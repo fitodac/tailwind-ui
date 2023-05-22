@@ -38,7 +38,14 @@ export default function Sidebar(){
 						<li className="">
 							<Link href="/forms/checkboxes" className="px-4 py-2 flex">Checkboxes</Link>
 						</li>
+						<li className="">
+							<Link href="/forms/radio-buttons" className="px-4 py-2 flex">Radio buttons</Link>
+						</li>
 					</ul>
+				</li>
+
+				<li className="">
+					<Link href="/scroll-bar" className="px-4 py-2 flex">Scroll bar</Link>
 				</li>
 
 				<li className="">
