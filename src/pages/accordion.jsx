@@ -70,7 +70,7 @@ export default function PageAccordion(){
 
 									<span className="">{ e.q }</span>
 								</label>
-								<div className="collapsible-content scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100">
+								<div className="collapsible-content scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
 									{ e.a.map(a => (<p className="p-5" key={Math.random().toString(16).substring(2)}>{a}</p>))}
 								</div>
 							</div>
@@ -91,7 +91,7 @@ export default function PageAccordion(){
 
 									<span className="">{ e.q }</span>
 								</label>
-								<div className="collapsible-content scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100">
+								<div className="collapsible-content scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
 									{ e.a.map(a => (<p className="p-5" key={Math.random().toString(16).substring(2)}>{a}</p>))}
 								</div>
 							</div>
@@ -120,7 +120,7 @@ export default function PageAccordion(){
 
 									<span className="">{ e.q }</span>
 								</label>
-								<div className="collapsible-content scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100">
+								<div className="collapsible-content scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
 									{ e.a.map(a => (<p className="p-5" key={Math.random().toString(16).substring(2)}>{a}</p>))}
 									
 								</div>
@@ -142,7 +142,7 @@ export default function PageAccordion(){
 
 									<span className="">{ e.q }</span>
 								</label>
-								<div className="collapsible-content scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100">
+								<div className="collapsible-content scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
 									{ e.a.map(a => (<p className="p-5" key={Math.random().toString(16).substring(2)}>{a}</p>))}
 									
 								</div>

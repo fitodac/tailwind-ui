@@ -268,33 +268,76 @@
 			bg-slate-100 
 			border-slate-100;
 		}
-
-
-		&.toggler input + span::before{
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='12' height='14'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm' fill='white'/%3E%3C/svg%3E");
-			background-position: 2px center;
-			border-color: var(--tw-ui-input-border-color);
-			@apply 
-			bg-slate-300
-			transition-all;
-		}
-
-		&.toggler:hover input:not(:disabled) + span::before{
-			
-		}
-
-
-		&.toggler input:checked + span::before{
-			@apply 
-			bg-primary;
-			background-position: calc(100% - 2px) center;
-		}
-
-		&.check input:checked + span::before{
-			background-size: 70%;
-		}
-
 	}
+
+
+
+
+
+	/** Radio buttons */
+	.input-radio{
+
+		input + span::before{
+			content: '';
+
+			@apply 
+			bg-white 
+			dark:bg-slate-700;
+		}
+
+		&:hover input:not(:disabled):not(:checked) + span::before{
+			@apply 
+			bg-primary 
+			border-primary;
+		}
+
+		&:not(.toggler):not(.check) input:checked + span::before{
+			box-shadow: 0 0 0 4.2px var(--tw-shadow-color) inset;
+			@apply shadow-primary;
+		}
+
+		&.input-lg:not(.toggler) input:checked + span::before{
+			box-shadow: 0 0 0 7px var(--tw-shadow-color) inset;
+			@apply shadow-primary;
+		}
+
+		input:disabled + span{
+			@apply 
+			text-slate-300;
+		}
+
+		input:disabled + span::before{
+			@apply 
+			bg-slate-100 
+			border-slate-100;
+		}
+	
+		&.check input:checked + span::before{
+			@apply bg-primary;
+		}
+	}
+
+
+
+	.input-checkbox.toggler input + span::before,
+	.input-radio.toggler input + span::before{
+		border-color: var(--tw-ui-input-border-color);
+		@apply 
+		bg-slate-300
+		transition-all;
+	}
+
+	.input-checkbox.toggler input:checked + span::before,
+	.input-radio.toggler input:checked + span::before{
+		@apply 
+		bg-primary;
+	}
+
+
+
+
+
+
 
 
 
@@ -327,6 +370,7 @@
 
 
 :root{
+	--scrollbar-thumb: red,
 	// --tw-ui-text-color: rgb(71 85 105);
 	// --tw-ui-font-size: 15px;
 	// --tw-ui-font-weight: 300;
