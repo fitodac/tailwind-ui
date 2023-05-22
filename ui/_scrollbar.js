@@ -20,6 +20,7 @@ const BASE_STYLES = {
  */
 const SCROLLBAR_SIZE_BASE = {
   'scrollbar-color': 'var(--scrollbar-thumb, initial) var(--scrollbar-track, initial)',
+	'overflow': 'auto',
 
   ...Object.fromEntries(COMPONENTS.map(component => {
     const base = `&::-webkit-scrollbar-${component}`;
@@ -50,8 +51,8 @@ const SCROLLBAR_SIZE_UTILITIES = {
 
     '&::-webkit-scrollbar': {
       display: 'block',
-      width: 'var(--scrollbar-width, 16px)',
-      height: 'var(--scrollbar-height, 16px)'
+      width: 'var(--scrollbar-width, 9px)',
+      height: 'var(--scrollbar-height, 9px)'
     }
   },
 
@@ -61,8 +62,8 @@ const SCROLLBAR_SIZE_UTILITIES = {
 
     '&::-webkit-scrollbar': {
       display: 'block',
-      width: '8px',
-      height: '8px'
+      width: '7px',
+      height: '7px'
     }
   },
 

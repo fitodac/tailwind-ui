@@ -6,15 +6,14 @@ const { BUTTON_UTILITIES } = require('./_buttons')
 const { FORM_INPUT_UTILITIES } = require('./_form-input')
 const { FORM_SELECT_UTILITIES } = require('./_form-select')
 const { FORM_CHECKBOX_UTILITIES } = require('./_form-checkboxes')
+const { FORM_RADIO_BUTTON_UTILITIES } = require('./_form-radiobuttons')
 const { CONTENT_UTILITIES } = require('./_content')
 
 
 const {
   BASE_STYLES,
   SCROLLBAR_SIZE_UTILITIES,
-  addColorUtilities,
-  // addRoundedUtilities,
-  // addSizeUtilities
+  addColorUtilities
 } = require('./_scrollbar')
 
 const { addVariantOverrides } = require('./variants')
@@ -37,6 +36,7 @@ module.exports = plugin.withOptions((options = {}) => tailwind => {
 		tailwind.addUtilities(FORM_INPUT_UTILITIES);
 		tailwind.addUtilities(FORM_SELECT_UTILITIES);
 		tailwind.addUtilities(FORM_CHECKBOX_UTILITIES);
+		tailwind.addUtilities(FORM_RADIO_BUTTON_UTILITIES);
 		tailwind.addUtilities(CONTENT_UTILITIES);
 
 		tailwind.addBase(BASE_STYLES);

@@ -2,8 +2,8 @@ const theme = require('tailwindcss/defaultTheme')
 const GLOBALS = require('./_utils')
 
 
-const FORM_CHECKBOX_UTILITIES = {
-	'.input-checkbox': {
+const FORM_RADIO_BUTTON_UTILITIES = {
+	'.input-radio': {
 		'font-size': theme.fontSize.sm[0],
 		'font-weight': theme.fontWeight.normal,
 		'line-height': theme.fontSize.sm[1].lineHeight,
@@ -13,13 +13,13 @@ const FORM_CHECKBOX_UTILITIES = {
 		'cursor': 'pointer',
 
 		'input': { 'display': 'none' },
-
+		
 		'input + span': {
 			'line-height': theme.fontSize.sm[1].lineHeight,
 			'display': 'flex',
 			'align-items': 'center',
 			'gap': theme.spacing[2],
-			'transition': theme.transitionProperty.all,
+			'transition': '.3s ease-in-out',
 			'user-select': 'none'
 		},
 
@@ -32,16 +32,14 @@ const FORM_CHECKBOX_UTILITIES = {
 			'height': theme.spacing[5],
 			'display': 'flex',
 			'transition': theme.transitionProperty.all,
-			'border-radius': theme.borderRadius.md
+			'border-radius': theme.borderRadius.full,
+			'transition': '.3s ease-in-out',
 		},
 
 		'&.input-lg input + span::before': {
 			'width': theme.spacing[7],
 			'height': theme.spacing[7],
-			'border-radius': theme.borderRadius.lg
 		},
-
-		'input:disabled + span::before': { 'cursor': 'auto' },
 
 		// Toggler
 		'&.toggler input + span::before': {
@@ -64,13 +62,20 @@ const FORM_CHECKBOX_UTILITIES = {
 			'border-radius': theme.borderRadius.full
 		},
 
+		'&.check input + span::before': {
+			'width': theme.spacing[6],
+			'height': theme.spacing[6],
+			'border-radius': theme.borderRadius.full
+		},
+
 		'&.check input:checked + span::before': {
-			'background-size': '70%'
+			'background-image': `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath fill='white' d='M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z' stroke='white' stroke-width='1' stroke-linecap='round' /%3E%3C/svg%3E")`,
+			'background-size': '74%'
 		}
 	}
 }
 
 
 module.exports = { 
-	FORM_CHECKBOX_UTILITIES
+	FORM_RADIO_BUTTON_UTILITIES
 }
