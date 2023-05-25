@@ -11,9 +11,12 @@ const BUTTON_STYLE_BASE = {
 		'font-weight': theme.fontWeight.medium,
 		'max-height': theme.spacing[10],
 		'padding': `${GLOBALS.spacing.y} ${GLOBALS.spacing.x}`,
+		'display': 'inline-flex',
+		'align-items': 'center',
 		'transition': theme.transitionProperty.all,
 		'transition-duration': theme.transitionDuration[300],
 		'border-radius': theme.borderRadius.md,
+		'cursor': 'pointer',
 		'overflow': 'hidden',
 		'text-overflow': 'ellipsis',
 		'user-select': 'none'
@@ -54,19 +57,43 @@ const BUTTON_UTILITIES = {
 			'max-height': theme.spacing[14],
 		},
 		'&.btn-icon': {...BUTTON_STYLE_BASE.ICON},
-		'&.rounded-full': {'border-radius': theme.borderRadius.full}
+		'&.rounded-full': {'border-radius': theme.borderRadius.full},
+
+		'> [class^=ri-]': { 'font-size': '1.2rem' }
 	},
 
 	'.btn-group': {
 		...BUTTON_STYLE_BASE.BTN_GROUP,
-		'& > .btn': {
+		'> .btn': {
 			...BUTTON_STYLE_BASE.BTN,
 			...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN,
 			'padding-left': theme.spacing[5],
 			'padding-right': theme.spacing[5],
-			'&:first-of-type': {...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN_FIRST},
-			'&:last-of-type': {...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN_LAST}
-		}
+			'&:first-child': {...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN_FIRST},
+			'&:last-child': {...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN_LAST}
+		},
+
+		// Checkbox
+		'> label': {
+			display: 'inline-flex',
+			cursor: 'pointer',
+
+			'> [type=checkbox], > [type=radio]': { display: 'none' },
+			'> .btn': {
+				...BUTTON_STYLE_BASE.BTN,
+				...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN,
+				'padding-left': theme.spacing[5],
+				'padding-right': theme.spacing[5],
+			},
+			'&:first-child > .btn': {...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN_FIRST},
+			'&:last-child > .btn': {...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN_LAST}
+		},
+
+		// Dropdown
+		'> .dropdown > .btn-toggler > .btn': {...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN},
+		'> .dropdown:first-child > .btn-toggler > .btn': {...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN_FIRST},
+		'> .dropdown:last-child > .btn-toggler > .btn': {...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN_LAST}
+
 	},
 	'.btn-group-sm': {
 		...BUTTON_STYLE_BASE.BTN_GROUP,
@@ -75,8 +102,8 @@ const BUTTON_UTILITIES = {
 			...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN,
 			'font-size': theme.fontSize.xs[0],
 			'padding': `${theme.spacing[1.5]} ${theme.spacing[3]}`,
-			'&:first-of-type': {...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN_FIRST},
-			'&:last-of-type': {...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN_LAST}
+			'&:first-child': {...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN_FIRST},
+			'&:last-child': {...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN_LAST}
 		}
 	},
 	'.btn-group-lg': {
@@ -86,9 +113,14 @@ const BUTTON_UTILITIES = {
 			...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN,
 			'padding': `${GLOBALS.spacing.lg.y} ${GLOBALS.spacing.lg.x}`,
 			'max-height': theme.spacing[14],
-			'&:first-of-type': { 'border-radius': `${theme.borderRadius.lg} 0 0 ${theme.borderRadius.lg}` },
-			'&:last-of-type': { 'border-radius': `0 ${theme.borderRadius.lg} ${theme.borderRadius.lg} 0` }
+			'&:first-child': { 'border-radius': `${theme.borderRadius.lg} 0 0 ${theme.borderRadius.lg}` },
+			'&:last-child': { 'border-radius': `0 ${theme.borderRadius.lg} ${theme.borderRadius.lg} 0` }
 		}
+	},
+
+	'.btn-toggler': {
+
+		'> [type=checkbox], > [type=radio]': { 'display': 'none' }
 	}
 }
 

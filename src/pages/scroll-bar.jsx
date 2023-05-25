@@ -6,11 +6,7 @@ import DemoCard from '../components/DemoCard'
 export default function PageScroll(){
 	return (
 		<Layout>
-			<PageHeader 
-				title="Scroll bar" 
-				breadcrumbs={[
-					{ text: 'Forms', link: null }
-				]} />
+			<PageHeader title="Scroll bar" />
 
 				<div className="space-y-7">
 					<DemoCard title={''}>

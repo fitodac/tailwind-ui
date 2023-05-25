@@ -130,38 +130,59 @@ export default function PageCheckbox(){
 
 
 				<DemoCard title={'Check'}>
-					<div className="grid gap-4">
-						<div className="grid gap-3">
-							<div>
-								<label className="input-checkbox check">
-									<input type="checkbox" />
-									<span>Option 1</span>
-								</label>
-							</div>
+					<div className="max-w-md grid gap-3">
+						<div>
+							<label className="input-checkbox check">
+								<input type="checkbox" />
+								<span>Option 1</span>
+							</label>
+						</div>
 
-							<div>
-								<label className="input-checkbox check">
+						<div>
+							<label className="input-checkbox check">
+								<input type="checkbox" />
+								<span>Option 2</span>
+							</label>
+						</div>
+						
+						<div>
+							<label className="input-checkbox check">
+								<input type="checkbox" defaultChecked />
+								<span>Option 3</span>
+							</label>
+						</div>
+						
+						<div>
+							<label className="input-checkbox check">
+								<input type="checkbox" disabled />
+								<span>Disabled</span>
+							</label>
+						</div>
+					</div>
+				</DemoCard>
+
+
+				<DemoCard title={'Button group'}>
+					<div className="grid grid-cols-3 gap-10">
+						<div className="">
+							<div className="btn-group btn-group-primary">
+								<label className="">
 									<input type="checkbox" />
-									<span>Option 2</span>
+									<span className="btn">One</span>
 								</label>
-							</div>
-							
-							<div>
-								<label className="input-checkbox check">
-									<input type="checkbox" defaultChecked />
-									<span>Option 3</span>
+								
+								<label className="">
+									<input type="checkbox" />
+									<span className="btn">Two</span>
 								</label>
-							</div>
-							
-							<div>
-								<label className="input-checkbox check">
-									<input type="checkbox" disabled />
-									<span>Disabled</span>
+								
+								<label className="">
+									<input type="checkbox" />
+									<span className="btn">Three</span>
 								</label>
 							</div>
 						</div>
 					</div>
-
 				</DemoCard>
 
 			</div>

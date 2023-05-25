@@ -1,0 +1,115 @@
+.btn{
+	@apply 
+	border-slate-200 
+	text-slate-500 
+	hover:bg-slate-200;
+}
+
+.btn-toggler input:checked + .btn{ @apply bg-slate-200; }
+
+
+/** Button primary */
+.btn-primary{
+	@apply 
+	bg-primary 
+	border-primary 
+	text-white 
+	hover:bg-primary-700 
+	hover:border-primary-700;
+	
+	&.btn-outline{
+		@apply 
+		bg-opacity-5 
+		border-primary 
+		text-primary
+		hover:bg-primary 
+		hover:text-white;
+	}
+
+	&.btn-icon.btn-outline svg{ @apply fill-primary; }
+
+	&.btn-icon svg,
+	&.btn-icon.btn-outline:hover svg{ @apply fill-white; }
+}
+
+.btn-group-primary > .btn,
+.btn-group-primary > label > .btn{ @apply btn-primary; }
+
+.btn-group-primary > label > input:checked + .btn,
+.btn-toggler input:checked + .btn-primary{ 
+	@apply 
+	bg-primary-700 
+	border-primary-700;
+}
+
+
+
+/** Button secondary */
+.btn-secondary{
+	@apply 
+	bg-secondary 
+	border-secondary 
+	text-white 
+	hover:bg-secondary-700 
+	hover:border-secondary-700;
+
+	&.btn-outline{
+		@apply 
+		bg-opacity-5 
+		border-secondary 
+		text-secondary
+		hover:bg-secondary 
+		hover:text-white;
+	}
+
+	&.btn-icon.btn-outline svg{ @apply fill-secondary; }
+
+	&.btn-icon svg,
+	&.btn-icon.btn-outline:hover svg{ @apply fill-white; }
+}
+
+.btn-group-secondary > .btn,
+.btn-group-secondary > label > .btn{ @apply btn-secondary; }
+
+.btn-group-secondary > label > input:checked + .btn,
+.btn-toggler input:checked + .btn-secondary{ 
+	@apply 
+	bg-secondary-700 
+	border-secondary-700;
+}
+
+
+
+/** Button alternative */
+.btn-alt{
+	@apply 
+	bg-alt 
+	border-alt 
+	text-white 
+	hover:bg-alt-700 
+	hover:border-alt-700;
+	
+	&.btn-outline{
+		@apply 
+		bg-opacity-5 
+		border-alt 
+		text-alt 
+		hover:bg-alt 
+		hover:text-white;
+	}
+
+	&.btn-icon.btn-outline svg{ @apply fill-alt; }
+	
+	&.btn-icon svg,
+	&.btn-icon.btn-outline:hover svg{ @apply fill-white; }
+}
+
+.btn-group-alt > .btn,
+.btn-group-alt > label > .btn{ @apply btn-alt; }
+
+.btn-group-alt > label > input:checked + .btn,
+.btn-toggler input:checked + .btn-alt{ 
+	@apply 
+	bg-alt-700 
+	border-alt-700;
+}

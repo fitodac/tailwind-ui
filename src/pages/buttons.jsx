@@ -131,6 +131,53 @@ export default function PageButtons(){
 				</DemoCard>
 
 
+				<DemoCard title={'Icon + text'}>
+					<div className="space-x-4">
+						<button className="btn btn-primary space-x-2">
+							<i class="ri-message-2-line"></i>
+							<span>Before</span>
+						</button>
+
+						<button className="btn btn-secondary space-x-2">
+							<span>After</span>
+							<i class="ri-sound-module-line"></i>
+						</button>
+
+						<button className="btn btn-alt space-x-2">
+							<i class="ri-error-warning-line"></i>
+							<span>Double</span>
+							<i class="ri-arrow-right-line"></i>
+						</button>
+
+					</div>
+				</DemoCard>
+
+
+				<DemoCard title={'Button toggler'}>
+					<div className="space-x-4">
+						<label className="btn-toggler">
+							<input type="checkbox" />
+							<span className="btn">Default</span>
+						</label>
+
+						<label className="btn-toggler">
+							<input type="checkbox" />
+							<span className="btn btn-primary">Primary</span>
+						</label>
+
+						<label className="btn-toggler">
+							<input type="checkbox" />
+							<span className="btn btn-secondary">Secondary</span>
+						</label>
+
+						<label className="btn-toggler">
+							<input type="checkbox" />
+							<span className="btn btn-alt">Alternative</span>
+						</label>
+					</div>
+				</DemoCard>
+
+
 				<DemoCard title={'Button group'}>
 					<div className="flex gap-x-16">
 						<div className="btn-group btn-group-primary">

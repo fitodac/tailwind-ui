@@ -2,89 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '../../ui/css/ui.scss';
+
+
 @layer components{
-	.btn{
-		@apply 
-		border-slate-200 
-		text-slate-400 
-		hover:bg-slate-200;
-	}
-
-	/** Button primary */
-	.btn-primary{
-		@apply 
-		bg-primary 
-		border-primary 
-		text-white 
-		hover:bg-primary-700 
-		hover:border-primary-700;
-		
-		&.btn-outline{
-			@apply 
-			bg-opacity-5 
-			border-primary 
-			text-primary
-			hover:bg-primary 
-			hover:text-white;
-		}
-
-		&.btn-icon.btn-outline svg{ @apply fill-primary; }
-
-		&.btn-icon svg,
-		&.btn-icon.btn-outline:hover svg{ @apply fill-white; }
-	}
-
-	.btn-group-primary > .btn{ @apply btn-primary; }
-
-
-	/** Button secondary */
-	.btn-secondary{
-		@apply 
-		bg-secondary 
-		border-secondary 
-		text-white 
-		hover:bg-secondary-700 
-		hover:border-secondary-700;
-
-		&.btn-outline{
-			@apply 
-			bg-opacity-5 
-			border-secondary 
-			text-secondary
-			hover:bg-secondary 
-			hover:text-white;
-		}
-
-		&.btn-icon.btn-outline svg{ @apply fill-secondary; }
-
-		&.btn-icon svg,
-		&.btn-icon.btn-outline:hover svg{ @apply fill-white; }
-	}
-
-	.btn-group-secondary > .btn{ @apply btn-secondary; }
-
-
-	/** Button alternative */
-	.btn-alt{
-		@apply 
-		bg-alt 
-		border-alt 
-		text-white 
-		hover:bg-alt-700 
-		hover:border-alt-700;
-		
-		&.btn-outline{
-			@apply bg-opacity-5 border-alt text-alt 
-							hover:bg-alt hover:text-white;
-		}
-
-		&.btn-icon.btn-outline svg{ @apply fill-alt; }
-		
-		&.btn-icon svg,
-		&.btn-icon.btn-outline:hover svg{ @apply fill-white; }
-	}
-
-	.btn-group-alt > .btn{ @apply btn-alt; }
+	
 
 
 
@@ -369,8 +291,10 @@
 
 
 
+
+
 :root{
-	--scrollbar-thumb: red,
+	// --scrollbar-thumb: red,
 	// --tw-ui-text-color: rgb(71 85 105);
 	// --tw-ui-font-size: 15px;
 	// --tw-ui-font-weight: 300;
@@ -402,36 +326,7 @@ body{
 
 
 
-/**
-Accordion
-**/
 
-.collapsible{
-	@apply border w-full relative overflow-hidden rounded-lg;
-}
-
-.collapsible [type=checkbox],
-.collapsible [type=radio]{
-	@apply absolute opacity-0;
-}
-
-.collapsible-head{
-	@apply leading-normal px-5 py-3 block cursor-pointer;
-}
-
-.collapsible-content{
-	@apply overflow-auto leading-tight max-h-0 transition-all duration-200;
-}
-
-.collapsible [type=checkbox]:checked ~ .collapsible-head,
-.collapsible [type=radio]:checked ~ .collapsible-head{
-	@apply text-primary;
-}
-
-.collapsible [type=checkbox]:checked ~ .collapsible-content,
-.collapsible [type=radio]:checked ~ .collapsible-content{
-	@apply max-h-80;
-}
 
 
 
