@@ -1,4 +1,7 @@
 import Layout from '../layouts/Layout'
+import PageHeader from '../components/PageHeader'
+import DemoCard from '../components/DemoCard'
+
 
 const faqs = [
 	{
@@ -52,109 +55,107 @@ export default function PageAccordion(){
 
 	return (
 	<Layout>
-		<h2>Accordion</h2>
+		<PageHeader title="Collapsible" />
 
+		<div className="space-y-7">
+			<DemoCard title={'Accordion'}>
+				<div className="grid gap-6 mt-6 md:grid-cols-2">
 
-		<h3>One by one</h3>
-		
-		<div className="grid gap-6 mt-6 md:grid-cols-2">
+					<div className="grid content-start gap-4">
+						{ faqs.map((e,i) => {
+							const k = Math.random().toString(16).substring(2)
+							return i < 3 ? (
+								<div className="" key={k}>
+									<div className="collapsible">
+										<input className="" id={k} type="radio" name="accOnebyOne" />
+										<label className="collapsible-head text-sm" htmlFor={k}>
 
-			<div className="grid content-start gap-4">
-				{ faqs.map((e,i) => {
-					const k = Math.random().toString(16).substring(2)
-					return i < 3 ? (
-						<div className="" key={k}>
-							<div className="collapsible">
-								<input className="" id={k} type="radio" name="accOnebyOne" />
-								<label className="collapsible-head text-sm" htmlFor={k}>
-
-									<span className="">{ e.q }</span>
-								</label>
-								<div className="collapsible-content scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
-									{ e.a.map(a => (<p className="p-5" key={Math.random().toString(16).substring(2)}>{a}</p>))}
+											<span className="">{ e.q }</span>
+										</label>
+										<div className="collapsible-content scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
+											{ e.a.map(a => (<p className="p-5" key={Math.random().toString(16).substring(2)}>{a}</p>))}
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					) : null
-				})}
-			</div>
+							) : null
+						})}
+					</div>
 
 
-			<div className="grid content-start gap-4">
-				{ faqs.map((e,i) => {
-					const k = Math.random().toString(16).substring(2)
-					return i >= 3 ? (
-						<div className="" key={k}>
-							<div className="collapsible">
-								<input className="" id={k} type="radio" name="accOnebyOne" />
-								<label className="collapsible-head text-sm" htmlFor={k}>
+					<div className="grid content-start gap-4">
+						{ faqs.map((e,i) => {
+							const k = Math.random().toString(16).substring(2)
+							return i >= 3 ? (
+								<div className="" key={k}>
+									<div className="collapsible">
+										<input className="" id={k} type="radio" name="accOnebyOne" />
+										<label className="collapsible-head text-sm" htmlFor={k}>
 
-									<span className="">{ e.q }</span>
-								</label>
-								<div className="collapsible-content scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
-									{ e.a.map(a => (<p className="p-5" key={Math.random().toString(16).substring(2)}>{a}</p>))}
+											<span className="">{ e.q }</span>
+										</label>
+										<div className="collapsible-content scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
+											{ e.a.map(a => (<p className="p-5" key={Math.random().toString(16).substring(2)}>{a}</p>))}
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					) : null
-				})}
-			</div>
+							) : null
+						})}
+					</div>
 
+				</div>
+			</DemoCard>
+
+
+
+			<DemoCard title={'Closable'}>
+				<div className="grid gap-6 mt-6 md:grid-cols-2">
+
+					<div className="grid content-start gap-4">
+						{ faqs.map((e,i) => {
+							const k = Math.random().toString(16).substring(2)
+							return i < 3 ? (
+								<div className="" key={k}>
+									<div className="collapsible">
+										<input className="" id={k} type="checkbox" />
+										<label className="collapsible-head text-sm" htmlFor={k}>
+
+											<span className="">{ e.q }</span>
+										</label>
+										<div className="collapsible-content scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
+											{ e.a.map(a => (<p className="p-5" key={Math.random().toString(16).substring(2)}>{a}</p>))}
+											
+										</div>
+									</div>
+								</div>
+							) : null
+						})}
+					</div>
+
+
+					<div className="grid content-start gap-4">
+						{ faqs.map((e,i) => {
+							const k = Math.random().toString(16).substring(2)
+							return i >= 3 ? (
+								<div className="" key={k}>
+									<div className="collapsible">
+										<input className="" id={k} type="checkbox" />
+										<label className="collapsible-head text-sm" htmlFor={k}>
+
+											<span className="">{ e.q }</span>
+										</label>
+										<div className="collapsible-content scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
+											{ e.a.map(a => (<p className="p-5" key={Math.random().toString(16).substring(2)}>{a}</p>))}
+											
+										</div>
+									</div>
+								</div>
+							) : null
+						})}
+					</div>
+
+				</div>
+			</DemoCard>
 		</div>
 
-		<div className="h-10"></div>
-
-
-		<h3>Multiple</h3>
-		
-		<div className="grid gap-6 mt-6 md:grid-cols-2">
-
-			<div className="grid content-start gap-4">
-				{ faqs.map((e,i) => {
-					const k = Math.random().toString(16).substring(2)
-					return i < 3 ? (
-						<div className="" key={k}>
-							<div className="collapsible">
-								<input className="" id={k} type="checkbox" />
-								<label className="collapsible-head text-sm" htmlFor={k}>
-
-									<span className="">{ e.q }</span>
-								</label>
-								<div className="collapsible-content scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
-									{ e.a.map(a => (<p className="p-5" key={Math.random().toString(16).substring(2)}>{a}</p>))}
-									
-								</div>
-							</div>
-						</div>
-					) : null
-				})}
-			</div>
-
-
-			<div className="grid content-start gap-4">
-				{ faqs.map((e,i) => {
-					const k = Math.random().toString(16).substring(2)
-					return i >= 3 ? (
-						<div className="" key={k}>
-							<div className="collapsible">
-								<input className="" id={k} type="checkbox" />
-								<label className="collapsible-head text-sm" htmlFor={k}>
-
-									<span className="">{ e.q }</span>
-								</label>
-								<div className="collapsible-content scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
-									{ e.a.map(a => (<p className="p-5" key={Math.random().toString(16).substring(2)}>{a}</p>))}
-									
-								</div>
-							</div>
-						</div>
-					) : null
-				})}
-			</div>
-
-		</div>
-		
-
-		<div className="h-32"></div>
 	</Layout>)
 }
