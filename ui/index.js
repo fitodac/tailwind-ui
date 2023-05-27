@@ -8,6 +8,7 @@ const { FORM_SELECT_UTILITIES } = require('./_form-select')
 const { FORM_CHECKBOX_UTILITIES } = require('./_form-checkboxes')
 const { FORM_RADIO_BUTTON_UTILITIES } = require('./_form-radiobuttons')
 const { CONTENT_UTILITIES } = require('./_content')
+const { TABLE_UTILITIES } = require('./_tables')
 
 
 const {
@@ -38,6 +39,7 @@ module.exports = plugin.withOptions((options = {}) => tailwind => {
 		tailwind.addUtilities(FORM_CHECKBOX_UTILITIES);
 		tailwind.addUtilities(FORM_RADIO_BUTTON_UTILITIES);
 		tailwind.addUtilities(CONTENT_UTILITIES);
+		tailwind.addUtilities(TABLE_UTILITIES);
 
 		tailwind.addBase(BASE_STYLES);
 		tailwind.addUtilities(SCROLLBAR_SIZE_UTILITIES);

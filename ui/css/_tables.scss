@@ -1,0 +1,41 @@
+table.table{
+	@apply
+	grid
+	overflow-x-auto;
+	
+	thead{
+		@apply
+		select-none;
+	}
+
+	tbody{
+		
+
+		tr td{
+			@apply
+			border-slate-100;
+		}
+	}
+
+
+	&.table-striped{
+		tbody tr:nth-child(odd) td{
+			@apply
+			bg-slate-100;
+		}
+	}
+
+	&.table-hoverable{
+		tbody tr{
+			> td{ @apply transition-all; }
+
+			&:hover > td{ @apply bg-primary-50 bg-opacity-70; }
+		}
+	}
+
+	
+	&.table-scrollable{
+		
+	}
+
+}

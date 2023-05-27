@@ -4,7 +4,7 @@ export default function PageHeader(props){
 
 	return (
 	<div className="py-8">
-		<h2 className="text-3xl font-medium">{props.title}</h2>
+		<h2 className="text-2xl font-medium select-none md:text-3xl">{props.title}</h2>
 
 		{/* breadcrumbs */}
 		<div className="text-slate-400 mt-2">

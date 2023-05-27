@@ -1,9 +1,14 @@
+
 import Link from 'next/link'
 
+
 export default function Sidebar(){
+
 	return(
 		<div
-			className="bg-white border-r border-slte-200 w-60 left-0 top-0 fixed z-30 
+			id="mainSidebar"
+			className="bg-white border-r border-slte-200 w-60 -left-full top-0 transition-all fixed z-30 
+			lg:left-0
 		dark:bg-gray-800 dark:border-gray-700">
 			<div className="h-screen grid gap-6">
 
@@ -38,6 +43,10 @@ export default function Sidebar(){
 
 								<li className="">
 									<Link href="/buttons" className="px-4 py-2 flex">Buttons</Link>
+								</li>
+
+								<li className="">
+									<Link href="/tables" className="px-4 py-2 flex">Tables</Link>
 								</li>
 
 							</ul>

@@ -22,11 +22,27 @@ export default function Header(){
 
 			<div className="flex justify-end">
 
-				<div className="bg-white border border-slate-200 p-3 rounded-full dark:bg-gray-800 dark:border-gray-700">
+				<div className="">
+					<label 
+						className="bg-white border border-slate-200 inline-flex rounded-full cursor-pointer 
+						dark:bg-slate-800 dark:border-slate-700">
+						<input 
+							type="checkbox" 
+							onChange={ toggleDarkMode } 
+							checked={!mode.length}
+							className="absolute hidden" />
+						<span className="w-7 h-7 grid place-content-center">
+							<i class="ri-sun-fill text-lg text-yellow-500 dark:hidden"></i>
+							<i class="ri-moon-fill text-lg text-slate-400 hidden dark:block"></i>
+						</span>
+					</label>
+
+					{/* 
 					<label className="toggler-dark-mode">
 						<input type="checkbox" onChange={ toggleDarkMode } checked={!mode.length} />
 						<span></span>
-					</label>
+					</label> 
+					*/}
 				</div>
 
 			</div>
