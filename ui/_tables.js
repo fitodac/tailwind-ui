@@ -5,6 +5,8 @@ const minWidth = '180px'
 
 const TABLE_STYLE_BASE = {
 	HEAD: {
+		'user-select': 'none',
+
 		TR: {},
 		TH: {
 			'font-weight': theme.fontWeight.medium,
@@ -18,7 +20,6 @@ const TABLE_STYLE_BASE = {
 		TR: {
 		},
 		TD: {
-			'border-top-width': '1px',
 			'min-width': minWidth,
 			'padding': theme.spacing[3],
 			'vertical-align': 'top'
@@ -32,26 +33,63 @@ const TABLE_UTILITIES = {
 	'table.table': {
 		'width': '100%',
 
-		'thead': {
+		'> thead': {
 			...TABLE_STYLE_BASE.HEAD,
 
 			'tr': {...TABLE_STYLE_BASE.HEAD.TR},
 			'tr th': {...TABLE_STYLE_BASE.HEAD.TH}
 		},
 
-		'tbody': {
+		'> tbody': {
 			...TABLE_STYLE_BASE.BODY,
 
 			'tr': {...TABLE_STYLE_BASE.BODY.TR},
 			'tr td': {...TABLE_STYLE_BASE.BODY.TD},
 		},
 
-		'tfoot': {
+		'> tfoot': {
 			...TABLE_STYLE_BASE.FOOTER,
 		},
 
 
-		'&.table-scrollable': {}
+		// Table bordered
+		'&.table-bordered': {
+			'> tbody': {
+				'> tr > td': { 'border-top-width': '1px' }
+			}
+		},
+
+
+		// Table compact
+		'&.table-compact': {
+			'> thead': {
+				'> tr > th': { 
+					'font-size': theme.fontSize.sm[0],
+					'line-height': theme.fontSize.sm[1].lineHeight,
+					'padding': theme.spacing[1],
+				}
+			},
+
+			'> tbody': {
+				'> tr > td': { 
+					'font-size': theme.fontSize.sm[0],
+					'line-height': theme.fontSize.sm[1].lineHeight,
+					'padding': theme.spacing[1],
+				}
+			}
+		},
+
+
+		// Table collapsible
+		'&.table-collapsible': {
+			'> thead': {
+				'> tr > th': { 'min-width': '1px' }
+			},
+
+			'> tbody': {
+				'> tr > td': { 'min-width': '1px' }
+			}
+		}
 	}
 }
 

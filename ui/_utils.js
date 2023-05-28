@@ -4,8 +4,7 @@ const theme = require('tailwindcss/defaultTheme')
 const GLOBALS = {
 	// textColor: 'rgb(71 85 105)', // slate-600
 	textColor: 'rgb(100 116 139)', // slate-500
-	fontSize: '17px',
-	fontSizeLarge: '15px',
+	fontSize: '15px',
 	fontWeight: theme.fontWeight.light,
 	lineHeight: '1.4',
 

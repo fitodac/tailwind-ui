@@ -17,7 +17,7 @@ export default function Header(){
 
 	return (
 		<header 
-			className="bg-white border-b border-slate-200 px-6 py-3 2xl:px-0
+			className="bg-white border-b border-slate-200 px-6 py-3
 		dark:bg-gray-800 dark:border-gray-700">
 
 			<div className="flex justify-end">
@@ -32,17 +32,10 @@ export default function Header(){
 							checked={!mode.length}
 							className="absolute hidden" />
 						<span className="w-7 h-7 grid place-content-center">
-							<i class="ri-sun-fill text-lg text-yellow-500 dark:hidden"></i>
-							<i class="ri-moon-fill text-lg text-slate-400 hidden dark:block"></i>
+							<i className="ri-sun-fill text-lg text-yellow-500 dark:hidden"></i>
+							<i className="ri-moon-fill text-lg text-slate-400 hidden dark:block"></i>
 						</span>
 					</label>
-
-					{/* 
-					<label className="toggler-dark-mode">
-						<input type="checkbox" onChange={ toggleDarkMode } checked={!mode.length} />
-						<span></span>
-					</label> 
-					*/}
 				</div>
 
 			</div>

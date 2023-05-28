@@ -67,7 +67,7 @@ export default function PageAccordion(){
 							return i < 3 ? (
 								<div className="" key={k}>
 									<div className="collapsible">
-										<input className="" id={k} type="radio" name="accOnebyOne" />
+										<input className="" id={k} type="radio" name="collapseOnebyOne" />
 										<label className="collapsible-head text-sm" htmlFor={k}>
 
 											<span className="">{ e.q }</span>
@@ -88,7 +88,7 @@ export default function PageAccordion(){
 							return i >= 3 ? (
 								<div className="" key={k}>
 									<div className="collapsible">
-										<input className="" id={k} type="radio" name="accOnebyOne" />
+										<input className="" id={k} type="radio" name="collapseOnebyOne" />
 										<label className="collapsible-head text-sm" htmlFor={k}>
 
 											<span className="">{ e.q }</span>

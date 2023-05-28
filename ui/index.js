@@ -25,7 +25,6 @@ module.exports = plugin.withOptions((options = {}) => tailwind => {
 			':root': {
 				'--tw-ui-text-color': GLOBALS.textColor,
 				'--tw-ui-font-size': GLOBALS.fontSize,
-				'--tw-ui-font-size-lg': GLOBALS.fontSizeLarge,
 				'--tw-ui-font-weight': GLOBALS.fontWeight,
 				'--tw-ui-line-height': GLOBALS.lineHeight,
 				'--tw-ui-input-border-color': GLOBALS.input.borderColor,

@@ -24,7 +24,7 @@ export default function Layout({children}){
 				<Header/>
 
 				<div className="container mx-auto">
-					<div className="px-6 md:px-14">
+					<div className="px-6 md:px-10">
 						{children}
 
 						<div className="border-t border-slate-200 pt-6 pb-16 mt-20 dark:border-gray-600">
