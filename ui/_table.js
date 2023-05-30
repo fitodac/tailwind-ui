@@ -79,17 +79,6 @@ const TABLE_UTILITIES = {
 			}
 		},
 
-
-		// Table collapsible
-		'&.table-collapsible': {
-			'> thead': {
-				'> tr > th': { 'min-width': '1px' }
-			},
-
-			'> tbody': {
-				'> tr > td': { 'min-width': '1px' }
-			}
-		}
 	}
 }
 

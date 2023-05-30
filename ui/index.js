@@ -1,14 +1,15 @@
 const plugin = require('tailwindcss/plugin')
-const colors = require('./_colors')
+const colors = require('./_color')
 
 const GLOBALS = require('./_utils')
-const { BUTTON_UTILITIES } = require('./_buttons')
+const { BUTTON_UTILITIES } = require('./_button')
 const { FORM_INPUT_UTILITIES } = require('./_form-input')
 const { FORM_SELECT_UTILITIES } = require('./_form-select')
-const { FORM_CHECKBOX_UTILITIES } = require('./_form-checkboxes')
-const { FORM_RADIO_BUTTON_UTILITIES } = require('./_form-radiobuttons')
+const { FORM_CHECKBOX_UTILITIES } = require('./_form-checkbox')
+const { FORM_RADIO_BUTTON_UTILITIES } = require('./_form-radiobutton')
 const { CONTENT_UTILITIES } = require('./_content')
-const { TABLE_UTILITIES } = require('./_tables')
+const { TABLE_UTILITIES } = require('./_table')
+const { BADGE_UTILITIES } = require('./_badge')
 
 
 const {
@@ -39,6 +40,7 @@ module.exports = plugin.withOptions((options = {}) => tailwind => {
 		tailwind.addUtilities(FORM_RADIO_BUTTON_UTILITIES);
 		tailwind.addUtilities(CONTENT_UTILITIES);
 		tailwind.addUtilities(TABLE_UTILITIES);
+		tailwind.addComponents(BADGE_UTILITIES);
 
 		tailwind.addBase(BASE_STYLES);
 		tailwind.addUtilities(SCROLLBAR_SIZE_UTILITIES);
