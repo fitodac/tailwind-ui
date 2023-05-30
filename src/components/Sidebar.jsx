@@ -27,6 +27,10 @@ export default function Sidebar(){
 							<ul className="pl-2">
 
 								<li className="">
+									<Link href="/buttons" className="px-4 py-2 flex">Buttons</Link>
+								</li>
+
+								<li className="">
 									<Link href="/colors" className="px-4 py-2 flex">Colors</Link>
 								</li>
 
@@ -37,21 +41,6 @@ export default function Sidebar(){
 							</ul>
 						</li>
 
-						<li className="pt-3 pb-1">
-							<div className="text-xs font-semibold px-4 pb-1">BASIC</div>
-							<ul className="pl-2">
-
-								<li className="">
-									<Link href="/buttons" className="px-4 py-2 flex">Buttons</Link>
-								</li>
-
-								<li className="">
-									<Link href="/tables" className="px-4 py-2 flex">Tables</Link>
-								</li>
-
-							</ul>
-						</li>
-						
 
 						<li className="pt-3 pb-1">
 							<div className="text-xs font-semibold px-4 pb-1">FORMS</div>
@@ -76,15 +65,18 @@ export default function Sidebar(){
 
 
 						<li className="pt-3 pb-1">
-							<div className="text-xs font-semibold px-4 pb-1">ACTIONS</div>
+							<div className="text-xs font-semibold px-4 pb-1">DATA</div>
 							<ul className="pl-2">
-								
 								<li className="">
-									<Link href="/dropdown" className="px-4 py-2 flex">Dropdown</Link>
+									<Link href="/tables" className="px-4 py-2 flex">Tables</Link>
 								</li>
-								
+
 								<li className="">
 									<Link href="/collapsible" className="px-4 py-2 flex">Collapsible</Link>
+								</li>
+
+								<li className="">
+									<Link href="/badges" className="px-4 py-2 flex">Badges</Link>
 								</li>
 
 							</ul>
@@ -92,20 +84,32 @@ export default function Sidebar(){
 
 
 						<li className="pt-3 pb-1">
-							<div className="text-xs font-semibold px-4 pb-1">DISPLAY</div>
+							<div className="text-xs font-semibold px-4 pb-1">NAVIGATION</div>
 							<ul className="pl-2">
-								
 								<li className="">
-									<Link href="/scroll-bar" className="px-4 py-2 flex">Scroll bar</Link>
+									<Link href="/dropdown" className="px-4 py-2 flex">Dropdown</Link>
 								</li>
 
 							</ul>
 						</li>
 
 
-						<li className="">
-							<Link href="/extra" className="px-4 py-2 flex">Extra</Link>
+						<li className="pt-3 pb-1">
+							<div className="text-xs font-semibold px-4 pb-1">OTHER</div>
+							<ul className="pl-2">
+								
+								<li className="">
+									<Link href="/scroll-bar" className="px-4 py-2 flex">Scroll bar</Link>
+								</li>
+
+								<li className="">
+									<Link href="/extra" className="px-4 py-2 flex">Extra</Link>
+								</li>
+
+							</ul>
 						</li>
+
+
 					</ul>
 				</div>
 
