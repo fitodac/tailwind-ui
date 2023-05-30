@@ -23,17 +23,13 @@ table.table{
 		}
 	}
 
+
 	&.table-hoverable{
 		> tbody tr{
 			> td{ @apply transition-all; }
 
 			&:hover > td{ @apply bg-primary-50 bg-opacity-70; }
 		}
-	}
-
-	
-	&.table-collapsible{
-		
 	}
 
 }
