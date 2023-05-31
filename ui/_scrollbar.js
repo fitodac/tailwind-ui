@@ -51,8 +51,9 @@ const SCROLLBAR_SIZE_UTILITIES = {
 
     '&::-webkit-scrollbar': {
       display: 'block',
-      width: 'var(--scrollbar-width, 9px)',
-      height: 'var(--scrollbar-height, 9px)'
+      width: 'var(--scrollbar-width, 6px)',
+      height: 'var(--scrollbar-height, 6px)',
+			maxHeight: '100px'
     }
   },
 
@@ -62,8 +63,8 @@ const SCROLLBAR_SIZE_UTILITIES = {
 
     '&::-webkit-scrollbar': {
       display: 'block',
-      width: '7px',
-      height: '7px'
+      width: '4px',
+      height: '4px'
     }
   },
 

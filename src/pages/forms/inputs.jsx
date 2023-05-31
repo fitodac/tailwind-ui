@@ -51,7 +51,7 @@ export default function PageInput(){
 
 
 				<DemoCard title={'Input groups'}>
-					<div className="grid grid-cols-4 gap-6">
+					<div className="grid grid-cols-2 gap-10">
 						<div className="space-y-1">
 							<label>Basic</label>
 							<div className="input-group">
