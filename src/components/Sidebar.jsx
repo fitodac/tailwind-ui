@@ -68,6 +68,14 @@ export default function Sidebar(){
 							<div className="text-xs font-semibold px-4 pb-1">DATA</div>
 							<ul className="pl-2">
 								<li className="">
+									<Link href="/avatar" className="px-4 py-2 flex">Avatar</Link>
+								</li>
+
+								<li className="">
+									<Link href="/spinner" className="px-4 py-2 flex">Spinner</Link>
+								</li>
+
+								<li className="">
 									<Link href="/tables" className="px-4 py-2 flex">Tables</Link>
 								</li>
 
