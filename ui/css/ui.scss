@@ -5,117 +5,14 @@
 	@import 'dropdown';
 	@import 'collapsible';
 	@import 'tables';
-
-	.badge{
-		@apply
-		bg-slate-400
-		text-white
-		border
-		border-slate-400
-		text-xs
-		font-medium
-		leading-none
-		px-2
-		py-1
-		rounded;
-	}
-
-	.dot-badge{
-		font-size: 0;
-		@apply
-		bg-red-600
-		text-transparent
-		w-3
-		h-3
-		-right-0.5
-		-top-0.5
-		absolute
-		overflow-hidden
-		rounded-full;
-	}
-
-
-
-	// Avatars
-	.avatar{
-		@apply
-		text-sm
-		leading-tight
-		inline-grid
-		place-content-center
-		relative
-		aspect-square
-		select-none
-		transition-all
-		align-top;
-
-		> img{
-			@apply
-			w-full
-			h-full
-			object-cover
-			pointer-events-none
-			rounded-md;
-
-		}
-		
-		&.rounded-full > img{ border-radius: 9999px; }
-
-		&.avatar-squircle{
-			mask-size: contain;
-			mask-repeat: no-repeat;
-			mask-position: center;
-			-webkit-mask-size: contain;
-			-webkit-mask-repeat: no-repeat;
-			-webkit-mask-position: center;
-
-			-webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzIwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTAwIDBDMjAgMCAwIDIwIDAgMTAwczIwIDEwMCAxMDAgMTAwIDEwMC0yMCAxMDAtMTAwUzE4MCAwIDEwMCAwWicvPjwvc3ZnPg==);
-			mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzIwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTAwIDBDMjAgMCAwIDIwIDAgMTAwczIwIDEwMCAxMDAgMTAwIDEwMC0yMCAxMDAtMTAwUzE4MCAwIDEwMCAwWicvPjwvc3ZnPg==);
-		}
-	}
-
-
-
-	.spinner{
-		@apply 
-		text-sm
-		leading-tight
-		w-10
-		inline-grid
-		place-content-center
-		relative
-		aspect-square;
-
-		&::after{
-			@apply
-			border-4
-			border-slate-100
-			w-full
-			absolute
-			aspect-square
-			rounded-full
-			select-none
-			pointer-events-none
-			animate-spin
-			dark:border-slate-600;
-
-			content: '';
-			border-left-color: inherit;
-		}
-
-		&.w-3::after,
-		&.w-4::after,
-		&.w-5::after,
-		&.w-6::after{ @apply border-2; }
-
-		&:not([class*=border-l-]){
-			@apply border-l-primary dark:border-l-primary;
-		}
-	}
-
-
+	@import 'badge';
+	@import 'spinner';
 }
 
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
 
 
 @layer utilities{

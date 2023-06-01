@@ -40,9 +40,9 @@ export default function PageHome(){
 								href={e.link} 
 								className="bg-white border border-slate-100 h-full block rounded-md select-none transition-all hover:shadow-md">
 								<div className="px-6 py-5">
-									<div className="space-y-3">
-										<div className="font-bold">{e.title}</div>
-										<div className="text-slate-400 text-xs font-light">{e.description}</div>
+									<div className="space-y-1">
+										<div className="text-lg font-bold">{e.title}</div>
+										<div className="text-slate-400 font-light text-sm">{e.description}</div>
 									</div>
 								</div>
 							</Link>
