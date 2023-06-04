@@ -30,6 +30,11 @@ const GLOBALS = {
 		error: { 
 			color: 'rgb(185 28 28)' // red-700 
 		}
+	},
+
+	DARK: {
+		textColor: 'rgb(241 245 249)', // slate-100
+		borderColor: 'rgb(100 116 139)', // slate-500
 	}
 }
 

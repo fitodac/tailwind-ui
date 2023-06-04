@@ -18,7 +18,7 @@ export default function Layout({children}){
 
 	return(
 		<div>
-			<div className="bg-slate-50 min-h-screen lg:pl-60 dark:bg-gray-800">
+			<div className="bg-slate-100 min-h-screen lg:pl-60 dark:bg-gray-800">
 				<Sidebar/>
 				
 				<Header/>

@@ -4,7 +4,7 @@ const GLOBALS = require('./_utils')
 
 const SPINNER_STYLE_BASE = {
 	DEFAULT: {
-		'font-weight': theme.fontWeight.md,
+		'font-weight': theme.fontWeight.medium,
 		'line-height': theme.fontSize.xs[1],
 		'width': theme.spacing[10],
 		'display': 'inline-grid',

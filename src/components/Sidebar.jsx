@@ -17,7 +17,7 @@ export default function Sidebar(){
 				</div>
 
 				<div className="scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
-					<ul className="text-slate-600 text-sm leading-tight grid select-none pb-16">
+					<ul className="text-slate-600 text-sm leading-tight grid select-none pb-16 dark:text-slate-100">
 						<li className="">
 							<Link href="/" className="px-4 py-2 flex">Home</Link>
 						</li>

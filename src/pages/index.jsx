@@ -38,7 +38,9 @@ export default function PageHome(){
 						<div key={`card-${Math.random().toString(16).substring(2)}`}>
 							<Link 
 								href={e.link} 
-								className="bg-white border border-slate-100 h-full block rounded-md select-none transition-all hover:shadow-md">
+								className="bg-white border border-slate-100 h-full block rounded-md select-none transition-all 
+								hover:shadow-md
+								dark:bg-slate-700 dark:border-slate-700">
 								<div className="px-6 py-5">
 									<div className="space-y-1">
 										<div className="text-lg font-bold">{e.title}</div>

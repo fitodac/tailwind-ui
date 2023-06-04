@@ -6,10 +6,11 @@ const BADGE_STYLE_BASE = {
 	DEFAULT: {
 		'border-width': theme.borderWidth.DEFAULT,
 		'font-size': theme.fontSize.xs[0],
-		'font-weight': theme.fontWeight.md,
+		'font-weight': theme.fontWeight.medium,
 		'line-height': theme.fontSize.xs[1],
 		'padding': `${theme.spacing[0.5]} ${theme.spacing[2]} ${theme.spacing[1]}`,
-		'border-radius': theme.borderRadius.DEFAULT
+		'border-radius': theme.borderRadius.DEFAULT,
+		'user-select': 'none'
 	},
 
 	DOT: {

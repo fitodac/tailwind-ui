@@ -15,12 +15,11 @@
 	// --tw-ui-input-border-color: rgb(203 213 225);
 	// --tw-ui-input-valid-color: rgb(22 163 74);
 	// --tw-ui-input-error-color: rgb(185 28 28);
+	
+	// --tw-ui-dark-text-color: rgb(241 245 249);
+	// --tw-ui-dark-border-color: rgb(100 116 139);
 }
 
-
-// *{
-// 	@apply border-slate-200;
-// }
 
 html{
 	font-size: var(--tw-ui-font-size);
@@ -30,6 +29,16 @@ body{
 	color: var(--tw-ui-text-color);
 	font-weight: var(--tw-ui-font-weight);
 	line-height: var(--tw-ui-line-height);
+	
+	&.dark{
+		color: var(--tw-ui-dark-text-color);
+	}
+}
+
+*{
+	@apply 
+	border-slate-200
+	dark:border-[var(--tw-ui-dark-border-color)];
 }
 
 /** Content */

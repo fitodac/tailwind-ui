@@ -33,6 +33,9 @@ module.exports = plugin.withOptions((options = {}) => tailwind => {
 				'--tw-ui-input-border-color': GLOBALS.input.borderColor,
 				'--tw-ui-input-valid-color': GLOBALS.input.valid.color,
 				'--tw-ui-input-error-color': GLOBALS.input.error.color,
+				// dark
+				'--tw-ui-dark-text-color': GLOBALS.DARK.textColor,
+				'--tw-ui-dark-border-color': GLOBALS.DARK.borderColor,
 			}
 		});
 		tailwind.addUtilities(BUTTON_UTILITIES);

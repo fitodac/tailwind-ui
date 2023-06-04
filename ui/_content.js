@@ -7,7 +7,7 @@ const CONTENT_UTILITIES = {
 		'& h2': { fontSize: theme.fontSize['4xl'], lineHeight: 1 },
 		'& h3': { fontSize: theme.fontSize['3xl'], lineHeight: 1 },
 		'& h4': { fontSize: theme.fontSize['2xl'], lineHeight: 1 },
-		'& h5': { fontWeight: 'bold' },
+		'& h5': { fontWeight: theme.fontWeight.bold },
 
 		'& p + p': { marginTop: theme.spacing[8] },
 

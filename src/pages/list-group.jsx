@@ -11,6 +11,7 @@ const data = {
 								<br/>
 								<span class="text-sm">Regional Integration Producer</span>`},
 			{__html: `Officer`},
+			{__html: `<span class="badge bg-green-600 text-green-600 rounded-full ghost">Active</span>`},
 			{__html: `(522) 824-4178`}
 		],
 		[
@@ -18,6 +19,7 @@ const data = {
 								<br/>
 								<span class="text-sm">Product Solutions Developer</span>`},
 			{__html: `Factors`},
+			{__html: `<span class="badge bg-green-600 text-green-600 rounded-full ghost">Active</span>`},
 			{__html: `922-626-2911`}
 		],
 		[
@@ -25,6 +27,7 @@ const data = {
 								<br/>
 								<span class="text-sm">Global Metrics Associate</span>`},
 			{__html: `Markets`},
+			{__html: `<span class="badge bg-green-600 text-green-600 rounded-full ghost">Active</span>`},
 			{__html: `681.310.5198`}
 		],
 		[
@@ -32,6 +35,7 @@ const data = {
 								<br/>
 								<span class="text-sm">Regional Identity Director</span>`},
 			{__html: `Markets`},
+			{__html: `<span class="badge bg-red-600 text-red-600 rounded-full ghost">Inactive</span>`},
 			{__html: `(613) 706-8525 x827`}
 		],
 		[
@@ -39,6 +43,7 @@ const data = {
 								<br/>
 								<span class="text-sm">Global Quality Representative</span>`},
 			{__html: `Creative`},
+			{__html: `<span class="badge bg-green-600 text-green-600 rounded-full ghost">Active</span>`},
 			{__html: `377-928-9313`}
 		],
 	]
@@ -55,11 +60,53 @@ export default function PageList(){
 					<div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
 						<div>
 							<div className="list-group">
-									{ data.list1.map((e,i) => (
+								{ data.list1.map((e,i) => (
+									<div key={`list-basic-${i}`} className="list-group-row">
+										<div className="list-group-cell">{e}</div>
+									</div>
+								)) }
+							</div>
+						</div>
+					</div>
+				</DemoCard>
+
+
+				<DemoCard title={'Variations'}>
+					<div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+						<div>
+							<div className="text-slate-400 text-xs mb-4">Striped</div>
+							<div className="list-group-striped">
+								{ data.list1.map((e,i) => (
+									<div key={`list-basic-${i}`} className="list-group-row">
+										<div className="list-group-cell">{e}</div>
+									</div>
+								)) }
+							</div>
+						</div>
+
+						<div>
+							<div className="text-slate-400 text-xs mb-4">Hoverable</div>
+							<div className="list-group-striped hoverable">
+								{ data.list1.map((e,i) => (
+									<div key={`list-basic-${i}`} className="list-group-row">
+										<div className="list-group-cell">{e}</div>
+									</div>
+								)) }
+							</div>
+						</div>
+
+						<div>
+							<div className="text-slate-400 text-xs mb-4">List group head</div>
+							<div className="list-group">
+								{ data.list1.map((e,i) => (
+									<>
+										{ i === 0 ? <div className="list-group-head">Primary list</div> : null }
+										{ i === 2 ? <div className="list-group-head">Secondary list</div> : null }
 										<div key={`list-basic-${i}`} className="list-group-row">
 											<div className="list-group-cell">{e}</div>
 										</div>
-									)) }
+									</>
+								)) }
 							</div>
 						</div>
 					</div>
@@ -67,13 +114,21 @@ export default function PageList(){
 
 
 				<DemoCard title={'Multi column'}>
-					<div>
+					<div className="border rounded-lg">
 						<div className="list-group">
+							<div className="list-group-row bg-primary rounded-t-lg">
+								<div className="list-group-cell text-white font-semibold">User</div>
+								<div className="list-group-cell text-white font-semibold">Job area</div>
+								<div className="list-group-cell text-white font-semibold">Status</div>
+								<div className="list-group-cell text-white font-semibold">Phone</div>
+							</div>
+
 							{ data.list2.map((e,i) => (
 								<div key={`list-basic-${i}`} className="list-group-row">
 									<div className="list-group-cell" dangerouslySetInnerHTML={e[0]} />
 									<div className="list-group-cell" dangerouslySetInnerHTML={e[1]} />
 									<div className="list-group-cell" dangerouslySetInnerHTML={e[2]} />
+									<div className="list-group-cell" dangerouslySetInnerHTML={e[3]} />
 								</div>
 							)) }
 						</div>
@@ -81,22 +136,7 @@ export default function PageList(){
 				</DemoCard>
 
 
-				<DemoCard title={'Striped'}>
-					<div>
-						<div className="list-group-striped">
-							{ data.list2.map((e,i) => (
-								<div key={`list-basic-${i}`} className="list-group-row">
-									<div className="list-group-cell" dangerouslySetInnerHTML={e[0]} />
-									<div className="list-group-cell" dangerouslySetInnerHTML={e[1]} />
-									<div className="list-group-cell" dangerouslySetInnerHTML={e[2]} />
-								</div>
-							)) }
-						</div>
-					</div>
-				</DemoCard>
-
-
-				<DemoCard title={'Hoverable'}>
+				<DemoCard title={'Collapsible'}>
 					<div>
 						<div className="list-group hoverable">
 							{ data.list2.map((e,i) => (
@@ -104,6 +144,11 @@ export default function PageList(){
 									<div className="list-group-cell" dangerouslySetInnerHTML={e[0]} />
 									<div className="list-group-cell" dangerouslySetInnerHTML={e[1]} />
 									<div className="list-group-cell" dangerouslySetInnerHTML={e[2]} />
+									<div className="list-group-cell flex items-center justify-end">
+										<button>
+											<i className="ri-more-2-fill"></i>
+										</button>
+									</div>
 								</div>
 							)) }
 						</div>
