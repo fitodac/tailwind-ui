@@ -134,19 +134,19 @@ export default function PageButtons(){
 				<DemoCard title={'Icon + text'}>
 					<div className="space-x-4">
 						<button className="btn btn-primary space-x-2">
-							<i class="ri-message-2-line"></i>
+							<i className="ri-message-2-line"></i>
 							<span>Before</span>
 						</button>
 
 						<button className="btn btn-secondary space-x-2">
 							<span>After</span>
-							<i class="ri-sound-module-line"></i>
+							<i className="ri-sound-module-line"></i>
 						</button>
 
 						<button className="btn btn-alt space-x-2">
-							<i class="ri-error-warning-line"></i>
+							<i className="ri-error-warning-line"></i>
 							<span>Double</span>
-							<i class="ri-arrow-right-line"></i>
+							<i className="ri-arrow-right-line"></i>
 						</button>
 
 					</div>

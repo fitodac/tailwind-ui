@@ -80,6 +80,10 @@ export default function Sidebar(){
 								</li>
 
 								<li className="">
+									<Link href="/list-group" className="px-4 py-2 flex">List groups</Link>
+								</li>
+
+								<li className="">
 									<Link href="/collapsible" className="px-4 py-2 flex">Collapsible</Link>
 								</li>
 

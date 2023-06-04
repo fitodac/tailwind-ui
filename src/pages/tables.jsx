@@ -199,7 +199,7 @@ export default function PageTables(){
 						</span>
 
 						<div className="w-full overflow-x-auto">
-							<table className="table table-striped table-hoverable">
+							<table className="table table-striped hoverable">
 								<thead>
 									<tr>
 										{ data.table1.head.map((e,i) => (

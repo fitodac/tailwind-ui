@@ -7,14 +7,66 @@
 	@import 'tables';
 	@import 'badge';
 	@import 'spinner';
-}
 
-@keyframes spin {
-	from { transform: rotate(0deg); }
-	to { transform: rotate(360deg); }
+
+	.list-group{
+		@apply grid;
+
+		> .list-group-row{
+			@apply 
+			flex
+			transition-all;
+
+			> .list-group-cell{
+				@apply
+				px-4 
+				py-2
+				flex-1
+				transition-all;
+			}
+
+			&:not(:first-of-type){
+				> .list-group-cell{
+					@apply
+					border-t
+					border-slate-200;
+				}
+			}
+
+		}
+
+
+		&.hoverable{
+			> .list-group-row:hover{
+				@apply bg-primary-50 bg-opacity-70;
+			}
+		}
+	}
+
+
+	.list-group-striped{
+		@extend .list-group;
+
+		> .list-group-row{
+
+			&:nth-child(odd){ @apply bg-slate-50; }
+
+			&:not(:first-of-type){
+				> .list-group-cell{ @apply border-none; }
+			}
+		}
+	}
+
+
 }
 
 
 @layer utilities{
-	.ghost{ @apply bg-opacity-20 border-opacity-5; }
+	@import 'utilities';
+}
+
+
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
 }

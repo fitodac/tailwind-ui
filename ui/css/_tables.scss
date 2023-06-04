@@ -17,7 +17,7 @@ table.table{
 	}
 
 
-	&.table-hoverable{
+	&.hoverable{
 		> tbody tr{
 			> td{ @apply transition-all; }
 

@@ -2,7 +2,7 @@ const theme = require('tailwindcss/defaultTheme')
 
 const minWidth = '180px'
 
-const TABLE_STYLE_BASE = {
+const LIST_GROUP_STYLE_BASE = {
 	HEAD: {
 		'user-select': 'none',
 
@@ -28,26 +28,26 @@ const TABLE_STYLE_BASE = {
 }
 
 
-const TABLE_UTILITIES = {
+const LIST_GROUP_UTILITIES = {
 	'table.table': {
 		'width': '100%',
 
 		'> thead': {
-			...TABLE_STYLE_BASE.HEAD,
+			...LIST_GROUP_STYLE_BASE.HEAD,
 
-			'tr': {...TABLE_STYLE_BASE.HEAD.TR},
-			'tr th': {...TABLE_STYLE_BASE.HEAD.TH}
+			'tr': {...LIST_GROUP_STYLE_BASE.HEAD.TR},
+			'tr th': {...LIST_GROUP_STYLE_BASE.HEAD.TH}
 		},
 
 		'> tbody': {
-			...TABLE_STYLE_BASE.BODY,
+			...LIST_GROUP_STYLE_BASE.BODY,
 
-			'tr': {...TABLE_STYLE_BASE.BODY.TR},
-			'tr td': {...TABLE_STYLE_BASE.BODY.TD},
+			'tr': {...LIST_GROUP_STYLE_BASE.BODY.TR},
+			'tr td': {...LIST_GROUP_STYLE_BASE.BODY.TD},
 		},
 
 		'> tfoot': {
-			...TABLE_STYLE_BASE.FOOTER,
+			...LIST_GROUP_STYLE_BASE.FOOTER,
 		},
 
 
@@ -82,4 +82,4 @@ const TABLE_UTILITIES = {
 }
 
 
-module.exports = { TABLE_UTILITIES }
+module.exports = { LIST_GROUP_UTILITIES }

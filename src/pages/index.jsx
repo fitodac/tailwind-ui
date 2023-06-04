@@ -35,7 +35,7 @@ export default function PageHome(){
 			<div className="max-w-2xl mx-auto">
 				<div className="grid grid-cols-2 gap-8">
 					{ grid.map(e => (
-						<div className="">
+						<div key={`card-${Math.random().toString(16).substring(2)}`}>
 							<Link 
 								href={e.link} 
 								className="bg-white border border-slate-100 h-full block rounded-md select-none transition-all hover:shadow-md">
