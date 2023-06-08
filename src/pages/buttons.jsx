@@ -2,6 +2,15 @@ import Layout from '../layouts/Layout'
 import PageHeader from '../components/PageHeader'
 import DemoCard from '../components/DemoCard'
 
+const primary_hover = 'hover:bg-primary-700 hover:border-primary-700'
+const secondary_hover = 'hover:bg-secondary-700 hover:border-secondary-700'
+const alt_hover = 'hover:bg-alt-700 hover:border-alt-700'
+
+const primary_outline_hover = 'hover:bg-primary hover:border-primary'
+const secondary_outline_hover = 'hover:bg-secondary hover:border-secondary'
+const alt_outline_hover = 'hover:bg-alt hover:border-alt'
+
+
 export default function PageButtons(){
 	return (
 		<Layout>
@@ -11,9 +20,9 @@ export default function PageButtons(){
 				<DemoCard title={'Buttons'}>
 					<div className="space-x-4">
 						<button className="btn">Default</button>
-						<button className="btn btn-primary">Primary</button>
-						<button className="btn btn-secondary">Secondary</button>
-						<button className="btn btn-alt">Alternative</button>
+						<button className={`btn bg-primary border-primary text-white ${primary_hover}`}>Primary</button>
+						<button className={`btn bg-secondary border-secondary text-white ${secondary_hover}`}>Secondary</button>
+						<button className={`btn bg-alt border-alt text-white ${alt_hover}`}>Alternative</button>
 					</div>
 				</DemoCard>
 				
@@ -21,17 +30,17 @@ export default function PageButtons(){
 					<div className="space-x-4">
 						<span className="text-slate-400 text-xs">Small</span>
 						<button className="btn btn-sm">Default</button>
-						<button className="btn btn-primary btn-sm">Primary</button>
-						<button className="btn btn-secondary btn-sm">Secondary</button>
-						<button className="btn btn-alt btn-sm">Alternative</button>
+						<button className={`btn btn-sm bg-primary border-primary text-white ${primary_hover}`}>Primary</button>
+						<button className={`btn btn-sm bg-secondary border-secondary text-white ${secondary_hover}`}>Secondary</button>
+						<button className={`btn btn-sm bg-alt border-alt text-white ${alt_hover}`}>Alternative</button>
 					</div>
 
 					<div className="space-x-4 mt-8">
 						<span className="text-slate-400 text-xs">Large</span>
 						<button className="btn btn-lg">Default</button>
-						<button className="btn btn-primary btn-lg">Primary</button>
-						<button className="btn btn-secondary btn-lg">Secondary</button>
-						<button className="btn btn-alt btn-lg">Alternative</button>
+						<button className={`btn btn-lg bg-primary border-primary text-white ${primary_hover}`}>Primary</button>
+						<button className={`btn btn-lg bg-secondary border-secondary text-white ${secondary_hover}`}>Secondary</button>
+						<button className={`btn btn-lg bg-alt border-alt text-white ${alt_hover}`}>Alternative</button>
 					</div>
 				</DemoCard>
 

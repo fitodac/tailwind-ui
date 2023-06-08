@@ -5,7 +5,7 @@ import DemoCard from '../components/DemoCard'
 
 const data = {
 	table1: {
-		head: ['Package', 'Invoice date', 'Status', 'Action'],
+		head: ['Package', 'Invoice date', 'Status', 'Actions'],
 		body: [
 			[
 				{__html: `<span class="font-semibold">Free package</span>
@@ -13,7 +13,9 @@ const data = {
 									<span>$287</span>`},
 				{__html: 'Jan. 13, 2023'},
 				{__html: '<span>paid</span>'},
-				{__html: '<button class="btn">Edit</button>'}
+				{__html: `<div class="text-end">
+										<button class="btn btn-primary">Edit</button>
+									</div>`}
 			],
 			[
 				{__html: `<span class="font-semibold">Standard package</span>
@@ -21,7 +23,9 @@ const data = {
 									<span>$530</span>`},
 				{__html: 'Mar. 4, 2023'},
 				{__html: '<span>paid</span>'},
-				{__html: '<button class="btn">Edit</button>'}
+				{__html: `<div class="text-end">
+										<button class="btn btn-primary">Edit</button>
+									</div>`}
 			],
 			[
 				{__html: `<span class="font-semibold">Business package</span>
@@ -29,7 +33,9 @@ const data = {
 									<span>$122</span>`},
 				{__html: 'Jun. 22, 2023'},
 				{__html: '<span>unpaid</span>'},
-				{__html: '<button class="btn">Edit</button>'}
+				{__html: `<div class="text-end">
+										<button class="btn btn-primary">Edit</button>
+									</div>`}
 			],
 			[
 				{__html: `<span class="font-semibold">Basic package</span>
@@ -37,41 +43,39 @@ const data = {
 									<span>$890</span>`},
 				{__html: 'Nov. 28, 2023'},
 				{__html: '<span>pending</span>'},
-				{__html: '<button class="btn">Edit</button>'}
+				{__html: `<div class="text-end">
+										<button class="btn btn-primary">Edit</button>
+									</div>`}
 			]
 		]
 	},
 
 	table2: {
-		head: ['Package', 'Invoice date', 'Ammount', 'Status', 'Action'],
+		head: ['Package', 'Invoice date', 'Ammount', 'Status'],
 		body: [
 			[
 				{__html: `<span class="font-semibold">Free package</span>`},
 				{__html: '$287'},
 				{__html: 'Jan. 13, 2023'},
-				{__html: '<span>paid</span>'},
-				{__html: '<i class="ri-more-fill"></i>'}
+				{__html: '<span>paid</span>'}
 			],
 			[
 				{__html: `<span class="font-semibold">Standard package</span>`},
 				{__html: '$530'},
 				{__html: 'Mar. 4, 2023'},
-				{__html: '<span>paid</span>'},
-				{__html: '<i class="ri-more-fill"></i>'}
+				{__html: '<span>paid</span>'}
 			],
 			[
 				{__html: `<span class="font-semibold">Business package</span>`},
 				{__html: '$122'},
 				{__html: 'Jun. 22, 2023'},
-				{__html: '<span>unpaid</span>'},
-				{__html: '<i class="ri-more-fill"></i>'}
+				{__html: '<span>unpaid</span>'}
 			],
 			[
 				{__html: `<span class="font-semibold">Basic package</span>`},
 				{__html: '$890'},
 				{__html: 'Nov. 28, 2023'},
-				{__html: '<span>pending</span>'},
-				{__html: '<i class="ri-more-fill"></i>'}
+				{__html: '<span>pending</span>'}
 			]
 		]
 	}
@@ -95,7 +99,9 @@ export default function PageTables(){
 								<thead>
 									<tr>
 										{ data.table1.head.map((e,i) => (
-											<th key={`t1-thead-${i}`}>{ e }</th>
+											<th key={`t1-thead-${i}`}>
+												<div class={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+											</th>
 										))}
 									</tr>
 								</thead>
@@ -131,7 +137,9 @@ export default function PageTables(){
 								<thead>
 									<tr>
 										{ data.table1.head.map((e,i) => (
-											<th key={`t2-thead-${i}`}>{ e }</th>
+											<th key={`t2-thead-${i}`}>
+												<div class={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+											</th>
 										))}
 									</tr>
 								</thead>
@@ -167,7 +175,9 @@ export default function PageTables(){
 								<thead>
 									<tr>
 										{ data.table1.head.map((e,i) => (
-											<th key={`t3-thead-${i}`}>{ e }</th>
+											<th key={`t3-thead-${i}`}>
+												<div class={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+											</th>
 										))}
 									</tr>
 								</thead>
@@ -203,7 +213,9 @@ export default function PageTables(){
 								<thead>
 									<tr>
 										{ data.table1.head.map((e,i) => (
-											<th key={`t4-thead-${i}`}>{ e }</th>
+											<th key={`t4-thead-${i}`}>
+												<div class={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+											</th>
 										))}
 									</tr>
 								</thead>
