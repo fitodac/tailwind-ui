@@ -1,6 +1,6 @@
 const theme = require('tailwindcss/defaultTheme')
 
-const minWidth = '180px'
+const minWidth = '100px'
 
 const TABLE_STYLE_BASE = {
 	HEAD: {
@@ -10,7 +10,6 @@ const TABLE_STYLE_BASE = {
 		TH: {
 			'font-weight': theme.fontWeight.medium,
 			'text-align': 'left',
-			'min-width': minWidth,
 			'padding': theme.spacing[3],
 			'vertical-align': 'top'
 		}
@@ -19,7 +18,6 @@ const TABLE_STYLE_BASE = {
 		TR: {
 		},
 		TD: {
-			'min-width': minWidth,
 			'padding': theme.spacing[3],
 			'vertical-align': 'top'
 		}
@@ -31,6 +29,7 @@ const TABLE_STYLE_BASE = {
 const TABLE_UTILITIES = {
 	'table.table': {
 		'width': '100%',
+		'border-width': theme.borderWidth.DEFAULT,
 
 		'> thead': {
 			...TABLE_STYLE_BASE.HEAD,
@@ -65,7 +64,7 @@ const TABLE_UTILITIES = {
 				'> tr > th': { 
 					'font-size': theme.fontSize.sm[0],
 					'line-height': theme.fontSize.sm[1].lineHeight,
-					'padding': theme.spacing[1],
+					'padding': `${theme.spacing[1]} ${theme.spacing[3]}`,
 				}
 			},
 
@@ -73,7 +72,7 @@ const TABLE_UTILITIES = {
 				'> tr > td': { 
 					'font-size': theme.fontSize.sm[0],
 					'line-height': theme.fontSize.sm[1].lineHeight,
-					'padding': theme.spacing[1],
+					'padding': `${theme.spacing[1]} ${theme.spacing[3]}`,
 				}
 			}
 		},
