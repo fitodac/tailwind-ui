@@ -12,7 +12,7 @@
 	.list-group{
 		@apply grid;
 
-		> .list-group-row{
+		.list-group-row{
 			@apply 
 			flex
 			transition-all;
@@ -25,6 +25,7 @@
 				flex-1
 				transition-all;
 			}
+			
 
 			&:not(:first-of-type){
 				> .list-group-cell{
@@ -64,7 +65,7 @@
 
 
 		&.hoverable{
-			> .list-group-row:hover{
+			.list-group-row:hover{
 				@apply 
 				bg-primary-50 
 				bg-opacity-70
@@ -99,6 +100,40 @@
 			dark:bg-opacity-70;
 		}
 	}
+
+
+
+
+	.list-group-collapse{
+
+		> .list-group-row > .list-group-cell{
+			@apply
+			border-t
+			border-slate-200
+			dark:border-slate-500;
+		}
+
+		input[type=checkbox]{
+			@apply
+			hidden;
+		}
+
+		.list-group-collapse-content{
+			@apply
+			h-0
+			invisible
+			opacity-0
+			transition-all;
+		}
+		
+		input[type=checkbox]:checked + .list-group-row + .list-group-collapse-content{
+			@apply
+			h-auto
+			visible
+			opacity-100;
+		}
+	}
+
 
 
 }

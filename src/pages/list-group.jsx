@@ -124,12 +124,16 @@ export default function PageList(){
 							</div>
 
 							{ data.list2.map((e,i) => (
-								<div key={`list-basic-${i}`} className="list-group-row">
-									<div className="list-group-cell" dangerouslySetInnerHTML={e[0]} />
-									<div className="list-group-cell" dangerouslySetInnerHTML={e[1]} />
-									<div className="list-group-cell" dangerouslySetInnerHTML={e[2]} />
-									<div className="list-group-cell" dangerouslySetInnerHTML={e[3]} />
-								</div>
+								<>
+									<div key={`list-basic-${i}`} className="list-group-row">
+										<div className="list-group-cell" dangerouslySetInnerHTML={e[0]} />
+										<div className="list-group-cell" dangerouslySetInnerHTML={e[1]} />
+										<div className="list-group-cell" dangerouslySetInnerHTML={e[2]} />
+										<div className="list-group-cell" dangerouslySetInnerHTML={e[3]} />
+									</div>
+
+									{ i === 2 ? (<div className="list-group-head">I'm a list header element</div>) : null }
+								</>
 							)) }
 						</div>
 					</div>
@@ -140,14 +144,31 @@ export default function PageList(){
 					<div>
 						<div className="list-group hoverable">
 							{ data.list2.map((e,i) => (
-								<div key={`list-basic-${i}`} className="list-group-row">
-									<div className="list-group-cell" dangerouslySetInnerHTML={e[0]} />
-									<div className="list-group-cell" dangerouslySetInnerHTML={e[1]} />
-									<div className="list-group-cell" dangerouslySetInnerHTML={e[2]} />
-									<div className="list-group-cell flex items-center justify-end">
-										<button>
-											<i className="ri-more-2-fill"></i>
-										</button>
+								<div className="list-group-collapse">
+									<input type="checkbox" id={`listGroupCollapse${i}`} />
+									<div key={`list-basic-${i}`} className="list-group-row">
+										<div className="list-group-cell" dangerouslySetInnerHTML={e[0]} />
+										<div className="list-group-cell" dangerouslySetInnerHTML={e[1]} />
+										<div className="list-group-cell" dangerouslySetInnerHTML={e[2]} />
+										<div className="list-group-cell flex items-center justify-end">
+											<label htmlFor={`listGroupCollapse${i}`} className="btn btn-icon rounded-full">
+												<i className="ri-more-2-fill"></i>
+											</label>
+										</div>
+									</div>
+
+									<div className="list-group-collapse-content bg-slate-50">
+										<div className="list-group-row">
+											<div className="list-group-cell">
+												<strong>Tillman and Sons</strong>
+											</div>
+										</div>
+										<div className="list-group-row">
+											<div className="list-group-cell">Decentralized interactive process improvement</div>
+											<div className="list-group-cell">Decentralized interactive process improvement</div>
+											<div className="list-group-cell">Decentralized interactive process improvement</div>
+										</div>
+										<div className="h-7"></div>
 									</div>
 								</div>
 							)) }
