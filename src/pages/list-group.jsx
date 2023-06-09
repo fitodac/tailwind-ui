@@ -12,7 +12,8 @@ const data = {
 								<span class="text-sm">Regional Integration Producer</span>`},
 			{__html: `Officer`},
 			{__html: `<span class="badge bg-green-600 text-green-600 rounded-full ghost">Active</span>`},
-			{__html: `(522) 824-4178`}
+			{__html: `(522) 824-4178`},
+			'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/547.jpg'
 		],
 		[
 			{__html: `<span class="font-semibold">Gregory Stamm</span>
@@ -20,7 +21,8 @@ const data = {
 								<span class="text-sm">Product Solutions Developer</span>`},
 			{__html: `Factors`},
 			{__html: `<span class="badge bg-green-600 text-green-600 rounded-full ghost">Active</span>`},
-			{__html: `922-626-2911`}
+			{__html: `922-626-2911`},
+			'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/548.jpg'
 		],
 		[
 			{__html: `<span class="font-semibold">Domingo Goyette</span>
@@ -28,7 +30,8 @@ const data = {
 								<span class="text-sm">Global Metrics Associate</span>`},
 			{__html: `Markets`},
 			{__html: `<span class="badge bg-green-600 text-green-600 rounded-full ghost">Active</span>`},
-			{__html: `681.310.5198`}
+			{__html: `681.310.5198`},
+			'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/549.jpg'
 		],
 		[
 			{__html: `<span class="font-semibold">Barbara Mitchell</span>
@@ -36,7 +39,8 @@ const data = {
 								<span class="text-sm">Regional Identity Director</span>`},
 			{__html: `Markets`},
 			{__html: `<span class="badge bg-red-600 text-red-600 rounded-full ghost">Inactive</span>`},
-			{__html: `(613) 706-8525 x827`}
+			{__html: `(613) 706-8525 x827`},
+			'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/550.jpg'
 		],
 		[
 			{__html: `<span class="font-semibold">Wilma McGlynn</span>
@@ -44,7 +48,8 @@ const data = {
 								<span class="text-sm">Global Quality Representative</span>`},
 			{__html: `Creative`},
 			{__html: `<span class="badge bg-green-600 text-green-600 rounded-full ghost">Active</span>`},
-			{__html: `377-928-9313`}
+			{__html: `377-928-9313`},
+			'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/551.jpg'
 		],
 	]
 }
@@ -147,6 +152,11 @@ export default function PageList(){
 								<div className="list-group-collapse">
 									<input type="checkbox" id={`listGroupCollapse${i}`} />
 									<div key={`list-basic-${i}`} className="list-group-row">
+										<div className="list-group-cell">
+											<div className="avatar avatar-squircle w-12">
+												<img src={e[4]} alt="avatar" />
+											</div>
+										</div>
 										<div className="list-group-cell" dangerouslySetInnerHTML={e[0]} />
 										<div className="list-group-cell" dangerouslySetInnerHTML={e[1]} />
 										<div className="list-group-cell" dangerouslySetInnerHTML={e[2]} />
@@ -160,13 +170,14 @@ export default function PageList(){
 									<div className="list-group-collapse-content bg-slate-50">
 										<div className="list-group-row">
 											<div className="list-group-cell">
-												<strong>Tillman and Sons</strong>
+												<span className="font-bold text-sm">Tillman and Sons</span><br/>
+												<span className="text-sm">Lacey</span>
 											</div>
 										</div>
-										<div className="list-group-row">
-											<div className="list-group-cell">Decentralized interactive process improvement</div>
-											<div className="list-group-cell">Decentralized interactive process improvement</div>
-											<div className="list-group-cell">Decentralized interactive process improvement</div>
+										<div className="list-group-row text-sm">
+											<div className="list-group-cell">218 Thiel Fields, Vermont</div>
+											<div className="list-group-cell">1-519-774-7296</div>
+											<div className="list-group-cell">orchestrate vertical convergence</div>
 										</div>
 										<div className="h-7"></div>
 									</div>
