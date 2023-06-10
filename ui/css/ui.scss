@@ -4,52 +4,10 @@
 	@import 'content';
 	@import 'dropdown';
 	@import 'collapsible';
-	@import 'tables';
+	@import 'table';
+	@import 'list-group';
 	@import 'badge';
 	@import 'spinner';
-
-
-	.list-group{
-
-		.list-group-item{
-			@apply
-			border-slate-200
-			dark:border-slate-500;
-		}
-
-
-		.list-group-head{
-			@apply 
-			bg-slate-100
-			dark:bg-slate-800;
-		}
-
-
-		&.striped{
-			.list-group-item{
-				@apply border-none;
-			}
-
-			.list-group-item:nth-child(even){ 
-				@apply 
-				bg-slate-50
-				dark:bg-slate-600;
-			}
-		}
-
-
-		&.hoverable,
-		&.striped.hoverable{
-			.list-group-item:hover{
-				@apply 
-				bg-primary-50 
-				dark:text-slate-800;
-			}
-		}
-	} // list-group
-
-
-
 
 }
 

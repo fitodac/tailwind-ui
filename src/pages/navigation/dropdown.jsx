@@ -5,7 +5,11 @@ import DemoCard from '../../components/DemoCard'
 export default function PageDropDown(){
 	return (
 		<Layout>
-			<PageHeader title="Dropdown" />
+			<PageHeader 
+				title="Dropdown"
+				breadcrumbs={[
+					{ text: 'Navigation', link: '/navigation' }
+				]} />
 
 			<div className="space-y-7">
 				<DemoCard title={'Dropdown button'}>

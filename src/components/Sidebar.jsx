@@ -99,9 +99,12 @@ export default function Sidebar(){
 							<div className="text-xs font-semibold px-4 pb-1">NAVIGATION</div>
 							<ul className="pl-2">
 								<li className="">
-									<Link href="/navigation/dropdown" className="px-4 py-2 flex">Dropdown</Link>
+									<Link href="/navigation/tabs" className="px-4 py-2 flex">Tabs</Link>
 								</li>
 
+								<li className="">
+									<Link href="/navigation/dropdown" className="px-4 py-2 flex">Dropdown</Link>
+								</li>
 							</ul>
 						</li>
 

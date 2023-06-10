@@ -6,31 +6,20 @@ const LIST_GROUP_STYLE_BASE = {
 	LIST: {
 		'display': 'grid'
 	},
+
 	ITEM: {
 		'line-height': theme.lineHeight.tight,
 		'padding': `${theme.spacing[2]} ${theme.spacing[4]}`,
 		'display': 'flex',
 		'transition': theme.transitionProperty.all
 	},
+
 	HEAD: {
 		'font-size': theme.fontSize.sm,
 		'font-weight': theme.fontWeight.semibold,
 		'padding': `${theme.spacing[1]} ${theme.spacing[4]}`,
 		'user-select': 'none'
-	},
-	STRIPED: {},
-	HOVER: {},
-
-	
-	BODY: {
-		TR: {
-		},
-		TD: {
-			'min-width': minWidth,
-			'padding': theme.spacing[3],
-			'vertical-align': 'top'
-		}
-	},
+	}
 }
 
 
@@ -56,8 +45,8 @@ const LIST_GROUP_UTILITIES = {
 
 		// Striped
 		'&.striped': {
-			'.list-group-item': {}
-		}
+			'.list-group-item': { 'border': 'none' }
+		},
 	}
 }
 
