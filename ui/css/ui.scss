@@ -14,33 +14,15 @@
 		.list-group-item{
 			@apply
 			border-slate-200
-			leading-tight
-			px-4 
-			py-2
-			flex-1
-			relative
-			transition-all
 			dark:border-slate-500;
-		}
-
-		.list-group-item:not(:first-child){
-			@apply
-			border-t;
 		}
 
 
 		.list-group-head{
 			@apply 
 			bg-slate-100
-			text-sm
-			font-semibold
-			px-4
-			py-1
-			select-none
 			dark:bg-slate-800;
 		}
-
-		.list-group-head + .list-group-item{ @apply border-none; }
 
 
 		&.striped{
@@ -56,11 +38,12 @@
 		}
 
 
-		&.hoverable{
-			.list-group-row:hover{
+		&.hoverable,
+		&.striped.hoverable{
+			.list-group-item:hover{
 				@apply 
-				bg-slate-50 
-				dark:bg-slate-800;
+				bg-primary-50 
+				dark:text-slate-800;
 			}
 		}
 	} // list-group

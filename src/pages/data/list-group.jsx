@@ -163,7 +163,7 @@ export default function PageList(){
 						</div>
 
 						<div>
-							<div className="list-group-striped hoverable">
+							<div className="list-group striped hoverable">
 								{ data.list1.map((e,i) => (
 									<Link 
 										key={`list-basic-${i}`} 
@@ -215,7 +215,7 @@ export default function PageList(){
 									<div key={`list-basic-${i}`} className="list-group-row">
 										<div className="list-group-cell">
 											<div className="avatar avatar-squircle w-12">
-												<img src={e[4]} alt="avatar" />
+												<Image src={e[4]} alt='avatar' width={48} height={48} />
 											</div>
 										</div>
 										<div className="list-group-cell" dangerouslySetInnerHTML={e[0]} />

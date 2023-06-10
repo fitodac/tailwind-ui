@@ -3,18 +3,25 @@ const theme = require('tailwindcss/defaultTheme')
 const minWidth = '180px'
 
 const LIST_GROUP_STYLE_BASE = {
-	HEAD: {
-		'user-select': 'none',
-
-		TR: {},
-		TH: {
-			'font-weight': theme.fontWeight.medium,
-			'text-align': 'left',
-			'min-width': minWidth,
-			'padding': theme.spacing[3],
-			'vertical-align': 'top'
-		}
+	LIST: {
+		'display': 'grid'
 	},
+	ITEM: {
+		'line-height': theme.lineHeight.tight,
+		'padding': `${theme.spacing[2]} ${theme.spacing[4]}`,
+		'display': 'flex',
+		'transition': theme.transitionProperty.all
+	},
+	HEAD: {
+		'font-size': theme.fontSize.sm,
+		'font-weight': theme.fontWeight.semibold,
+		'padding': `${theme.spacing[1]} ${theme.spacing[4]}`,
+		'user-select': 'none'
+	},
+	STRIPED: {},
+	HOVER: {},
+
+	
 	BODY: {
 		TR: {
 		},
@@ -24,60 +31,33 @@ const LIST_GROUP_STYLE_BASE = {
 			'vertical-align': 'top'
 		}
 	},
-	FOOTER: {},
 }
 
 
 const LIST_GROUP_UTILITIES = {
-	'table.table': {
-		'width': '100%',
+	'.list-group': {
+		...LIST_GROUP_STYLE_BASE.LIST,
 
-		'> thead': {
+		// Item
+		'.list-group-item': {
+			...LIST_GROUP_STYLE_BASE.ITEM,
+		},
+
+		'.list-group-item:not(:first-child)': {
+			'border-top-width': theme.borderWidth.DEFAULT
+		},
+
+
+		// Head
+		'.list-group-head': {
 			...LIST_GROUP_STYLE_BASE.HEAD,
-
-			'tr': {...LIST_GROUP_STYLE_BASE.HEAD.TR},
-			'tr th': {...LIST_GROUP_STYLE_BASE.HEAD.TH}
 		},
+		'.list-group-head + .list-group-item': { 'border': 'none' },
 
-		'> tbody': {
-			...LIST_GROUP_STYLE_BASE.BODY,
-
-			'tr': {...LIST_GROUP_STYLE_BASE.BODY.TR},
-			'tr td': {...LIST_GROUP_STYLE_BASE.BODY.TD},
-		},
-
-		'> tfoot': {
-			...LIST_GROUP_STYLE_BASE.FOOTER,
-		},
-
-
-		// Table bordered
-		'&.table-bordered': {
-			'> tbody': {
-				'> tr > td': { 'border-top-width': '1px' }
-			}
-		},
-
-
-		// Table compact
-		'&.table-compact': {
-			'> thead': {
-				'> tr > th': { 
-					'font-size': theme.fontSize.sm[0],
-					'line-height': theme.fontSize.sm[1].lineHeight,
-					'padding': theme.spacing[1],
-				}
-			},
-
-			'> tbody': {
-				'> tr > td': { 
-					'font-size': theme.fontSize.sm[0],
-					'line-height': theme.fontSize.sm[1].lineHeight,
-					'padding': theme.spacing[1],
-				}
-			}
-		},
-
+		// Striped
+		'&.striped': {
+			'.list-group-item': {}
+		}
 	}
 }
 

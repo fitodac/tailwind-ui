@@ -9,6 +9,7 @@ const { FORM_CHECKBOX_UTILITIES } = require('./_form-checkbox')
 const { FORM_RADIO_BUTTON_UTILITIES } = require('./_form-radiobutton')
 const { CONTENT_UTILITIES } = require('./_content')
 const { TABLE_UTILITIES } = require('./_table')
+const { LIST_GROUP_UTILITIES } = require('./_list-group')
 const { BADGE_UTILITIES } = require('./_badge')
 const { SPINNER_UTILITIES } = require('./_spinner')
 const { AVATAR_UTILITIES } = require('./_avatar')
@@ -45,6 +46,7 @@ module.exports = plugin.withOptions((options = {}) => tailwind => {
 		tailwind.addUtilities(FORM_RADIO_BUTTON_UTILITIES);
 		tailwind.addUtilities(CONTENT_UTILITIES);
 		tailwind.addUtilities(TABLE_UTILITIES);
+		tailwind.addUtilities(LIST_GROUP_UTILITIES);
 		tailwind.addComponents(BADGE_UTILITIES);
 		tailwind.addComponents(AVATAR_UTILITIES);
 		tailwind.addComponents(SPINNER_UTILITIES);
