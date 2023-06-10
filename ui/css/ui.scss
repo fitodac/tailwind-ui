@@ -10,12 +10,16 @@
 
 
 	.list-group{
-		@apply grid;
 
 		.list-group-row{
 			@apply 
 			flex
 			transition-all;
+
+			&.hidden{ 
+				display: none; 
+				@apply md:flex;
+			}
 
 			> .list-group-cell{
 				@apply
@@ -23,7 +27,23 @@
 				px-4 
 				py-2
 				flex-1
+				relative
 				transition-all;
+
+				&[data-title]{
+					@apply 
+					pl-28
+					md:pl-4;
+				}
+
+				&::before{
+					@apply
+					content-[attr(data-title)]
+					left-4
+					absolute
+					md:content-['']
+					md:invisible;
+				}
 			}
 			
 
@@ -34,11 +54,6 @@
 					border-slate-200
 					dark:border-slate-500;
 				}
-			}
-
-
-			.list-group-head{
-
 			}
 
 
@@ -67,10 +82,8 @@
 		&.hoverable{
 			.list-group-row:hover{
 				@apply 
-				bg-primary-50 
-				bg-opacity-70
-				dark:bg-slate-800
-				dark:bg-opacity-70;
+				bg-slate-50 
+				dark:bg-slate-800;
 			}
 		}
 	}
