@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
 
 export default function Header(){
 
@@ -8,11 +9,22 @@ export default function Header(){
 		if( !mode.length ){
 			setMode('dark')
 			document.body.classList.add('dark')
+			localStorage.setItem('tailwind-ui-mode', 'dark')
 		}else{
 			setMode('')
 			document.body.classList.remove('dark')
+			localStorage.removeItem('tailwind-ui-mode')
 		}
 	}
+
+	useEffect(() => {
+		const color_mode = localStorage.getItem('tailwind-ui-mode')
+
+		if( color_mode ){
+			toggleDarkMode(color_mode)
+			// document.body.classList.add('dark')
+		}
+	}, [])
 
 
 	return (

@@ -68,27 +68,27 @@ export default function Sidebar(){
 							<div className="text-xs font-semibold px-4 pb-1">DATA</div>
 							<ul className="pl-2">
 								<li className="">
-									<Link href="/avatar" className="px-4 py-2 flex">Avatar</Link>
+									<Link href="/data/avatar" className="px-4 py-2 flex">Avatar</Link>
 								</li>
 
 								<li className="">
-									<Link href="/spinner" className="px-4 py-2 flex">Spinner</Link>
+									<Link href="/data/spinner" className="px-4 py-2 flex">Spinner</Link>
 								</li>
 
 								<li className="">
-									<Link href="/tables" className="px-4 py-2 flex">Tables</Link>
+									<Link href="/data/tables" className="px-4 py-2 flex">Tables</Link>
 								</li>
 
 								<li className="">
-									<Link href="/list-group" className="px-4 py-2 flex">List groups</Link>
+									<Link href="/data/list-group" className="px-4 py-2 flex">List groups</Link>
 								</li>
 
 								<li className="">
-									<Link href="/collapsible" className="px-4 py-2 flex">Collapsible</Link>
+									<Link href="/data/collapsible" className="px-4 py-2 flex">Collapsible</Link>
 								</li>
 
 								<li className="">
-									<Link href="/badges" className="px-4 py-2 flex">Badges</Link>
+									<Link href="/data/badges" className="px-4 py-2 flex">Badges</Link>
 								</li>
 
 							</ul>
@@ -99,7 +99,7 @@ export default function Sidebar(){
 							<div className="text-xs font-semibold px-4 pb-1">NAVIGATION</div>
 							<ul className="pl-2">
 								<li className="">
-									<Link href="/dropdown" className="px-4 py-2 flex">Dropdown</Link>
+									<Link href="/navigation/dropdown" className="px-4 py-2 flex">Dropdown</Link>
 								</li>
 
 							</ul>
@@ -111,11 +111,11 @@ export default function Sidebar(){
 							<ul className="pl-2">
 								
 								<li className="">
-									<Link href="/scroll-bar" className="px-4 py-2 flex">Scroll bar</Link>
+									<Link href="/other/scroll-bar" className="px-4 py-2 flex">Scroll bar</Link>
 								</li>
 
 								<li className="">
-									<Link href="/extra" className="px-4 py-2 flex">Extra</Link>
+									<Link href="/other/extra" className="px-4 py-2 flex">Extra</Link>
 								</li>
 
 							</ul>
