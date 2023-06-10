@@ -11,63 +11,25 @@
 
 	.list-group{
 
-		.list-group-row{
-			@apply 
-			flex
-			transition-all;
+		.list-group-item{
+			@apply
+			border-slate-200
+			leading-tight
+			px-4 
+			py-2
+			flex-1
+			relative
+			transition-all
+			dark:border-slate-500;
+		}
 
-			&.hidden{ 
-				display: none; 
-				@apply md:flex;
-			}
-
-			> .list-group-cell{
-				@apply
-				leading-tight
-				px-4 
-				py-2
-				flex-1
-				relative
-				transition-all;
-
-				&[data-title]{
-					@apply 
-					pl-28
-					md:pl-4;
-				}
-
-				&::before{
-					@apply
-					content-[attr(data-title)]
-					left-4
-					absolute
-					md:content-['']
-					md:invisible;
-				}
-			}
-			
-
-			&:not(:first-of-type){
-				> .list-group-cell{
-					@apply
-					border-t
-					border-slate-200
-					dark:border-slate-500;
-				}
-			}
-
-
-			& + .list-group-head{
-				@apply
-				border-t
-				border-slate-200
-				dark:border-slate-500;
-			}
-
+		.list-group-item:not(:first-child){
+			@apply
+			border-t;
 		}
 
 
-		> .list-group-head{
+		.list-group-head{
 			@apply 
 			bg-slate-100
 			text-sm
@@ -75,7 +37,22 @@
 			px-4
 			py-1
 			select-none
-			dark:bg-slate-600;
+			dark:bg-slate-800;
+		}
+
+		.list-group-head + .list-group-item{ @apply border-none; }
+
+
+		&.striped{
+			.list-group-item{
+				@apply border-none;
+			}
+
+			.list-group-item:nth-child(even){ 
+				@apply 
+				bg-slate-50
+				dark:bg-slate-600;
+			}
 		}
 
 
@@ -86,66 +63,8 @@
 				dark:bg-slate-800;
 			}
 		}
-	}
+	} // list-group
 
-
-	.list-group-striped{
-		@extend .list-group;
-
-		> .list-group-row{
-
-			&:nth-child(odd){ 
-				@apply 
-				bg-slate-50
-				dark:bg-slate-600;
-			}
-
-			&:not(:first-of-type){
-				> .list-group-cell{ @apply border-none; }
-			}
-		}
-
-		&.hoverable > .list-group-row:hover{
-			@apply 
-			bg-primary-50 
-			bg-opacity-70 
-			dark:bg-slate-800
-			dark:bg-opacity-70;
-		}
-	}
-
-
-
-
-	.list-group-collapse{
-
-		> .list-group-row > .list-group-cell{
-			@apply
-			border-t
-			border-slate-200
-			dark:border-slate-500;
-		}
-
-		input[type=checkbox]{
-			@apply
-			hidden;
-		}
-
-		.list-group-collapse-content{
-			@apply
-			h-0
-			invisible
-			opacity-0
-			transition-all;
-		}
-		
-		input[type=checkbox]:checked + .list-group-row + .list-group-collapse-content{
-			@apply
-			h-auto
-			visible
-			opacity-100;
-		}
-	}
 
 
 

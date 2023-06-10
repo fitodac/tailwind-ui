@@ -75,9 +75,7 @@ export default function PageList(){
 						<div>
 							<div className="list-group">
 								{ data.list1.map((e,i) => (
-									<div key={`list-basic-${i}`} className="list-group-row">
-										<div className="list-group-cell">{e}</div>
-									</div>
+									<div key={`list-basic-${i}`} className="list-group-item">{e}</div>
 								)) }
 							</div>
 						</div>
@@ -88,11 +86,9 @@ export default function PageList(){
 				<DemoCard title={'Striped'}>
 					<div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
 						<div>
-							<div className="list-group-striped">
+							<div className="list-group striped">
 								{ data.list1.map((e,i) => (
-									<div key={`list-basic-${i}`} className="list-group-row">
-										<div className="list-group-cell">{e}</div>
-									</div>
+									<div key={`list-basic-${i}`} className="list-group-item">{e}</div>
 								)) }
 							</div>
 						</div>
@@ -105,19 +101,15 @@ export default function PageList(){
 						<div>
 							<div className="list-group hoverable">
 								{ data.list1.map((e,i) => (
-									<div key={`list-basic-${i}`} className="list-group-row">
-										<div className="list-group-cell">{e}</div>
-									</div>
+									<div key={`list-basic-${i}`} className="list-group-item">{e}</div>
 								)) }
 							</div>
 						</div>
 
 						<div>
-							<div className="list-group-striped hoverable">
+							<div className="list-group striped hoverable">
 								{ data.list1.map((e,i) => (
-									<div key={`list-basic-${i}`} className="list-group-row">
-										<div className="list-group-cell">{e}</div>
-									</div>
+									<div key={`list-basic-${i}`} className="list-group-item">{e}</div>
 								)) }
 							</div>
 						</div>
@@ -133,23 +125,19 @@ export default function PageList(){
 									<>
 										{ i === 0 ? <div className="list-group-head">Primary list</div> : null }
 										{ i === 2 ? <div className="list-group-head">Secondary list</div> : null }
-										<div key={`list-basic-${i}`} className="list-group-row">
-											<div className="list-group-cell">{e}</div>
-										</div>
+										<div key={`list-basic-${i}`} className="list-group-item">{e}</div>
 									</>
 								)) }
 							</div>
 						</div>
 
 						<div>
-							<div className="list-group-striped hoverable">
+							<div className="list-group striped hoverable">
 								{ data.list1.map((e,i) => (
 									<>
 										{ i === 0 ? <div className="list-group-head">Primary list</div> : null }
 										{ i === 2 ? <div className="list-group-head">Secondary list</div> : null }
-										<div key={`list-basic-${i}`} className="list-group-row">
-											<div className="list-group-cell">{e}</div>
-										</div>
+										<div key={`list-basic-${i}`} className="list-group-item">{e}</div>
 									</>
 								)) }
 							</div>
@@ -163,9 +151,13 @@ export default function PageList(){
 						<div>
 							<div className="list-group hoverable">
 								{ data.list1.map((e,i) => (
-									<div key={`list-basic-${i}`} className="list-group-row">
-										<Link href={data.links[i]} target="_blank" className="list-group-cell">{e}</Link>
-									</div>
+									<Link 
+										key={`list-basic-${i}`} 
+										href={data.links[i]} 
+										target="_blank" 
+										className="list-group-item">
+										{e}
+									</Link>
 								)) }
 							</div>
 						</div>
@@ -173,9 +165,13 @@ export default function PageList(){
 						<div>
 							<div className="list-group-striped hoverable">
 								{ data.list1.map((e,i) => (
-									<div key={`list-basic-${i}`} className="list-group-row">
-										<Link href={data.links[i]} target="_blank" className="list-group-cell">{e}</Link>
-									</div>
+									<Link 
+										key={`list-basic-${i}`} 
+										href={data.links[i]} 
+										target="_blank" 
+										className="list-group-item">
+										{e}
+									</Link>
 								)) }
 							</div>
 						</div>
