@@ -1,6 +1,6 @@
-import Layout from '../layouts/Layout'
-import PageHeader from '../components/PageHeader'
-import DemoCard from '../components/DemoCard'
+import Layout from '../../layouts/Layout'
+import PageHeader from '../../components/PageHeader'
+import DemoCard from '../../components/DemoCard'
 
 
 const data = {
