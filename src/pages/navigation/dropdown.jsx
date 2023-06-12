@@ -21,7 +21,7 @@ export default function PageDropDown(){
 									<input type="checkbox" className="dropdown-toggler" />
 									<span className="btn btn-primary space-x-2">
 										<span>More</span>
-										<i class="ri-arrow-down-s-line"></i>
+										<i className="ri-arrow-down-s-line"></i>
 									</span>
 
 
@@ -62,7 +62,7 @@ export default function PageDropDown(){
 									<input type="checkbox" className="dropdown-toggler" />
 
 									<span className="btn btn-icon rounded-full">
-										<i class="ri-more-2-fill"></i>
+										<i className="ri-more-2-fill"></i>
 									</span>
 
 									<div className="dropdown-nav w-32 right-0">
@@ -111,7 +111,7 @@ export default function PageDropDown(){
 										<input type="checkbox" className="dropdown-toggler" />
 										<span className="btn btn-primary space-x-2">
 											<span>Article</span>
-											<i class="ri-arrow-down-s-line"></i>
+											<i className="ri-arrow-down-s-line"></i>
 										</span>
 
 
@@ -157,7 +157,7 @@ export default function PageDropDown(){
 										<input type="checkbox" className="dropdown-toggler" name="dd-1" />
 										<span className="btn btn-primary space-x-2">
 											<span>Article</span>
-											<i class="ri-arrow-down-s-line"></i>
+											<i className="ri-arrow-down-s-line"></i>
 										</span>
 
 
@@ -196,7 +196,7 @@ export default function PageDropDown(){
 										<input type="checkbox" className="dropdown-toggler" name="dd-1" />
 										<span className="btn btn-primary space-x-2">
 											<span>Options</span>
-											<i class="ri-arrow-down-s-line"></i>
+											<i className="ri-arrow-down-s-line"></i>
 										</span>
 
 

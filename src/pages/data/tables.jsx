@@ -100,7 +100,7 @@ export default function PageTables(){
 									<tr>
 										{ data.table1.head.map((e,i) => (
 											<th key={`t1-thead-${i}`}>
-												<div class={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+												<div className={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
 											</th>
 										))}
 									</tr>
@@ -138,7 +138,7 @@ export default function PageTables(){
 									<tr>
 										{ data.table1.head.map((e,i) => (
 											<th key={`t2-thead-${i}`}>
-												<div class={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+												<div className={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
 											</th>
 										))}
 									</tr>
@@ -176,7 +176,7 @@ export default function PageTables(){
 									<tr>
 										{ data.table1.head.map((e,i) => (
 											<th key={`t3-thead-${i}`}>
-												<div class={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+												<div className={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
 											</th>
 										))}
 									</tr>
@@ -214,7 +214,7 @@ export default function PageTables(){
 									<tr>
 										{ data.table1.head.map((e,i) => (
 											<th key={`t4-thead-${i}`}>
-												<div class={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+												<div className={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
 											</th>
 										))}
 									</tr>

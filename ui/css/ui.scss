@@ -21,3 +21,55 @@
 	from { transform: rotate(0deg); }
 	to { transform: rotate(360deg); }
 }
+
+.tabs{
+	@apply
+	flex
+	flex-wrap;
+
+	> input[type=radio]{
+		@apply 
+		absolute
+		hidden;
+	}
+
+	.tab-item{
+		@apply
+		border-b
+		border-slate-200
+		font-normal
+		p-4
+		inline-flex
+		top-px
+		relative
+		cursor-pointer
+		dark:border-slate-500;
+	}
+
+	> input[type=radio]:checked + .tab-item{
+		@apply
+		text-primary
+		border-primary;
+	}
+
+	.tab-content{
+		@apply
+		w-full
+		p-4
+		block
+		order-last;
+	}
+
+	> input[type=radio] ~ .tab-content{
+		@apply hidden;
+	}
+
+	> input[type=radio]:checked + .tab-item + .tab-content{
+		@apply
+		border-t
+		border-slate-200
+		block
+		dark:border-slate-500;
+	}
+
+}
