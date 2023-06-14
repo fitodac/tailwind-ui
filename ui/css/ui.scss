@@ -8,6 +8,7 @@
 	@import 'list-group';
 	@import 'badge';
 	@import 'spinner';
+	@import 'tabs';
 
 }
 
@@ -20,109 +21,4 @@
 @keyframes spin {
 	from { transform: rotate(0deg); }
 	to { transform: rotate(360deg); }
-}
-
-.tabs{
-
-	.tabs-nav{
-		@apply
-		whitespace-nowrap
-		relative
-		block
-		overflow-x-auto
-		z-10
-		md:flex;
-
-		&::-webkit-scrollbar{ display: none; }
-		-ms-overflow-style: none;  /* IE and Edge */
-		scrollbar-width: none;
-
-		.tab-item{
-			@apply
-			border-b
-			border-slate-200
-			font-normal
-			p-4
-			inline-flex
-			relative
-			cursor-pointer
-			select-none
-			dark:border-slate-500;
-		}
-	}
-
-
-	> input[type=radio]{
-		@apply 
-		absolute
-		hidden;
-	}
-
-	> input[type=radio]:checked:nth-child(1) ~ .tabs-nav .tab-item:nth-child(1),
-	> input[type=radio]:checked:nth-child(2) ~ .tabs-nav .tab-item:nth-child(2),
-	> input[type=radio]:checked:nth-child(3) ~ .tabs-nav .tab-item:nth-child(3),
-	> input[type=radio]:checked:nth-child(4) ~ .tabs-nav .tab-item:nth-child(4),
-	> input[type=radio]:checked:nth-child(5) ~ .tabs-nav .tab-item:nth-child(5),
-	> input[type=radio]:checked:nth-child(6) ~ .tabs-nav .tab-item:nth-child(6){
-		@apply 
-		border-primary
-		text-primary;
-	}
-
-
-	.tabs-content{
-		@apply 
-		border-t
-		border-slate-200
-		-top-px
-		relative
-		dark:border-slate-500;
-	}
-
-	.tab-body{
-		@apply
-		p-4
-		hidden;
-	}
-
-	> input[type=radio]:checked:nth-child(1) ~ .tabs-content .tab-body:nth-child(1),
-	> input[type=radio]:checked:nth-child(2) ~ .tabs-content .tab-body:nth-child(2),
-	> input[type=radio]:checked:nth-child(3) ~ .tabs-content .tab-body:nth-child(3),
-	> input[type=radio]:checked:nth-child(4) ~ .tabs-content .tab-body:nth-child(4),
-	> input[type=radio]:checked:nth-child(5) ~ .tabs-content .tab-body:nth-child(5),
-	> input[type=radio]:checked:nth-child(6) ~ .tabs-content .tab-body:nth-child(6){
-		@apply 
-		block;
-	}
-
-	
-	&.tabs-vertical{
-		@apply
-		grid
-		grid-cols-4;
-
-		.tabs-nav{
-			@apply
-			md:block;
-
-			.tab-item{
-				@apply
-				border-b-0
-				border-r
-				py-3
-				flex;
-			}
-		}
-
-		.tabs-content{
-			@apply
-			border-t-0
-			border-l
-			px-6
-			top-0
-			-left-px
-			col-span-3;
-		}
-	}
-
 }

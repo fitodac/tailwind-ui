@@ -13,6 +13,7 @@ const { LIST_GROUP_UTILITIES } = require('./_list-group')
 const { BADGE_UTILITIES } = require('./_badge')
 const { SPINNER_UTILITIES } = require('./_spinner')
 const { AVATAR_UTILITIES } = require('./_avatar')
+const { TABS_UTILITIES } = require('./_tabs')
 
 
 const {
@@ -50,6 +51,7 @@ module.exports = plugin.withOptions((options = {}) => tailwind => {
 		tailwind.addComponents(BADGE_UTILITIES);
 		tailwind.addComponents(AVATAR_UTILITIES);
 		tailwind.addComponents(SPINNER_UTILITIES);
+		tailwind.addComponents(TABS_UTILITIES);
 
 		tailwind.addBase(BASE_STYLES);
 		tailwind.addUtilities(SCROLLBAR_SIZE_UTILITIES);

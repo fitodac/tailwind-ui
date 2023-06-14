@@ -1,5 +1,4 @@
 const theme = require('tailwindcss/defaultTheme')
-const GLOBALS = require('./_utils')
 
 
 const SPINNER_STYLE_BASE = {
@@ -42,7 +41,5 @@ const SPINNER_UTILITIES = {
 	}
 }
 
-
-// `@keyframes spin { from{ transform: rotate(0); } to{ ${theme.keyframes.spin.to} } }`: null
 
 module.exports = { SPINNER_UTILITIES }
