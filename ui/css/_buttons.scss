@@ -1,8 +1,15 @@
 .btn{
 	@apply 
+	bg-slate-200
 	border-slate-200 
 	text-slate-500 
-	hover:bg-slate-200;
+	hover:bg-slate-300
+	hover:border-slate-300
+	hover:text-slate-600
+	dark:bg-slate-800
+	dark:border-slate-800
+	dark:text-slate-200
+	dark:hover:text-slate-200;
 }
 
 .btn-toggler input:checked + .btn{ @apply bg-slate-200; }
@@ -10,12 +17,12 @@
 
 /** Button primary */
 .btn-primary{
-	@apply 
-	bg-primary 
-	border-primary 
-	text-white 
-	hover:bg-primary-700 
-	hover:border-primary-700;
+	// @apply 
+	// bg-primary 
+	// border-primary 
+	// text-white 
+	// hover:bg-primary-700 
+	// hover:border-primary-700;
 	
 	&.btn-outline{
 		@apply 
@@ -46,12 +53,12 @@
 
 /** Button secondary */
 .btn-secondary{
-	@apply 
-	bg-secondary 
-	border-secondary 
-	text-white 
-	hover:bg-secondary-700 
-	hover:border-secondary-700;
+	// @apply 
+	// bg-secondary 
+	// border-secondary 
+	// text-white 
+	// hover:bg-secondary-700 
+	// hover:border-secondary-700;
 
 	&.btn-outline{
 		@apply 
@@ -82,12 +89,12 @@
 
 /** Button alternative */
 .btn-alt{
-	@apply 
-	bg-alt 
-	border-alt 
-	text-white 
-	hover:bg-alt-700 
-	hover:border-alt-700;
+	// @apply 
+	// bg-alt 
+	// border-alt 
+	// text-white 
+	// hover:bg-alt-700 
+	// hover:border-alt-700;
 	
 	&.btn-outline{
 		@apply 

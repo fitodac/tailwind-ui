@@ -37,8 +37,11 @@ body{
 
 *{
 	@apply 
-	border-slate-200
-	dark:border-[var(--tw-ui-dark-border-color)];
+	border-slate-200;
+}
+
+*:not(.btn){
+	@apply dark:border-[var(--tw-ui-dark-border-color)];
 }
 
 /** Content */
