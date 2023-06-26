@@ -14,6 +14,9 @@ const { BADGE_UTILITIES } = require('./_badge')
 const { SPINNER_UTILITIES } = require('./_spinner')
 const { AVATAR_UTILITIES } = require('./_avatar')
 const { TABS_UTILITIES } = require('./_tabs')
+const { MODAL_UTILITIES } = require('./_modal')
+const { OVERLAY_UTILITIES } = require('./_overlay')
+const { TOAST_UTILITIES } = require('./_toast')
 
 
 const {
@@ -52,6 +55,9 @@ module.exports = plugin.withOptions((options = {}) => tailwind => {
 		tailwind.addComponents(AVATAR_UTILITIES);
 		tailwind.addComponents(SPINNER_UTILITIES);
 		tailwind.addComponents(TABS_UTILITIES);
+		tailwind.addComponents(MODAL_UTILITIES);
+		tailwind.addComponents(OVERLAY_UTILITIES);
+		tailwind.addComponents(TOAST_UTILITIES);
 
 		tailwind.addBase(BASE_STYLES);
 		tailwind.addUtilities(SCROLLBAR_SIZE_UTILITIES);

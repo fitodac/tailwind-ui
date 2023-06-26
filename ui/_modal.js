@@ -20,7 +20,7 @@ const MODAL_STYLE_BASE = {
 const MODAL_UTILITIES = {
 	'.modal': { ...MODAL_STYLE_BASE.BASIC },
 
-	'input[type=checkbox]:checked + .overlay > .modal': {
+	'input[type=checkbox]:checked + .overlay > .modal, input[type=radio]:checked + .overlay > .modal': {
 		...MODAL_STYLE_BASE.ACTIVE
 	}
 }
