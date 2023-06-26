@@ -72,10 +72,6 @@ export default function Sidebar(){
 								</li>
 
 								<li className="">
-									<Link href="/data/spinner" className="px-4 py-2 flex">Spinner</Link>
-								</li>
-
-								<li className="">
 									<Link href="/data/tables" className="px-4 py-2 flex">Tables</Link>
 								</li>
 
@@ -104,6 +100,20 @@ export default function Sidebar(){
 
 								<li className="">
 									<Link href="/navigation/dropdown" className="px-4 py-2 flex">Dropdown</Link>
+								</li>
+							</ul>
+						</li>
+						
+						
+						<li className="pt-3 pb-1">
+							<div className="text-xs font-semibold px-4 pb-1">FEEDBACK</div>
+							<ul className="pl-2">
+								<li className="">
+									<Link href="/feedback/spinner" className="px-4 py-2 flex">Spinner</Link>
+								</li>
+
+								<li className="">
+									<Link href="/feedback/modal" className="px-4 py-2 flex">Modal</Link>
 								</li>
 							</ul>
 						</li>
