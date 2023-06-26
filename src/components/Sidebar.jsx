@@ -115,6 +115,10 @@ export default function Sidebar(){
 								<li className="">
 									<Link href="/feedback/modal" className="px-4 py-2 flex">Modal</Link>
 								</li>
+
+								<li className="">
+									<Link href="/feedback/toast" className="px-4 py-2 flex">Toast</Link>
+								</li>
 							</ul>
 						</li>
 
