@@ -1,7 +1,5 @@
 const theme = require('tailwindcss/defaultTheme')
 
-const minWidth = '100px'
-
 const TABLE_STYLE_BASE = {
 	HEAD: {
 		'user-select': 'none',
