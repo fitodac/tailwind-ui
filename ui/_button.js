@@ -12,6 +12,7 @@ const BUTTON_STYLE_BASE = {
 		'max-height': theme.spacing[10],
 		'padding': `${GLOBALS.spacing.y} ${GLOBALS.spacing.x}`,
 		'display': 'inline-flex',
+		'justify-content': 'center',
 		'align-items': 'center',
 		'transition': theme.transitionProperty.all,
 		'transition-duration': theme.transitionDuration[300],
@@ -41,6 +42,11 @@ const BUTTON_STYLE_BASE = {
 	},
 	BTN_GROUP_CHILDREN_FIRST: { 'border-radius': `${theme.borderRadius.md} 0 0 ${theme.borderRadius.md}` },
 	BTN_GROUP_CHILDREN_LAST: { 'border-radius': `0 ${theme.borderRadius.md} ${theme.borderRadius.md} 0` },
+
+	LINK: {
+		'border': 'none',
+		'padding': 0
+	}
 }
 
 
@@ -58,6 +64,8 @@ const BUTTON_UTILITIES = {
 		},
 		'&.btn-icon': {...BUTTON_STYLE_BASE.ICON},
 		'&.rounded-full': {'border-radius': theme.borderRadius.full},
+
+		'&.btn-link': {...BUTTON_STYLE_BASE.LINK},
 
 		'> [class^=ri-]': { 'font-size': '1.2rem' }
 	},

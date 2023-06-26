@@ -120,3 +120,10 @@
 	bg-alt-700 
 	border-alt-700;
 }
+
+.btn.btn-link{
+	@apply
+	bg-transparent
+	border-transparent
+	rounded-none;
+}
