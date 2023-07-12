@@ -44,8 +44,8 @@ export default function Header(){
 							checked={!mode.length}
 							className="absolute hidden" />
 						<span className="w-7 h-7 grid place-content-center">
-							<i className="ri-sun-fill text-lg text-yellow-500 dark:hidden"></i>
-							<i className="ri-moon-fill text-lg text-slate-400 hidden dark:block"></i>
+							<i className="ri-sun-fill text-lg text-yellow-500 top-0.5 relative dark:hidden"></i>
+							<i className="ri-moon-fill text-lg text-slate-400 top-0.5 relative hidden dark:block"></i>
 						</span>
 					</label>
 				</div>
