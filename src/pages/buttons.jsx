@@ -6,13 +6,13 @@ const class_primary = 'bg-primary border-primary text-white dark:bg-primary dark
 const class_secondary = 'bg-secondary border-secondary text-white dark:bg-secondary dark:border-secondary dark:text-white'
 const class_alt = 'bg-alt border-alt text-white dark:bg-alt dark:border-alt dark:text-white'
 
-const primary_hover = 'hover:bg-primary-700 hover:border-primary-700 hover:text-white dark:hover:bg-primary-700 dark:hover:border-primary-700 dark:hover:text-white'
-const secondary_hover = 'hover:bg-secondary-700 hover:border-secondary-700 hover:text-white dark:hover:bg-secondary-700 dark:hover:border-secondary-700 dark:hover:text-white'
-const alt_hover = 'hover:bg-alt-700 hover:border-alt-700 hover:text-white dark:hover:bg-alt-700 dark:hover:border-alt-700 dark:hover:text-white'
+const class_primary_outline = 'bg-primary border-primary text-primary bg-opacity-5 hover:bg-primary hover:text-white'
+const class_secondary_outline = 'bg-secondary border-secondary text-secondary bg-opacity-5 hover:bg-secondary hover:text-white'
+const class_alt_outline = 'bg-alt border-alt text-alt bg-opacity-5 hover:bg-alt hover:text-white'
 
-const primary_outline = 'bg-opacity-5 hover:bg-primary hover:border-primary'
-const secondary_outline = 'bg-opacity-5 hover:bg-secondary hover:border-secondary hover:text-white dark:hover:text-white'
-const alt_outline = 'bg-opacity-5 hover:bg-alt hover:border-alt'
+const class_ghost_primary = 'bg-primary border-primary text-primary dark:bg-primary --dark:border-primary --dark:text-primary'
+const class_ghost_secondary = 'bg-secondary border-secondary text-secondary dark:bg-secondary --dark:border-secondary --dark:text-secondary'
+const class_ghost_alt = 'bg-alt border-alt text-alt-600 dark:bg-alt --dark:border-alt --dark:text-alt'
 
 
 export default function PageButtons(){
@@ -24,9 +24,9 @@ export default function PageButtons(){
 				<DemoCard title={'Buttons'}>
 					<div className="space-x-4">
 						<button className="btn">Default</button>
-						<button className={`btn ${class_primary} ${primary_hover}`}>Primary</button>
-						<button className={`btn ${class_secondary} ${secondary_hover}`}>Secondary</button>
-						<button className={`btn ${class_alt} ${alt_hover}`}>Alternative</button>
+						<button className={`btn ${class_primary}`}>Primary</button>
+						<button className={`btn ${class_secondary}`}>Secondary</button>
+						<button className={`btn ${class_alt}`}>Alternative</button>
 					</div>
 				</DemoCard>
 				
@@ -34,27 +34,37 @@ export default function PageButtons(){
 					<div className="space-x-4">
 						<span className="text-slate-400 text-xs">Small</span>
 						<button className="btn btn-sm">Default</button>
-						<button className={`btn btn-sm ${class_primary} ${primary_hover}`}>Primary</button>
-						<button className={`btn btn-sm ${class_secondary} ${secondary_hover}`}>Secondary</button>
-						<button className={`btn btn-sm ${class_alt} ${alt_hover}`}>Alternative</button>
+						<button className={`btn btn-sm ${class_primary}`}>Primary</button>
+						<button className={`btn btn-sm ${class_secondary}`}>Secondary</button>
+						<button className={`btn btn-sm ${class_alt}`}>Alternative</button>
 					</div>
 
 					<div className="space-x-4 mt-8">
 						<span className="text-slate-400 text-xs">Large</span>
 						<button className="btn btn-lg">Default</button>
-						<button className={`btn btn-lg ${class_primary} ${primary_hover}`}>Primary</button>
-						<button className={`btn btn-lg ${class_secondary} ${secondary_hover}`}>Secondary</button>
-						<button className={`btn btn-lg ${class_alt} ${alt_hover}`}>Alternative</button>
+						<button className={`btn btn-lg ${class_primary}`}>Primary</button>
+						<button className={`btn btn-lg ${class_secondary}`}>Secondary</button>
+						<button className={`btn btn-lg ${class_alt}`}>Alternative</button>
 					</div>
 				</DemoCard>
 
 
-				<DemoCard title={'Buttons outline'}>
+				<DemoCard title={'Outline buttons'}>
 					<div className="space-x-4">
-						<button className={`btn bg-opacity-10 dark:bg-opacity-10`}>Default</button>
-						<button className={`btn ${class_primary} ${primary_outline}`}>Primary</button>
-						<button className={`btn ${class_secondary} ${secondary_hover}`}>Secondary</button>
-						<button className={`btn ${class_alt} ${alt_hover}`}>Alternative</button>
+						<button className={`btn btn-outline`}>Default</button>
+						<button className={`btn btn-outline ${class_primary_outline}`}>Primary</button>
+						<button className={`btn btn-outline ${class_secondary_outline}`}>Secondary</button>
+						<button className={`btn btn-outline ${class_alt_outline}`}>Alternative</button>
+					</div>
+				</DemoCard>
+
+
+				<DemoCard title={'Ghost buttons'}>
+					<div className="space-x-4">
+						<button className="btn ghost">Default</button>
+						<button className={`btn ghost ${class_ghost_primary}`}>Primary</button>
+						<button className={`btn ghost ${class_ghost_secondary}`}>Secondary</button>
+						<button className={`btn ghost ${class_ghost_alt}`}>Alternative</button>
 					</div>
 				</DemoCard>
 
@@ -62,9 +72,9 @@ export default function PageButtons(){
 				<DemoCard title={'Buttons rounded'}>
 					<div className="space-x-4">
 						<button className="btn rounded-full">Default</button>
-						<button className="btn btn-primary rounded-full">Primary</button>
-						<button className="btn btn-secondary rounded-full">Secondary</button>
-						<button className="btn btn-alt rounded-full">Alternative</button>
+						<button className={`btn ${class_primary} rounded-full`}>Primary</button>
+						<button className={`btn ${class_secondary} rounded-full`}>Secondary</button>
+						<button className={`btn ${class_alt} rounded-full`}>Alternative</button>
 					</div>
 				</DemoCard>
 
