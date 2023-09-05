@@ -18,13 +18,13 @@ export default function PageHeader(props){
 					props.breadcrumbs.map((e,i) => (
 						<li 
 							key={`page-header-item-${i}`}
-							className="before:content-['/'] before:mx-3 before:text-slate-400">
+							className="select-none before:content-['/'] before:mx-3 before:text-slate-400">
 							{ e.link ? 
 								<Link href={e.link} className="hover:text-primary">{ e.text }</Link> : 
 								e.text }
 						</li>
 					)) : null }
-				<li className="before:content-['/'] before:mx-3 before:text-slate-400">
+				<li className="select-none before:content-['/'] before:mx-3 before:text-slate-400">
 					{props.title}
 				</li>
 			</ul>

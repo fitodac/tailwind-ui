@@ -13,7 +13,7 @@ export default function Sidebar(){
 			<div className="h-screen grid gap-6">
 
 				<div className="px-4 pt-5">
-					<h1 className="font-bold">TailwindCSS UI</h1>
+					<h1 className="font-bold select-none">TailwindCSS UI</h1>
 				</div>
 
 				<div className="scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
