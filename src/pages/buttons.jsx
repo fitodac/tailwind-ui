@@ -21,7 +21,7 @@ export default function PageButtons(){
 			<PageHeader title="Buttons" />
 
 			<div className="space-y-7">
-				<DemoCard title={'Buttons'}>
+				<DemoCard title={'Buttons'} code="Code_Buttons">
 					<div className="space-x-4">
 						<button className="btn">Default</button>
 						<button className={`btn ${class_primary}`}>Primary</button>
