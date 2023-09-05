@@ -58,20 +58,26 @@ const BUTTON_UTILITIES = {
 			'font-size': theme.fontSize.xs[0],
 			'padding': `${GLOBALS.spacing.sm.y} ${GLOBALS.spacing.sm.x}`
 		},
+
 		'&.btn-lg': {
 			'padding': `${GLOBALS.spacing.lg.y} ${GLOBALS.spacing.lg.x}`,
 			'max-height': theme.spacing[14],
 		},
-		'&.btn-icon': {...BUTTON_STYLE_BASE.ICON},
-		'&.rounded-full': {'border-radius': theme.borderRadius.full},
 
-		'&.btn-link': {...BUTTON_STYLE_BASE.LINK},
+		'&.ghost': { 'border': 'transparent' },
+
+		'&.btn-icon': { ...BUTTON_STYLE_BASE.ICON },
+
+		'&.rounded-full': { 'border-radius': theme.borderRadius.full },
+
+		'&.btn-link': { ...BUTTON_STYLE_BASE.LINK },
 
 		'> [class^=ri-]': { 'font-size': '1.2rem' }
 	},
 
 	'.btn-group': {
 		...BUTTON_STYLE_BASE.BTN_GROUP,
+
 		'> .btn': {
 			...BUTTON_STYLE_BASE.BTN,
 			...BUTTON_STYLE_BASE.BTN_GROUP_CHILDREN,
