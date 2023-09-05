@@ -1,5 +1,5 @@
 export default function Code_Buttons(props){
-	const {mark, tag, class_name, equal, class_list} = props.classes
+	const {mark, tag, class_name, equal, class_list, class_list_secondary} = props.classes
 
 	return (
 	<>
