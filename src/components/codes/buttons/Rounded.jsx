@@ -10,9 +10,9 @@ export default function Code_ButtonsRounded(props){
 		<code className={class_list}>{`"btn rounded-full"`}</code>
 		<code className={mark}>{`>`}</code>
 		<code className={mark}>{`Default`}</code>
-		<code className={mark}>{`<`}</code>
+		<code className={mark}>{`</`}</code>
 		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`/>`}</code>
+		<code className={mark}>{`>`}</code>
 		<br/>
 		<br/>
 
@@ -23,12 +23,12 @@ export default function Code_ButtonsRounded(props){
 		<code className={equal}>{`=`}</code>
 		<code className={class_list}>{`"btn rounded-full`}</code>
 		<code className={class_list_secondary}>{` bg-primary border-primary text-white 
-        dark:bg-primary dark:border-primary dark:text-white"`}</code>
+		dark:bg-primary dark:border-primary dark:text-white"`}</code>
 		<code className={mark}>{`>`}</code>
 		<code className={mark}>{`Primary`}</code>
-		<code className={mark}>{`<`}</code>
+		<code className={mark}>{`</`}</code>
 		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`/>`}</code>
+		<code className={mark}>{`>`}</code>
 		<br/>
 		<br/>
 
@@ -42,9 +42,9 @@ export default function Code_ButtonsRounded(props){
 		dark:bg-secondary dark:border-secondary dark:text-white"`}</code>
 		<code className={mark}>{`>`}</code>
 		<code className={mark}>{`Secondary`}</code>
-		<code className={mark}>{`<`}</code>
+		<code className={mark}>{`</`}</code>
 		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`/>`}</code>
+		<code className={mark}>{`>`}</code>
 		<br/>
 		<br/>
 
@@ -58,8 +58,9 @@ export default function Code_ButtonsRounded(props){
 		dark:bg-alt dark:border-alt dark:text-white"`}</code>
 		<code className={mark}>{`>`}</code>
 		<code className={mark}>{`Alternative`}</code>
-		<code className={mark}>{`<`}</code>
+		<code className={mark}>{`</`}</code>
 		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`/>`}</code>
+		<code className={mark}>{`>`}</code>
+
 	</>)
 }
