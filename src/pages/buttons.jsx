@@ -30,6 +30,7 @@ export default function PageButtons(){
 			<PageHeader title="Buttons" />
 
 			<div className="space-y-7">
+
 				<DemoCard title={'Buttons'} code="Code_Buttons">
 					<div className="space-x-4">
 						<button className="btn">Default</button>
@@ -38,7 +39,8 @@ export default function PageButtons(){
 						<button className={`btn ${class_alt}`}>Alternative</button>
 					</div>
 				</DemoCard>
-				
+
+
 				<DemoCard title={'Button size'} code="Code_ButtonsSizes">
 					<div className="space-x-4">
 						<span className="text-slate-400 text-xs">Small</span>
@@ -60,7 +62,7 @@ export default function PageButtons(){
 
 				<DemoCard title={'Outline buttons'} code="Code_ButtonsOutline">
 					<div className="space-x-4">
-						<button className={`btn bg-opacity-20 hover:bg-opacity-100`}>Default</button>
+						<button className={`btn bg-opacity-20 hover:bg-opacity-100 dark:bg-opacity-20 dark:hover:bg-opacity-100`}>Default</button>
 						<button className={`btn ${class_primary_outline}`}>Primary</button>
 						<button className={`btn ${class_secondary_outline}`}>Secondary</button>
 						<button className={`btn ${class_alt_outline}`}>Alternative</button>
@@ -88,7 +90,7 @@ export default function PageButtons(){
 				</DemoCard>
 
 
-				<DemoCard title={'Iconized buttons'}>
+				<DemoCard title={'Iconized buttons'} code="Code_ButtonsIconized">
 					<div className="flex gap-x-16">
 						<div className="space-x-4">
 							<button className={`btn btn-icon ${class_primary}`}>
@@ -185,7 +187,7 @@ export default function PageButtons(){
 				</DemoCard>
 
 
-				<DemoCard title={'Icon + text'}>
+				<DemoCard title={'Icon + text'} code="Code_ButtonsIconText">
 					<div className="space-x-4">
 						<button className={`btn space-x-2 ${class_primary}`}>
 							<i className="ri-message-2-line"></i>
@@ -291,6 +293,7 @@ export default function PageButtons(){
 						</div>
 					</div>
 				</DemoCard>
+
 			</div>
 		</Layout>
 	)
