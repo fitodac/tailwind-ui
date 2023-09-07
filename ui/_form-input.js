@@ -24,7 +24,7 @@ const FIELD_STYLE_BASE = {
 	'line-height': theme.fontSize.sm[1].lineHeight,
 	'width': '100%',
 	'max-height': theme.spacing[10],
-	'padding': GLOBALS.spacing.DEFAULT,
+	'padding': `${theme.spacing[2]} ${GLOBALS.spacing.DEFAULT}`,
 	'border-radius': theme.borderRadius.md,
 	'user-select': 'none'
 }
@@ -39,7 +39,7 @@ const INPUT_GROUP = {
 	INSET: {
 		'border-width': theme.borderWidth.DEFAULT,
 		'width': '100%',
-		'padding': theme.spacing[1.5],
+		'padding': theme.spacing[2],
 		'display': 'inline-flex',
 		'align-items': 'center',
 		'column-gap': theme.spacing[1.5],

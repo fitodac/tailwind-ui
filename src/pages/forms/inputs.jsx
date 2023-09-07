@@ -18,7 +18,7 @@ export default function PageInput(){
 
 			<div className="space-y-7">
 				<DemoCard title={'Basic'}>
-					<div className="grid grid-cols-4 gap-6">
+					<div className="grid grid-cols-3 gap-6">
 						<div className="space-y-1">
 							<label>Basic</label>
 							<input type="text" placeholder="Insert text here..." defaultValue="" />
@@ -37,14 +37,37 @@ export default function PageInput(){
 				</DemoCard>
 
 
+				<DemoCard title={'Helper text'}>
+					<div className="grid grid-cols-3 gap-6">
+						<div className="space-y-1">
+							<label>Basic helper text</label>
+							<input type="text" placeholder="..." defaultValue="" />
+							<div className="input-helper">Please, write a cool username above</div>
+						</div>
+
+						<div className="space-y-1">
+							<label>Helper text at right</label>
+							<input type="text" placeholder="..." defaultValue="" />
+							<div className="input-helper text-right">The helper text could be at right too</div>
+						</div>
+					</div>
+				</DemoCard>
+
+
 				<DemoCard title={'Validation states'}>
-					<div className="grid grid-cols-4 gap-6">
+					<div className="grid grid-cols-3 gap-6">
 						<div className="space-y-1">
 							<input type="text" defaultValue="Success!!" className="input-valid" />
+							<div className="input-helper input-helper-valid">
+								<i className="ri-thumb-up-line"></i> Your request was approved
+							</div>
 						</div>
 
 						<div className="space-y-1">
 							<input type="text" defaultValue="Sad response :(" className="input-error" />
+							<div className="input-helper input-helper-error">
+								<i className="ri-alert-line"></i> We're sorry, your request wasn't approved
+							</div>
 						</div>
 					</div>
 				</DemoCard>
@@ -72,14 +95,13 @@ export default function PageInput(){
 				</DemoCard>
 
 
-				<DemoCard title={'Iconized'}>
-					<div className="content text-slate-500 font-light">
+				<DemoCard title={'Input addons'}>
+					<div className="content text-slate-500 text-sm font-light">
 						Different input group combinations with icons.
 					</div>
 
-					<div className="grid grid-cols-3 gap-6 mt-5">
+					<div className="w-1/2 grid gap-6 mt-5">
 						<div className="space-y-1">
-							<label>Icon / input / button</label>
 							<div className="input-group">
 								<span>
 									<svg 
@@ -93,6 +115,8 @@ export default function PageInput(){
 								<input type="text" placeholder="Instagram account" defaultValue="" />
 								<button className="btn btn-primary">Follow</button>
 							</div>
+
+							<div className="input-helper">Icon / input / button</div>
 						</div>
 
 						<div className="space-y-1">

@@ -38,6 +38,7 @@ input[type=color]{
 	}
 }
 
+
 .input-group-inset{
 	@apply border-[var(--tw-ui-input-border-color)];
 }
@@ -246,14 +247,35 @@ select{
 
 
 
-
-
-
-
 /** Label */
 label{
 	@apply
-	text-sm
+	text-gray-500
+	text-xs
 	font-semibold
-	leading-tight;
+	leading-tight
+	indent-0.5;
+}
+
+
+
+/** Helpers */
+.input-helper{
+	@apply
+	text-gray-400
+	text-xs
+	leading-tight
+	px-0.5;
+
+	[class*=ri-]{ @apply text-base; }
+
+	&.input-helper-valid{
+		@apply
+		text-[var(--tw-ui-input-valid-color)];
+	}
+
+	&.input-helper-error{
+		@apply 
+		text-[var(--tw-ui-input-error-color)];
+	}
 }

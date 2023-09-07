@@ -9,7 +9,7 @@ const FORM_SELECT_UTILITIES = {
 		'background-position': 'right 0.5rem center',
 		'background-repeat': 'no-repeat',
 		'background-size': '1.5em',
-		'padding': `${theme.spacing[2.5]} ${theme.spacing[7]} ${theme.spacing[2.5]} ${GLOBALS.spacing.DEFAULT}`,
+		'padding': `${theme.spacing[2]} ${theme.spacing[7]} ${theme.spacing[2]} ${GLOBALS.spacing.DEFAULT}`,
 		'cursor': 'pointer',
 
 		'-webkit-print-color-adjust': 'exact',
