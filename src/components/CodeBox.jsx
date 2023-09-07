@@ -5,6 +5,9 @@ import Code_ButtonsSizes from './codes/buttons/Sizes'
 import Code_ButtonsOutline from './codes/buttons/Outline'
 import Code_ButtonsGhost from './codes/buttons/Ghost'
 import Code_ButtonsRounded from './codes/buttons/Rounded'
+import Code_ButtonsIconized from './codes/buttons/Iconized'
+import Code_ButtonsIconText from './codes/buttons/IconText'
+
 
 const classes = {
 	mark: 'text-white',
@@ -36,7 +39,8 @@ export default function CodeBox(props){
 	<div className="bg-slate-700 pr-16 mx-6 mb-8 relative rounded-lg">
 
 		<button 
-			className="btn btn-icon btn-outline right-3 top-3 absolute hover:bg-slate-200 hover:border-slate-200"
+			className="btn btn-icon btn-outline right-3 top-3 absolute hover:bg-slate-200 hover:border-slate-200
+								dark:hover:bg-slate-900 dark:hover:border-slate-900"
 			onClick={copyCode}>
 			<i className="ri-clipboard-line text-slate-400"></i>
 		</button>
@@ -50,6 +54,8 @@ export default function CodeBox(props){
 					{ props.code === 'Code_ButtonsOutline' 	? (<Code_ButtonsOutline classes={classes} />) 	: null }
 					{ props.code === 'Code_ButtonsGhost' 		? (<Code_ButtonsGhost classes={classes} />) 		: null }
 					{ props.code === 'Code_ButtonsRounded' 	? (<Code_ButtonsRounded classes={classes} />) 	: null }
+					{ props.code === 'Code_ButtonsIconized' ? (<Code_ButtonsIconized classes={classes} />) 	: null }
+					{ props.code === 'Code_ButtonsIconText' ? (<Code_ButtonsIconText classes={classes} />) 	: null }
 
 				</pre>
 			</div>

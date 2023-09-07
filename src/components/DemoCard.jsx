@@ -21,12 +21,14 @@ export default function DemoCard(props){
 					
 							!codeVisible
 								? (<button 
-										className="btn btn-icon btn-outline hover:bg-slate-200 hover:border-slate-200"
+										className="btn btn-icon btn-outline hover:bg-slate-200 hover:border-slate-200
+															dark:hover:bg-slate-900 dark:hover:border-slate-900"
 										onClick={ () => setCodeVisible(true) }>
 										<i className="ri-code-s-slash-line text-slate-400"></i>
 									</button>)
 								: (<button 
-										className="btn btn-icon btn-outline hover:bg-slate-200 hover:border-slate-200"
+										className="btn btn-icon btn-outline hover:bg-slate-200 hover:border-slate-200
+															dark:hover:bg-slate-900 dark:hover:border-slate-900"
 										onClick={ () => setCodeVisible(false) }>
 										<i className="ri-code-line text-slate-400"></i>
 									</button>) 
