@@ -31,7 +31,7 @@ export default function Header(){
 		<>
 			<header 
 				className="bg-white border-b border-slate-200 px-6 py-3 inset-x-0 top-0 fixed z-10
-			dark:bg-gray-800 dark:border-gray-700">
+			dark:bg-slate-800 dark:border-slate-700">
 
 				<div className="flex justify-end">
 

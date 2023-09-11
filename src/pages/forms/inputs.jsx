@@ -17,7 +17,7 @@ export default function PageInput(){
 			</div>
 
 			<div className="space-y-7">
-				<DemoCard title={'Basic'}>
+				<DemoCard title={'Basic'} code="Code_Input">
 					<div className="grid grid-cols-3 gap-6">
 						<div className="space-y-1">
 							<label>Basic</label>
@@ -37,7 +37,7 @@ export default function PageInput(){
 				</DemoCard>
 
 
-				<DemoCard title={'Helper text'}>
+				<DemoCard title={'Helper text'} code="Code_Helper">
 					<div className="grid grid-cols-3 gap-6">
 						<div className="space-y-1">
 							<label>Basic helper text</label>
@@ -54,7 +54,7 @@ export default function PageInput(){
 				</DemoCard>
 
 
-				<DemoCard title={'Validation states'}>
+				<DemoCard title={'Validation states'} code="Code_Validation">
 					<div className="grid grid-cols-3 gap-6">
 						<div className="space-y-1">
 							<input type="text" defaultValue="Success!!" className="input-valid" />
@@ -73,7 +73,7 @@ export default function PageInput(){
 				</DemoCard>
 
 
-				<DemoCard title={'Input groups'}>
+				<DemoCard title={'Input groups'} code="Code_InputGroups">
 					<div className="grid grid-cols-2 gap-10">
 						<div className="space-y-1">
 							<label>Basic</label>
@@ -95,7 +95,7 @@ export default function PageInput(){
 				</DemoCard>
 
 
-				<DemoCard title={'Input addons'}>
+				<DemoCard title={'Input addons'} code="Code_InputAddons">
 					<div className="content text-slate-500 text-sm font-light">
 						Different input group combinations with icons.
 					</div>

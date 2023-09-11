@@ -7,6 +7,22 @@ import Code_ButtonsGhost from './codes/buttons/Ghost'
 import Code_ButtonsRounded from './codes/buttons/Rounded'
 import Code_ButtonsIconized from './codes/buttons/Iconized'
 import Code_ButtonsIconText from './codes/buttons/IconText'
+import Code_ButtonsToggler from './codes/buttons/Toggler'
+import Code_ButtonsGroup from './codes/buttons/Group'
+import Code_ButtonsGroupSize from './codes/buttons/GroupSize'
+
+import Code_Heading from './codes/content/Heading'
+import Code_Paragraph from './codes/content/Paragraph'
+import Code_ListOrdered from './codes/content/ListOrdered'
+import Code_ListUnordered from './codes/content/ListUnordered'
+import Code_ContentCode from './codes/content/Code'
+import Code_ContentPre from './codes/content/Pre'
+
+import Code_Input from './codes/forms/Input'
+import Code_Helper from './codes/forms/Helper'
+import Code_Validation from './codes/forms/Validation'
+import Code_InputGroups from './codes/forms/InputGroups'
+import Code_InputAddons from './codes/forms/InputAddons'
 
 
 const classes = {
@@ -47,15 +63,35 @@ export default function CodeBox(props){
 		
 		<div className="overflow-hidden">
 			<div className="overflow-x-auto relative top-4 -mt-4">
-				<pre className="text-slate-500 text-sm leading-tight p-6 pb-11" ref={code}>
+				<pre className="text-slate-500 text-sm leading-tight p-6 pb-11 dark:text-slate-400" ref={code}>
 
-					{ props.code === 'Code_Buttons' 				? (<Code_Buttons classes={classes} />) 					: null }
-					{ props.code === 'Code_ButtonsSizes' 		? (<Code_ButtonsSizes classes={classes} />) 		: null }
-					{ props.code === 'Code_ButtonsOutline' 	? (<Code_ButtonsOutline classes={classes} />) 	: null }
-					{ props.code === 'Code_ButtonsGhost' 		? (<Code_ButtonsGhost classes={classes} />) 		: null }
-					{ props.code === 'Code_ButtonsRounded' 	? (<Code_ButtonsRounded classes={classes} />) 	: null }
-					{ props.code === 'Code_ButtonsIconized' ? (<Code_ButtonsIconized classes={classes} />) 	: null }
-					{ props.code === 'Code_ButtonsIconText' ? (<Code_ButtonsIconText classes={classes} />) 	: null }
+					{/* Buttons */}
+					{ props.code === 'Code_Buttons' 					? (<Code_Buttons classes={classes} />) 						: null }
+					{ props.code === 'Code_ButtonsSizes' 			? (<Code_ButtonsSizes classes={classes} />) 			: null }
+					{ props.code === 'Code_ButtonsOutline' 		? (<Code_ButtonsOutline classes={classes} />) 		: null }
+					{ props.code === 'Code_ButtonsGhost' 			? (<Code_ButtonsGhost classes={classes} />) 			: null }
+					{ props.code === 'Code_ButtonsRounded' 		? (<Code_ButtonsRounded classes={classes} />) 		: null }
+					{ props.code === 'Code_ButtonsIconized' 	? (<Code_ButtonsIconized classes={classes} />) 		: null }
+					{ props.code === 'Code_ButtonsIconText' 	? (<Code_ButtonsIconText classes={classes} />) 		: null }
+					{ props.code === 'Code_ButtonsToggler' 		? (<Code_ButtonsToggler classes={classes} />) 		: null }
+					{ props.code === 'Code_ButtonsGroup' 			? (<Code_ButtonsGroup classes={classes} />) 			: null }
+					{ props.code === 'Code_ButtonsGroupSize' 	? (<Code_ButtonsGroupSize classes={classes} />) 	: null }
+					
+					
+					{/* Content */}
+					{ props.code === 'Code_Heading' 					? (<Code_Heading classes={classes} />) 						: null }
+					{ props.code === 'Code_Paragraph' 				? (<Code_Paragraph classes={classes} />) 					: null }
+					{ props.code === 'Code_ListOrdered' 			? (<Code_ListOrdered classes={classes} />) 				: null }
+					{ props.code === 'Code_ListUnordered' 		? (<Code_ListUnordered classes={classes} />) 			: null }
+					{ props.code === 'Code_ContentCode' 			? (<Code_ContentCode classes={classes} />) 				: null }
+					{ props.code === 'Code_ContentPre' 				? (<Code_ContentPre classes={classes} />) 				: null }
+					
+					{/* Form */}
+					{ props.code === 'Code_Input' 						? (<Code_Input classes={classes} />) 							: null }
+					{ props.code === 'Code_Helper' 						? (<Code_Helper classes={classes} />) 						: null }
+					{ props.code === 'Code_Validation' 				? (<Code_Validation classes={classes} />) 				: null }
+					{ props.code === 'Code_InputGroups' 			? (<Code_InputGroups classes={classes} />) 				: null }
+					{ props.code === 'Code_InputAddons' 			? (<Code_InputAddons classes={classes} />) 				: null }
 
 				</pre>
 			</div>

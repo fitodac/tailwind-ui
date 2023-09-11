@@ -6,21 +6,6 @@
 
 
 
-:root{
-	// --scrollbar-thumb: red,
-	// --tw-ui-text-color: rgb(71 85 105);
-	// --tw-ui-font-size: 15px;
-	// --tw-ui-font-weight: 300;
-	// --tw-ui-line-height: 1.4;
-	// --tw-ui-input-border-color: rgb(203 213 225);
-	// --tw-ui-input-valid-color: rgb(22 163 74);
-	// --tw-ui-input-error-color: rgb(185 28 28);
-	
-	// --tw-ui-dark-text-color: rgb(241 245 249);
-	// --tw-ui-dark-border-color: rgb(100 116 139);
-}
-
-
 html{
 	font-size: var(--tw-ui-font-size);
 }
@@ -31,6 +16,7 @@ body{
 	line-height: var(--tw-ui-line-height);
 	
 	&.dark{
+		background-color: rgb(30 41 59 / 1);
 		color: var(--tw-ui-dark-text-color);
 	}
 }
