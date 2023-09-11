@@ -1,4 +1,4 @@
-export default function Code_ButtonsOutline(props){
+export default function Code(props){
 	const {mark, tag, class_name, equal, class_list, class_list_secondary} = props.classes
 
 	return (
