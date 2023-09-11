@@ -209,7 +209,7 @@ export default function PageButtons(){
 				</DemoCard>
 
 
-				<DemoCard title={'Button toggler'}>
+				<DemoCard title={'Button toggler'} code="Code_ButtonsToggler">
 					<div className="space-x-4">
 						<label className="btn-toggler">
 							<input type="checkbox" className="peer" />
@@ -234,7 +234,7 @@ export default function PageButtons(){
 				</DemoCard>
 
 
-				<DemoCard title={'Button group'}>
+				<DemoCard title={'Button group'} code="Code_ButtonsGroup">
 					<div className="flex gap-x-16">
 						<div className="btn-group">
 							<button className={`btn ${class_primary}`}>One</button>
@@ -257,7 +257,7 @@ export default function PageButtons(){
 				</DemoCard>
 
 
-				<DemoCard title={'Button group size'}>
+				<DemoCard title={'Button group size'} code="Code_ButtonsGroupSize">
 					<div className="flex gap-x-16">
 						<div className="space-x-4">
 							<span className="text-slate-400 text-xs">Small</span>
