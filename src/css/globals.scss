@@ -43,16 +43,3 @@ body{
 *:not(.btn){
 	@apply dark:border-[var(--tw-ui-dark-border-color)];
 }
-
-/** Content */
-.content{
-
-	code{
-		@apply bg-slate-100 text-primary;
-	}
-
-	pre{
-		@apply bg-slate-100 text-slate-500;
-	}
-
-}
