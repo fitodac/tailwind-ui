@@ -13,7 +13,7 @@ export default function PageContent(){
 			</div>
 
 			<div className="space-y-7">
-				<DemoCard title={'Heading'}>
+				<DemoCard title={'Heading'} code="Code_Heading">
 					<div className="content flex gap-5 items-end">
 						<h1>H1</h1>
 						<h2>H2</h2>
@@ -21,19 +21,11 @@ export default function PageContent(){
 						<h4>H4</h4>
 						<h5>H5</h5>
 					</div>
-
-					<div className="content mt-6">
-						<pre>
-							<div>&lt;div class="content"&gt;</div>
-							<div className="pl-4">&lt;h1&gt;H1&lt;/h1&gt;</div>
-							<div>&lt;/div&gt;</div>
-						</pre>
-					</div>
 				</DemoCard>
 
 
 
-				<DemoCard title={'Paragraph'}>
+				<DemoCard title={'Paragraph'} code="Code_Paragraph">
 					<div className="content">
 						<p>Tailwind 3 is the latest version of the popular utility-first CSS framework, Tailwind CSS. It brings a host of new features and enhancements that make it even more powerful and flexible for building modern web applications. One of the standout features in Tailwind 3 is the introduction of Just-in-Time (JIT) mode, which allows developers to generate a highly optimized and minimal CSS bundle for their projects. This results in faster load times and improved performance, as only the necessary CSS classes are included in the final output.</p>
 						<p>Another notable addition in Tailwind 3 is the introduction of the new "Dark Mode" feature. With this feature, developers can easily create dark mode variants for their components and styles. This is especially valuable as dark mode has gained significant popularity in recent years, providing users with a more comfortable viewing experience, reducing eye strain, and saving battery life on devices with OLED screens. Tailwind 3's Dark Mode feature makes it effortless to implement this design trend, allowing developers to cater to the preferences of their users with ease.</p>
@@ -43,9 +35,9 @@ export default function PageContent(){
 
 
 
-				<DemoCard title={'Unordered list'}>
+				<DemoCard title={'Unordered list'} code="Code_ListUnordered">
 					<div className="content">
-						<ul className="pl-4">
+						<ul className="pl-5">
 							<li type="-">The Dark Knight (2008)</li>
 							<li>Inception (2010)</li>
 							<li>The Social Network (2010)</li>
@@ -57,14 +49,14 @@ export default function PageContent(){
 
 
 
-				<DemoCard title={'Ordered lists'}>
+				<DemoCard title={'Ordered lists'} code="Code_ListOrdered">
 					<div className="content text-slate-500 font-light">
 						Ordered list bullets can be controlled with the type attribute. Available types are <code>type="1"</code>, <code>type="A"</code>, <code>type="a"</code>, <code>type="I"</code>, <code>type="i"</code>.
 					</div>
 					
 					<div className="content flex justify-between mt-7">
 						<div className="">
-							<ol className="pl-4">
+							<ol className="pl-5">
 								<li>React</li>
 								<li>Vue</li>
 								<li>Angular</li>
@@ -108,12 +100,17 @@ export default function PageContent(){
 
 
 
-				<DemoCard title={'Code'}>
-					<div className="content flex gap-x-6">
+				<DemoCard title={'Code'} code="Code_ContentCode">
+					<div className="content">
 						<div>
-							<code>code</code>
+							<p>This is a <code>code</code> tag example which don't need any additional class.</p>
 						</div>
+					</div>
+				</DemoCard>
 
+
+				<DemoCard title={'Pre'} code="Code_ContentPre">
+					<div className="content">
 						<div>
 							<pre>
 								&lt;div class="bg-slate-500 text-white rounded-lg"&gt;Sample content&lt;/div&gt;

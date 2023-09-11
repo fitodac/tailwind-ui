@@ -17,10 +17,7 @@ const CONTENT_UTILITIES = {
 		'& code': { 
 			'font-size': theme.fontSize.sm[0],
 			'line-height': 1,
-			'letter-spacing': theme.letterSpacing.tight,
-			'padding': `${theme.spacing[0.5]} ${theme.spacing[2]}`,
-			'border-radius': theme.borderRadius.md,
-			'list-style-type': 'decimal' 
+			'letter-spacing': theme.letterSpacing.tight
 		},
 
 		'& pre': {
