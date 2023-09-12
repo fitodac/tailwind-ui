@@ -17,7 +17,7 @@ export default function Code(props){
 		<code className={class_list}>{`"text"`}</code>
 		<code className={class_name}>{` placeholder`}</code>
 		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"Insert text here..."`}</code>
+		<code className={class_list_secondary}>{`"Insert text here..."`}</code>
 		<code className={mark}>{` />`}</code>
 		<br/>
 		<code className={mark}>{`  <`}</code>
@@ -53,7 +53,7 @@ export default function Code(props){
 		<code className={class_list}>{`"text"`}</code>
 		<code className={class_name}>{` placeholder`}</code>
 		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"Insert text here..."`}</code>
+		<code className={class_list_secondary}>{`"Insert text here..."`}</code>
 		<code className={mark}>{` />`}</code>
 		<br/>
 		<code className={mark}>{`  <`}</code>
@@ -71,8 +71,5 @@ export default function Code(props){
 		<code className={mark}>{`</`}</code>
 		<code className={tag}>{`div`}</code>
 		<code className={mark}>{`>`}</code>
-		<br/>
-		<br/>
-		<br/>
 	</>)
 }
