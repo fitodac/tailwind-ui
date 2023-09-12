@@ -19,7 +19,7 @@ export default function PageDropDown(){
 							<div className="dropdown">
 								<label className="btn-toggler">
 									<input type="checkbox" className="dropdown-toggler" />
-									<span className="btn btn-primary space-x-2">
+									<span className="btn space-x-2 bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">
 										<span>More</span>
 										<i className="ri-arrow-down-s-line"></i>
 									</span>
@@ -109,7 +109,7 @@ export default function PageDropDown(){
 								<div className="dropdown">
 									<label className="btn-toggler">
 										<input type="checkbox" className="dropdown-toggler" />
-										<span className="btn btn-primary space-x-2">
+										<span className="btn space-x-2 bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">
 											<span>Article</span>
 											<i className="ri-arrow-down-s-line"></i>
 										</span>
@@ -155,7 +155,7 @@ export default function PageDropDown(){
 								<div className="dropdown">
 									<label className="btn-toggler">
 										<input type="checkbox" className="dropdown-toggler" name="dd-1" />
-										<span className="btn btn-primary space-x-2">
+										<span className="btn space-x-2 bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">
 											<span>Article</span>
 											<i className="ri-arrow-down-s-line"></i>
 										</span>
@@ -194,7 +194,7 @@ export default function PageDropDown(){
 								<div className="dropdown">
 									<label className="btn-toggler">
 										<input type="checkbox" className="dropdown-toggler" name="dd-1" />
-										<span className="btn btn-primary space-x-2">
+										<span className="btn space-x-2 bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">
 											<span>Options</span>
 											<i className="ri-arrow-down-s-line"></i>
 										</span>

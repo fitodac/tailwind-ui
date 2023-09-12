@@ -103,7 +103,7 @@ export default function PageSelect(){
 									<option value="dubai">Dubai</option>
 									<option value="tokyo">Tokyo</option>
 								</select>
-								<button className="btn btn-primary">Submit</button>
+								<button className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Submit</button>
 							</div>
 							
 						</div>
@@ -129,7 +129,7 @@ export default function PageSelect(){
 									<option value="dubai">Dubai</option>
 									<option value="tokyo">Tokyo</option>
 								</select>
-								<button className="btn btn-primary">Go!</button>
+								<button className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Go!</button>
 							</div>
 						</div>
 

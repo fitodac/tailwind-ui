@@ -74,11 +74,11 @@ export default function PageTags(){
 						</div>
 
 						<div className="space-x-4">
-							<button className="btn btn-primary">
+							<button className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">
 								Button <span className="badge ghost bg-white border-white text-white rounded-full ml-3">8K</span>
 							</button>
 
-							<button className="btn btn-primary">
+							<button className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">
 								Button <span className="badge bg-white border-white text-primary rounded-full ml-3">+99</span>
 							</button>
 						</div>
@@ -104,7 +104,7 @@ export default function PageTags(){
 						
 						<div className="">
 							<div className="inline-block relative">
-								<button className="btn btn-primary">
+								<button className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">
 									Action required
 								</button>
 								<div className="dot-badge animate-pulse"></div>

@@ -79,7 +79,7 @@ export default function PageInput(){
 							<label>Basic</label>
 							<div className="input-group">
 								<input type="text" placeholder="Find your product..." defaultValue="" />
-								<button className="btn btn-primary">Search</button>
+								<button className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Search</button>
 							</div>
 						</div>
 
@@ -87,8 +87,8 @@ export default function PageInput(){
 							<label>Inset</label>
 							<div className="input-group-inset">
 								<input type="text" placeholder="somebody@gmail.com" defaultValue="" />
-								<button className="btn btn-primary">Ok</button>
-								<button className="btn btn-primary">Cancel</button>
+								<button className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Ok</button>
+								<button className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Cancel</button>
 							</div>
 						</div>
 					</div>
@@ -113,14 +113,13 @@ export default function PageInput(){
 									</svg>
 								</span>
 								<input type="text" placeholder="Instagram account" defaultValue="" />
-								<button className="btn btn-primary">Follow</button>
+								<button className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Follow</button>
 							</div>
 
 							<div className="input-helper">Icon / input / button</div>
 						</div>
 
 						<div className="space-y-1">
-							<label>Input / icon</label>
 							<div className="input-group">
 								<input type="text" placeholder="Change your password" defaultValue="" />
 								<span>
@@ -133,10 +132,11 @@ export default function PageInput(){
 									</svg>
 								</span>
 							</div>
+
+							<div className="input-helper">Input / icon</div>
 						</div>
 
 						<div className="space-y-1">
-							<label>Input / icon / input</label>
 							<div className="input-group">
 								<input type="text" placeholder="email address" />
 								<span>
@@ -151,10 +151,11 @@ export default function PageInput(){
 								<input type="text" placeholder="company name" defaultValue="" />
 								<span>.com</span>
 							</div>
+
+							<div className="input-helper">Input / icon / input</div>
 						</div>
 
 						<div className="space-y-1">
-							<label>Group inset with icon</label>
 							<div className="input-group-inset">
 								<input type="text" placeholder="Search for happiness" defaultValue="" />
 
@@ -168,12 +169,13 @@ export default function PageInput(){
 									</svg>
 								</div>
 							</div>
+
+							<div className="input-helper">Group inset with icon</div>
 						</div>
 
 						<div className="space-y-1">
-							<label>Group inset, icon and button</label>
 							<div className="input-group-inset">
-								<div>
+								<span>
 									<svg 
 										className="h-6 fill-slate-400"
 										xmlns="http://www.w3.org/2000/svg" 
@@ -181,10 +183,12 @@ export default function PageInput(){
 										<path fill="none" d="M0 0h24v24H0z"/>
 										<path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-4H8V8h3V6h2v2h1a2.5 2.5 0 0 1 2 4 2.5 2.5 0 0 1-2 4h-1v2h-2v-2zm-1-3v1h4a.5.5 0 1 0 0-1h-4zm0-3v1h4a.5.5 0 1 0 0-1h-4z"/>
 									</svg>
-								</div>
+								</span>
 								<input type="text" placeholder="BTC to USD" defaultValue="" />
-								<button className="btn btn-primary">Calculate</button>
+								<button className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Calculate</button>
 							</div>
+
+							<div className="input-helper">Group inset, icon and button</div>
 						</div>
 					</div>
 				</DemoCard>

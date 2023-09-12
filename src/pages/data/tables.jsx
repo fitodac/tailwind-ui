@@ -14,7 +14,7 @@ const data = {
 				{__html: 'Jan. 13, 2023'},
 				{__html: '<span>paid</span>'},
 				{__html: `<div class="text-end">
-										<button class="btn btn-primary">Edit</button>
+										<button class="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
 									</div>`}
 			],
 			[
@@ -24,7 +24,7 @@ const data = {
 				{__html: 'Mar. 4, 2023'},
 				{__html: '<span>paid</span>'},
 				{__html: `<div class="text-end">
-										<button class="btn btn-primary">Edit</button>
+										<button class="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
 									</div>`}
 			],
 			[
@@ -34,7 +34,7 @@ const data = {
 				{__html: 'Jun. 22, 2023'},
 				{__html: '<span>unpaid</span>'},
 				{__html: `<div class="text-end">
-										<button class="btn btn-primary">Edit</button>
+										<button class="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
 									</div>`}
 			],
 			[
@@ -44,7 +44,7 @@ const data = {
 				{__html: 'Nov. 28, 2023'},
 				{__html: '<span>pending</span>'},
 				{__html: `<div class="text-end">
-										<button class="btn btn-primary">Edit</button>
+										<button class="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
 									</div>`}
 			]
 		]
@@ -94,7 +94,7 @@ export default function PageTables(){
 							<i className="ri-arrow-right-double-fill"></i>
 						</span>
 
-						<div className="w-full overflow-x-auto">
+						<div className="w-full overflow-x-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
 							<table className="table">
 								<thead>
 									<tr>
@@ -132,7 +132,7 @@ export default function PageTables(){
 							<i className="ri-arrow-right-double-fill"></i>
 						</span>
 
-						<div className="w-full overflow-x-auto">
+						<div className="w-full overflow-x-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
 							<table className="table table-bordered">
 								<thead>
 									<tr>
@@ -170,7 +170,7 @@ export default function PageTables(){
 							<i className="ri-arrow-right-double-fill"></i>
 						</span>
 
-						<div className="w-full overflow-x-auto">
+						<div className="w-full overflow-x-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
 							<table className="table table-striped">
 								<thead>
 									<tr>
@@ -208,7 +208,7 @@ export default function PageTables(){
 							<i className="ri-arrow-right-double-fill"></i>
 						</span>
 
-						<div className="w-full overflow-x-auto">
+						<div className="w-full overflow-x-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
 							<table className="table table-striped hoverable">
 								<thead>
 									<tr>
@@ -246,7 +246,7 @@ export default function PageTables(){
 							<i className="ri-arrow-right-double-fill"></i>
 						</span>
 
-						<div className="w-full overflow-x-auto">
+						<div className="w-full overflow-x-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
 							<table className="table table-bordered table-compact">
 								<thead>
 									<tr>
@@ -261,6 +261,59 @@ export default function PageTables(){
 										<tr key={`t5-tbody-tr-${i}`}>
 											{ tr.map((e,i) => (
 												<td dangerouslySetInnerHTML={e} key={`t5-tbody-td-${i}`} />
+											)) }
+										</tr>
+									))}
+								</tbody>
+
+								<tfoot>
+
+								</tfoot>
+							</table>
+						</div>
+					</>
+				</DemoCard>
+
+
+
+				<DemoCard title={'Scroll content'}>
+					<>
+						<span className="text-slate-300 text-xs font-medium flex justify-end items-center mb-4 md:hidden">
+							scroll to see more...
+							<i className="ri-arrow-right-double-fill"></i>
+						</span>
+
+						<div className="w-full h-72 overflow-x-auto scrollbar scrollbar-thumb-slate-400 scrollbar-track-slate-100">
+							<table className="table">
+								<thead>
+									<tr>
+										{ data.table1.head.map((e,i) => (
+											<th key={`t1-thead-${i}`}>
+												<div className={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+											</th>
+										))}
+									</tr>
+								</thead>
+								
+								<tbody>
+									{ data.table1.body.map((tr,i) => (
+										<tr key={`t1-tbody-tr-${i}`}>
+											{ tr.map((e,i) => (
+												<td dangerouslySetInnerHTML={e} key={`t1-tbody-td-${i}`} />
+											)) }
+										</tr>
+									))}
+									{ data.table1.body.map((tr,i) => (
+										<tr key={`t1-tbody-tr-${i}`}>
+											{ tr.map((e,i) => (
+												<td dangerouslySetInnerHTML={e} key={`t1-tbody-td-${i}`} />
+											)) }
+										</tr>
+									))}
+									{ data.table1.body.map((tr,i) => (
+										<tr key={`t1-tbody-tr-${i}`}>
+											{ tr.map((e,i) => (
+												<td dangerouslySetInnerHTML={e} key={`t1-tbody-td-${i}`} />
 											)) }
 										</tr>
 									))}
