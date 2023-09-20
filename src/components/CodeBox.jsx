@@ -31,6 +31,9 @@ import Code_TableHoverable from './codes/tables/Hoverable'
 import Code_TableCompact from './codes/tables/Compact'
 import Code_TableScrollContent from './codes/tables/ScrollContent'
 
+import Code_Modal from './codes/modals/Default'
+import Code_ModalCancelButton from './codes/modals/CancelButton'
+
 
 const classes = {
 	mark: 'text-white',
@@ -86,27 +89,31 @@ export default function CodeBox(props){
 					
 					
 					{/* Content */}
-					{ props.code === 'Code_Heading' 							? (<Code_Heading classes={classes} />) 						: null }
-					{ props.code === 'Code_Paragraph' 						? (<Code_Paragraph classes={classes} />) 					: null }
-					{ props.code === 'Code_ListOrdered' 					? (<Code_ListOrdered classes={classes} />) 				: null }
-					{ props.code === 'Code_ListUnordered' 				? (<Code_ListUnordered classes={classes} />) 			: null }
-					{ props.code === 'Code_ContentCode' 					? (<Code_ContentCode classes={classes} />) 				: null }
-					{ props.code === 'Code_ContentPre' 						? (<Code_ContentPre classes={classes} />) 				: null }
+					{ props.code === 'Code_Heading' 							? (<Code_Heading classes={classes} />) 							: null }
+					{ props.code === 'Code_Paragraph' 						? (<Code_Paragraph classes={classes} />) 						: null }
+					{ props.code === 'Code_ListOrdered' 					? (<Code_ListOrdered classes={classes} />) 					: null }
+					{ props.code === 'Code_ListUnordered' 				? (<Code_ListUnordered classes={classes} />) 				: null }
+					{ props.code === 'Code_ContentCode' 					? (<Code_ContentCode classes={classes} />) 					: null }
+					{ props.code === 'Code_ContentPre' 						? (<Code_ContentPre classes={classes} />) 					: null }
 					
 					{/* Form */}
-					{ props.code === 'Code_Input' 								? (<Code_Input classes={classes} />) 							: null }
-					{ props.code === 'Code_Helper' 								? (<Code_Helper classes={classes} />) 						: null }
-					{ props.code === 'Code_Validation' 						? (<Code_Validation classes={classes} />) 				: null }
-					{ props.code === 'Code_InputGroups' 					? (<Code_InputGroups classes={classes} />) 				: null }
-					{ props.code === 'Code_InputAddons' 					? (<Code_InputAddons classes={classes} />) 				: null }
+					{ props.code === 'Code_Input' 								? (<Code_Input classes={classes} />) 								: null }
+					{ props.code === 'Code_Helper' 								? (<Code_Helper classes={classes} />) 							: null }
+					{ props.code === 'Code_Validation' 						? (<Code_Validation classes={classes} />) 					: null }
+					{ props.code === 'Code_InputGroups' 					? (<Code_InputGroups classes={classes} />) 					: null }
+					{ props.code === 'Code_InputAddons' 					? (<Code_InputAddons classes={classes} />) 					: null }
 
 					{/* Tables */}
-					{ props.code === 'Code_TableBasic' 						? (<Code_TableBasic classes={classes} />) 				: null }
-					{ props.code === 'Code_TableBordered' 				? (<Code_TableBordered classes={classes} />) 			: null }
-					{ props.code === 'Code_TableStriped' 					? (<Code_TableStriped classes={classes} />) 			: null }
-					{ props.code === 'Code_TableHoverable' 				? (<Code_TableHoverable classes={classes} />) 		: null }
-					{ props.code === 'Code_TableCompact' 					? (<Code_TableCompact classes={classes} />) 			: null }
-					{ props.code === 'Code_TableScrollContent' 		? (<Code_TableScrollContent classes={classes} />) 			: null }
+					{ props.code === 'Code_TableBasic' 						? (<Code_TableBasic classes={classes} />) 					: null }
+					{ props.code === 'Code_TableBordered' 				? (<Code_TableBordered classes={classes} />) 				: null }
+					{ props.code === 'Code_TableStriped' 					? (<Code_TableStriped classes={classes} />) 				: null }
+					{ props.code === 'Code_TableHoverable' 				? (<Code_TableHoverable classes={classes} />) 			: null }
+					{ props.code === 'Code_TableCompact' 					? (<Code_TableCompact classes={classes} />) 				: null }
+					{ props.code === 'Code_TableScrollContent' 		? (<Code_TableScrollContent classes={classes} />) 	: null }
+
+					{/* Modals */}
+					{ props.code === 'Code_Modal' 								? (<Code_Modal classes={classes} />) 								: null }
+					{ props.code === 'Code_ModalCancelButton' 		? (<Code_ModalCancelButton classes={classes} />) 		: null }
 
 
 				</pre>

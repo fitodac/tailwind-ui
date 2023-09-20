@@ -13,7 +13,7 @@ export default function PageModal(){
 				]} />
 
 			<div className="space-y-7">
-				<DemoCard title={'Default'}>
+				<DemoCard title={'Default'} code="Code_Modal">
 					<label 
 						className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white
 											hover:bg-primary-700 hover:border-primary-700 hover:text-white dark:hover:bg-primary-700 dark:hover:border-primary-700 dark:hover:text-white"
@@ -41,7 +41,7 @@ export default function PageModal(){
 				</DemoCard>
 
 
-				<DemoCard title={'Cancel button'}>
+				<DemoCard title={'Cancel button'} code="Code_ModalCancelButton">
 					<label 
 						className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white
 											hover:bg-primary-700 hover:border-primary-700 hover:text-white dark:hover:bg-primary-700 dark:hover:border-primary-700 dark:hover:text-white"
