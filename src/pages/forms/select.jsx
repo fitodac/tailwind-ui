@@ -14,7 +14,7 @@ export default function PageSelect(){
 
 			<div className="space-y-7">
 				<DemoCard title={'Select'}>
-					<div className="grid grid-cols-4 gap-6">
+					<div className="grid grid-cols-3 gap-6">
 
 						<div className="space-y-1">
 							<label>Basic</label>
@@ -57,7 +57,7 @@ export default function PageSelect(){
 
 
 				<DemoCard title={'Validation states'}>
-					<div className="grid grid-cols-4 gap-6">
+					<div className="grid grid-cols-3 gap-6">
 
 						<div className="space-y-1">
 							<select className="input-valid">
@@ -90,7 +90,7 @@ export default function PageSelect(){
 
 
 				<DemoCard title={'Input group'}>
-					<div className="grid grid-cols-4 gap-6">
+					<div className="grid grid-cols-3 gap-6">
 
 						<div className="space-y-1">
 							<div className="input-group">
