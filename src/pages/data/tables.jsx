@@ -8,11 +8,10 @@ const data = {
 		head: ['Package', 'Invoice date', 'Status', 'Actions'],
 		body: [
 			[
-				{__html: `<span class="font-semibold">Free package</span>
-									<br/>
+				{__html: `<span class="font-semibold block">Free package</span>
 									<span>$287</span>`},
 				{__html: 'Jan. 13, 2023'},
-				{__html: '<span>paid</span>'},
+				{__html: '<span class="badge bg-green-600 border-green-600">paid</span>'},
 				{__html: `<div class="text-end">
 										<button class="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
 									</div>`}
@@ -22,7 +21,7 @@ const data = {
 									<br/>
 									<span>$530</span>`},
 				{__html: 'Mar. 4, 2023'},
-				{__html: '<span>paid</span>'},
+				{__html: '<span class="badge bg-green-600 border-green-600">paid</span>'},
 				{__html: `<div class="text-end">
 										<button class="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
 									</div>`}
@@ -32,7 +31,7 @@ const data = {
 									<br/>
 									<span>$122</span>`},
 				{__html: 'Jun. 22, 2023'},
-				{__html: '<span>unpaid</span>'},
+				{__html: '<span class="badge bg-red-700 border-red-700">unpaid</span>'},
 				{__html: `<div class="text-end">
 										<button class="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
 									</div>`}
@@ -42,7 +41,7 @@ const data = {
 									<br/>
 									<span>$890</span>`},
 				{__html: 'Nov. 28, 2023'},
-				{__html: '<span>pending</span>'},
+				{__html: '<span class="badge bg-yellow-600 border-yellow-600">pending</span>'},
 				{__html: `<div class="text-end">
 										<button class="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
 									</div>`}
@@ -87,7 +86,7 @@ export default function PageTables(){
 			<PageHeader title="Tables" />
 
 			<div className="space-y-7">
-				<DemoCard title={'Basic table'}>
+				<DemoCard title={'Basic table'} code="Code_TableBasic">
 					<>
 						<span className="text-slate-300 text-xs font-medium flex justify-end items-center mb-4 md:hidden">
 							scroll to see more...
@@ -100,7 +99,7 @@ export default function PageTables(){
 									<tr>
 										{ data.table1.head.map((e,i) => (
 											<th key={`t1-thead-${i}`}>
-												<div className={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+												<div className={i === data.table1.head.length -1 ? 'text-end' : null}>{ e }</div>
 											</th>
 										))}
 									</tr>
@@ -115,17 +114,13 @@ export default function PageTables(){
 										</tr>
 									))}
 								</tbody>
-
-								<tfoot>
-
-								</tfoot>
 							</table>
 						</div>
 					</>
 				</DemoCard>
 
 
-				<DemoCard title={'Bordered table'}>
+				<DemoCard title={'Bordered table'} code="Code_TableBordered">
 					<>
 						<span className="text-slate-300 text-xs font-medium flex justify-end items-center mb-4 md:hidden">
 							scroll to see more...
@@ -138,7 +133,7 @@ export default function PageTables(){
 									<tr>
 										{ data.table1.head.map((e,i) => (
 											<th key={`t2-thead-${i}`}>
-												<div className={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+												<div className={i === data.table1.head.length -1 ? 'text-end' : null}>{ e }</div>
 											</th>
 										))}
 									</tr>
@@ -153,17 +148,13 @@ export default function PageTables(){
 										</tr>
 									))}
 								</tbody>
-
-								<tfoot>
-
-								</tfoot>
 							</table>
 						</div>
 					</>
 				</DemoCard>
 
 
-				<DemoCard title={'Striped table'}>
+				<DemoCard title={'Striped table'} code="Code_TableStriped">
 					<>
 						<span className="text-slate-300 text-xs font-medium flex justify-end items-center mb-4 md:hidden">
 							scroll to see more...
@@ -176,7 +167,7 @@ export default function PageTables(){
 									<tr>
 										{ data.table1.head.map((e,i) => (
 											<th key={`t3-thead-${i}`}>
-												<div className={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+												<div className={i === data.table1.head.length -1 ? 'text-end' : null}>{ e }</div>
 											</th>
 										))}
 									</tr>
@@ -191,17 +182,13 @@ export default function PageTables(){
 										</tr>
 									))}
 								</tbody>
-
-								<tfoot>
-
-								</tfoot>
 							</table>
 						</div>
 					</>
 				</DemoCard>
 
 
-				<DemoCard title={'Hoverable table'}>
+				<DemoCard title={'Hoverable table'} code="Code_TableHoverable">
 					<>
 						<span className="text-slate-300 text-xs font-medium flex justify-end items-center mb-4 md:hidden">
 							scroll to see more...
@@ -214,7 +201,7 @@ export default function PageTables(){
 									<tr>
 										{ data.table1.head.map((e,i) => (
 											<th key={`t4-thead-${i}`}>
-												<div className={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+												<div className={i === data.table1.head.length -1 ? 'text-end' : null}>{ e }</div>
 											</th>
 										))}
 									</tr>
@@ -229,17 +216,13 @@ export default function PageTables(){
 										</tr>
 									))}
 								</tbody>
-
-								<tfoot>
-
-								</tfoot>
 							</table>
 						</div>
 					</>
 				</DemoCard>
 
 
-				<DemoCard title={'Compact table'}>
+				<DemoCard title={'Compact table'} code="Code_TableCompact">
 					<>
 						<span className="text-slate-300 text-xs font-medium flex justify-end items-center mb-4 md:hidden">
 							scroll to see more...
@@ -265,10 +248,6 @@ export default function PageTables(){
 										</tr>
 									))}
 								</tbody>
-
-								<tfoot>
-
-								</tfoot>
 							</table>
 						</div>
 					</>
@@ -276,7 +255,7 @@ export default function PageTables(){
 
 
 
-				<DemoCard title={'Scroll content'}>
+				<DemoCard title={'Scroll content'} code="Code_TableScrollContent">
 					<>
 						<span className="text-slate-300 text-xs font-medium flex justify-end items-center mb-4 md:hidden">
 							scroll to see more...
@@ -289,7 +268,7 @@ export default function PageTables(){
 									<tr>
 										{ data.table1.head.map((e,i) => (
 											<th key={`t1-thead-${i}`}>
-												<div className={i === data.table1.head.length -1 ? 'text-end' : ''}>{ e }</div>
+												<div className={i === data.table1.head.length -1 ? 'text-end' : null}>{ e }</div>
 											</th>
 										))}
 									</tr>
@@ -318,10 +297,6 @@ export default function PageTables(){
 										</tr>
 									))}
 								</tbody>
-
-								<tfoot>
-
-								</tfoot>
 							</table>
 						</div>
 					</>
