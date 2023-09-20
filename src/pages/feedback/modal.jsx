@@ -28,7 +28,7 @@ export default function PageModal(){
 							<div className="font-semibold flex justify-between">
 								<div className="text-primary text-lg">The modal box</div>
 								<label htmlFor="modal1" className="btn btn-link">
-									<i class="ri-close-line"></i>
+									<i class="ri-close-line"/>
 								</label>
 							</div>
 
@@ -56,7 +56,7 @@ export default function PageModal(){
 							<div className="font-semibold flex justify-between">
 								<div className="text-primary text-lg">Subscribe now</div>
 								<label htmlFor="modal2" className="btn btn-link">
-									<i class="ri-close-line"></i>
+									<i class="ri-close-line"/>
 								</label>
 							</div>
 

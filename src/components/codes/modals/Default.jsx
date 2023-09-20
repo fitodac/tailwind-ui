@@ -27,6 +27,8 @@ export default function Code(props){
 		<br/>
 		<br/>
 
+		<code>// Modal checkbox. This is necessary for the functionality of the modal box</code>
+		<br/>
 		<code className={mark}>{`<`}</code>
 		<code className={tag}>{`input`}</code>
 		<code className={class_name}> {`type`}</code>
@@ -43,6 +45,8 @@ export default function Code(props){
 		<br/>
 		<br/>
 		
+		<code>// Modal box</code>
+		<br/>
 		<code className={mark}>{`<`}</code>
 		<code className={tag}>{`div`}</code>
 		<code className={class_name}> {`class`}</code>
@@ -62,6 +66,40 @@ export default function Code(props){
 		<code className={tag}>{`div`}</code>
 		<code className={mark}>{`>`}</code>
 		<br/>
+
+		<code className={mark}>{`      <`}</code>
+		<code className={tag}>{`div`}</code>
+		<code className={class_name}> {`class`}</code>
+		<code className={equal}>{`=`}</code>
+		<code className={class_list_secondary}>{`"flex justify-end"`}</code>
+		<code className={mark}>{`>`}</code>
+		<br/>
+		<code className={mark}>{`        <`}</code>
+		<code className={tag}>{`label`}</code>
+		<code className={class_name}> {`class`}</code>
+		<code className={equal}>{`=`}</code>
+		<code className={class_list_secondary}>{`"btn btn-link"`}</code>
+		<code className={class_name}> {`for`}</code>
+		<code className={equal}>{`=`}</code>
+		<code className={class_list}>{`"modal_box"`}</code>
+		<code className={mark}>{`>`}</code>
+		<br/>
+		<code className={mark}>{`          <`}</code>
+		<code className={tag}>{`i`}</code>
+		<code className={class_name}> {`class`}</code>
+		<code className={equal}>{`=`}</code>
+		<code className={class_list_secondary}>{`"ri-close-line"`}</code>
+		<code className={mark}>{`/>`}</code>
+		<br/>
+		<code className={mark}>{`        </`}</code>
+		<code className={tag}>{`label`}</code>
+		<code className={mark}>{`>`}</code>
+		<br/>
+		<code className={mark}>{`      </`}</code>
+		<code className={tag}>{`div`}</code>
+		<code className={mark}>{`>`}</code>
+		<br/>
+
 		<code>{`      Hi there!`}</code>
 		<br/>
 		<code>{`      I'm the modal box content`}</code>
