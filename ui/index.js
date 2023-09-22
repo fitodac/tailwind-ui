@@ -18,7 +18,7 @@ const { MODAL_UTILITIES } = require('./_modal')
 const { OVERLAY_UTILITIES } = require('./_overlay')
 const { TOAST_UTILITIES } = require('./_toast')
 
-
+// Scroll bar
 const {
   BASE_STYLES,
   SCROLLBAR_SIZE_UTILITIES,
@@ -26,6 +26,7 @@ const {
 } = require('./_scrollbar')
 
 const { addVariantOverrides } = require('./variants')
+
 
 
 module.exports = plugin.withOptions((options = {}) => tailwind => {
@@ -43,7 +44,7 @@ module.exports = plugin.withOptions((options = {}) => tailwind => {
 				'--tw-ui-dark-border-color': GLOBALS.DARK.borderColor,
 			}
 		});
-		tailwind.addUtilities(BUTTON_UTILITIES);
+		tailwind.addComponents(BUTTON_UTILITIES);
 		tailwind.addUtilities(FORM_INPUT_UTILITIES);
 		tailwind.addUtilities(FORM_SELECT_UTILITIES);
 		tailwind.addUtilities(FORM_CHECKBOX_UTILITIES);
@@ -69,7 +70,7 @@ module.exports = plugin.withOptions((options = {}) => tailwind => {
 		// 	addSizeUtilities(tailwind);
 		// }
 
-		return function ({ addVariant, addComponents, theme, prefix }) {
+		return function ({ addVariant, addComponents, addUtilities, theme, prefix }) {
 			addComponents({
 				// ...buttons
 			})
