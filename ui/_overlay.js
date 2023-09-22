@@ -12,7 +12,6 @@ const OVERLAY_STYLE_BASE = {
 		'position': 'fixed',
 		'opacity': 0,
 		'visibility': 'hidden',
-		'border-radius': theme.borderRadius.xl,
 		'transition': '.2s ease-in-out',
 		'pointer-events': 'none',
 		'will-change': 'opacity',
