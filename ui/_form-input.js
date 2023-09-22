@@ -1,5 +1,9 @@
+const plugin = require('tailwindcss/plugin')
 const theme = require('tailwindcss/defaultTheme')
 const GLOBALS = require('./_utils');
+
+
+const OPTIONS = {}
 
 
 const COMPONENTS = [
