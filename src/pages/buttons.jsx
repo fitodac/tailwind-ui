@@ -32,11 +32,22 @@ export default function PageButtons(){
 			<div className="space-y-7">
 
 				<DemoCard title={'Buttons'} code="Code_Buttons">
-					<div className="space-x-4">
-						<button className="btn">Default</button>
-						<button className={`btn ${class_primary}`}>Primary</button>
-						<button className={`btn ${class_secondary}`}>Secondary</button>
-						<button className={`btn ${class_alt}`}>Alternative</button>
+					<div className="grid gap-y-4 md:space-x-4">
+						<div>
+							<button className="btn">Default</button>
+						</div>
+
+						<div>
+							<button className={`btn ${class_primary}`}>Primary</button>
+						</div>
+
+						<div>
+							<button className={`btn ${class_secondary}`}>Secondary</button>
+						</div>
+
+						<div>
+							<button className={`btn ${class_alt}`}>Alternative</button>
+						</div>
 					</div>
 				</DemoCard>
 
