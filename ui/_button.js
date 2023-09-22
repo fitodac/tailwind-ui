@@ -20,6 +20,7 @@ const BUTTON_STYLE_BASE = {
 		'cursor': 'pointer',
 		'overflow': 'hidden',
 		'text-overflow': 'ellipsis',
+		'white-space': 'nowrap',
 		'user-select': 'none'
 	},
 
@@ -66,7 +67,11 @@ const BUTTON_UTILITIES = {
 
 		'&.ghost': { 'border': 'transparent' },
 
-		'&.btn-icon': { ...BUTTON_STYLE_BASE.ICON },
+		'&.btn-icon': {
+			...BUTTON_STYLE_BASE.ICON,
+
+			'svg': { 'transition': theme.transitionProperty.all }
+		},
 
 		'&.rounded-full': { 'border-radius': theme.borderRadius.full },
 

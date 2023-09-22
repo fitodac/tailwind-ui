@@ -14,12 +14,8 @@
 .btn.ghost{ @apply hover:bg-opacity-100; }
 
 .btn-icon svg:not([class*=fill-]){ 
-	@apply 
-	fill-white
-	transition-all; 
+	@apply fill-white;
 }
-
-// .btn-toggler input:checked + .btn{ @apply bg-slate-200; }
 
 
 
