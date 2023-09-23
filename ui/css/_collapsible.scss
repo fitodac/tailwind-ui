@@ -2,28 +2,11 @@
 Collapsible
 **/
 .collapsible{
-	@apply border border-slate-300 w-full relative overflow-hidden rounded-lg;
+	@apply border-slate-200;
 }
 
-.collapsible [type=checkbox],
-.collapsible [type=radio]{
-	@apply absolute opacity-0;
-}
-
-.collapsible-head{
-	@apply leading-normal px-5 py-3 block cursor-pointer;
-}
-
-.collapsible-content{
-	@apply overflow-auto leading-tight max-h-0 transition-all duration-200;
-}
 
 .collapsible [type=checkbox]:checked ~ .collapsible-head,
 .collapsible [type=radio]:checked ~ .collapsible-head{
 	@apply text-primary;
-}
-
-.collapsible [type=checkbox]:checked ~ .collapsible-content,
-.collapsible [type=radio]:checked ~ .collapsible-content{
-	@apply max-h-80;
 }
