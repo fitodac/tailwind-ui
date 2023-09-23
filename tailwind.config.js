@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const twUiKit = require('./ui')
-// const test = require('./test')
+
 
 module.exports = {
   content: [
@@ -21,8 +21,14 @@ module.exports = {
 		}
   },
 	plugins: [
-		twUiKit.base,
-		twUiKit.content,
-		twUiKit.button({}),
+		twUiKit
+		// twUiKit.base,
+		// twUiKit.content,
+		// twUiKit.button({}),
+		// twUiKit.form_input,
+		// twUiKit.form_select,
+		// twUiKit.form_custom_select,
+		// twUiKit.form_checkbox,
+		// twUiKit.form_radiobutton,
 	],
 }

@@ -1,6 +1,5 @@
-const plugin = require('tailwindcss/plugin')
 const theme = require('tailwindcss/defaultTheme')
-const GLOBALS = require('./_utils')
+const { GLOBALS } = require('./_utils')
 const MEDIA = require('./_mediaqueries')
 
 
@@ -28,7 +27,6 @@ const OPTIONS = {
 	'.btn-group-lg > .btn:first-child': {},
 	'.btn-group-lg > .btn:last-child': {},
 }
-
 
 
 const BASE = {
@@ -131,100 +129,101 @@ const BASE = {
 }
 
 
+const COMPONENTS = (addComponents, options) => {
+	
+	addComponents({
+		['.btn']: {
+			...BASE.BTN, 
+			...options['.btn'],
+			
+			['&.btn-sm']: {...BASE.BTN.SM, ...options['.btn-sm']},
+			['&.btn-lg']: {...BASE.BTN.LG, ...options['.btn-lg']},
+			['&.ghost']: {...BASE.BTN.GHOST, ...options['.btn.ghost']},
+			['&.btn-icon']: {
+				...BASE.BTN.ICON, 
+				...options['.btn-icon'],
 
-module.exports = plugin.withOptions((options = OPTIONS) => {
-	return function ({addComponents}) {
-		addComponents({
-			['.btn']: {
-				...BASE.BTN, 
-				...options['.btn'],
-				
-				['&.btn-sm']: {...BASE.BTN.SM, ...options['.btn-sm']},
-				['&.btn-lg']: {...BASE.BTN.LG, ...options['.btn-lg']},
-				['&.ghost']: {...BASE.BTN.GHOST, ...options['.btn.ghost']},
-				['&.btn-icon']: {
-					...BASE.BTN.ICON, 
-					...options['.btn-icon'],
+				['svg']: {...BASE.BTN.ICON.SVG, ...options['.btn_icon > svg']}
+			},
+			['&.rounded-full']: {...BASE.BTN.ROUNDED, ...options['.btn.rounded']},
+			['&.btn-link']: {...BASE.LINK, ...options['.btn-link']},
+			['> [class^=ri-]']: {...BASE.RI, ...options['.btn > [class^=ri-]']},
+		}
+	})
 
-					['svg']: {...BASE.BTN.ICON.SVG, ...options['.btn_icon > svg']}
-				},
-				['&.rounded-full']: {...BASE.BTN.ROUNDED, ...options['.btn.rounded']},
-				['&.btn-link']: {...BASE.LINK, ...options['.btn-link']},
-				['> [class^=ri-]']: {...BASE.RI, ...options['.btn > [class^=ri-]']},
-			}
-		})
+	addComponents({
+		['.btn-group']: {
+			...BASE.GROUP.GROUP,
+			...options['.btn-group'],
 
-		addComponents({
-			['.btn-group']: {
-				...BASE.GROUP.GROUP,
-				...options['.btn-group'],
+			['> .btn']: {
+				...BASE.GROUP.CHILDREN,
+				...options['.btn-group > .btn'],
 
+				['&:first-child']: {...BASE.GROUP.CHILDREN_FIRST, ...options['.btn-group > .btn:first-child']},
+				['&:last-child']: {...BASE.GROUP.CHILDREN_LAST, ...options['.btn-group > .btn:last-child']}
+			},
+
+			['> label']: {
+				...BASE.GROUP.LABEL,
+				...options['.btn-group > label'],
+
+				['> [type=checkbox], > [type=radio]']: { display: 'none' },
 				['> .btn']: {
 					...BASE.GROUP.CHILDREN,
+					...BASE.GROUP.LABEL.BTN,
 					...options['.btn-group > .btn'],
-
-					['&:first-child']: {...BASE.GROUP.CHILDREN_FIRST, ...options['.btn-group > .btn:first-child']},
-					['&:last-child']: {...BASE.GROUP.CHILDREN_LAST, ...options['.btn-group > .btn:last-child']}
 				},
+				['&:first-child > .btn']: {...BASE.GROUP.CHILDREN_FIRST, ...options['.btn-group > .btn:first-child']},
+				['&:last-child > .btn']: {...BASE.GROUP.CHILDREN_LAST, ...options['.btn-group > .btn:last-child']},
+			},
 
-				['> label']: {
-					...BASE.GROUP.LABEL,
-					...options['.btn-group > label'],
+			['> .dropdown > .btn-toggler > .btn']: {...BASE.GROUP.CHILDREN, ...options['.btn-group > .btn']},
+			['> .dropdown:first-child > .btn-toggler > .btn']: {...BASE.GROUP.CHILDREN_FIRST, ...options['.btn-group > .btn:first-child']},
+			['> .dropdown:last-child > .btn-toggler > .btn']: {...BASE.GROUP.CHILDREN_LAST, ...options['.btn-group > .btn:last-child']}
 
-					['> [type=checkbox], > [type=radio]']: { display: 'none' },
-					['> .btn']: {
-						...BASE.GROUP.CHILDREN,
-						...BASE.GROUP.LABEL.BTN,
-						...options['.btn-group > .btn'],
-					},
-					['&:first-child > .btn']: {...BASE.GROUP.CHILDREN_FIRST, ...options['.btn-group > .btn:first-child']},
-					['&:last-child > .btn']: {...BASE.GROUP.CHILDREN_LAST, ...options['.btn-group > .btn:last-child']},
-				},
+		}
+	})
 
-				['> .dropdown > .btn-toggler > .btn']: {...BASE.GROUP.CHILDREN, ...options['.btn-group > .btn']},
-				['> .dropdown:first-child > .btn-toggler > .btn']: {...BASE.GROUP.CHILDREN_FIRST, ...options['.btn-group > .btn:first-child']},
-				['> .dropdown:last-child > .btn-toggler > .btn']: {...BASE.GROUP.CHILDREN_LAST, ...options['.btn-group > .btn:last-child']}
+	addComponents({
+		['.btn-group-sm']: {
+			...BASE.GROUP.GROUP,
+			...options['.btn-group-sm'],
 
+			['& > .btn']: {
+				...BASE.GROUP.CHILDREN,
+				...BASE.GROUP.SM.BTN,
+				...options['.btn-group-sm > .btn'],
+
+				['&:first-child']: {...BASE.GROUP.CHILDREN_FIRST, ...options['.btn-group-sm > .btn:first-child']},
+				['&:last-child']: {...BASE.GROUP.CHILDREN_LAST, ...options['.btn-group-sm > .btn:last-child']},
 			}
-		})
+		}
+	})
+	
+	addComponents({
+		['.btn-group-lg']: {
+			...BASE.GROUP.GROUP,
+			...options['.btn-group-lg'],
 
-		addComponents({
-			['.btn-group-sm']: {
-				...BASE.GROUP.GROUP,
-				...options['.btn-group-sm'],
+			['& > .btn']: {
+				...BASE.GROUP.CHILDREN,
+				...BASE.GROUP.LG.BTN,
+				...options['.btn-group-lg > .btn'],
 
-				['& > .btn']: {
-					...BASE.GROUP.CHILDREN,
-					...BASE.GROUP.SM.BTN,
-					...options['.btn-group-sm > .btn'],
-
-					['&:first-child']: {...BASE.GROUP.CHILDREN_FIRST, ...options['.btn-group-sm > .btn:first-child']},
-					['&:last-child']: {...BASE.GROUP.CHILDREN_LAST, ...options['.btn-group-sm > .btn:last-child']},
-				}
+				['&:first-child']: {...BASE.GROUP.LG.BTN.FIRST_CHILD, ...options['.btn-group-lg > .btn:first-child']},
+				['&:last-child']: {...BASE.GROUP.LG.BTN.LAST_CHILD, ...options['.btn-group-lg > .btn:last-child']},
 			}
-		})
-		
-		addComponents({
-			['.btn-group-lg']: {
-				...BASE.GROUP.GROUP,
-				...options['.btn-group-lg'],
+		}
+	})
 
-				['& > .btn']: {
-					...BASE.GROUP.CHILDREN,
-					...BASE.GROUP.LG.BTN,
-					...options['.btn-group-lg > .btn'],
+	addComponents({
+		['.btn-toggler']: {
+			['> [type=checkbox], > [type=radio]']: { display: 'none' }
+		}
+	})
 
-					['&:first-child']: {...BASE.GROUP.LG.BTN.FIRST_CHILD, ...options['.btn-group-lg > .btn:first-child']},
-					['&:last-child']: {...BASE.GROUP.LG.BTN.LAST_CHILD, ...options['.btn-group-lg > .btn:last-child']},
-				}
-			}
-		})
+}
 
-		addComponents({
-			['.btn-toggler']: {
-				['> [type=checkbox], > [type=radio]']: { display: 'none' }
-			}
-		})
 
-	}
-})
+module.exports = { OPTIONS, COMPONENTS }

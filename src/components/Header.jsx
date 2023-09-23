@@ -1,4 +1,10 @@
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
+
+
+const navItemClassName = {
+	BASE: 'text-slate-400 hover:text-primary'
+}
 
 
 export default function Header(){
@@ -20,10 +26,7 @@ export default function Header(){
 	useEffect(() => {
 		const color_mode = localStorage.getItem('tailwind-ui-mode')
 
-		if( color_mode ){
-			toggleDarkMode(color_mode)
-			// document.body.classList.add('dark')
-		}
+		if( color_mode ) toggleDarkMode(color_mode)
 	}, [])
 
 
@@ -33,7 +36,13 @@ export default function Header(){
 				className="bg-white border-b border-slate-200 px-6 py-3 inset-x-0 top-0 fixed z-10
 			dark:bg-slate-800 dark:border-slate-700">
 
-				<div className="flex justify-end">
+				<div className="flex justify-between lg:pl-60">
+					<div className="text-sm flex gap-x-8 items-center">
+						<Link href="/components/application" className={navItemClassName.BASE}>Application</Link>
+						<Link href="/components/dashboard" className={navItemClassName.BASE}>Dashboard</Link>
+						<Link href="/components/ecommerce" className={navItemClassName.BASE}>E-commerce</Link>
+						<Link href="/components/marketing" className={navItemClassName.BASE}>Marketing</Link>
+					</div>
 
 					<div className="">
 						<label 

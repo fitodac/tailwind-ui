@@ -39,4 +39,20 @@ const GLOBALS = {
 }
 
 
-module.exports = GLOBALS
+const FIELD_STYLE_BASE = {
+	'border-width': theme.borderWidth.DEFAULT,
+	'border-style': 'solid',
+	'font-size': theme.fontSize.sm[0],
+	'line-height': theme.fontSize.sm[1].lineHeight,
+	'width': '100%',
+	'max-height': theme.spacing[10],
+	'padding': `${theme.spacing[2]} ${GLOBALS.spacing.DEFAULT}`,
+	'border-radius': theme.borderRadius.md,
+	'user-select': 'none',
+}
+
+
+module.exports = {
+	GLOBALS,
+	FIELD_STYLE_BASE
+}

@@ -29,7 +29,7 @@ export default function Layout({children}){
 
 						<div className="border-t border-slate-200 pt-6 pb-16 mt-20 dark:border-slate-600">
 							<div className="flex justify-end">
-								<div className="text-slate-400 text-xs">TailwindCSS UI Alpha 1.0.0</div>
+								<div className="text-slate-400 text-xs">TailwindCSS UI beta 1.0.0</div>
 							</div>
 						</div>
 					</div>

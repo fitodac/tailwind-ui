@@ -1,9 +1,14 @@
 const theme = require('tailwindcss/defaultTheme')
-const GLOBALS = require('./_utils')
 
 
-const BADGE_STYLE_BASE = {
-	DEFAULT: {
+const OPTIONS = {
+	'.badge': {},
+	'.dot-badge': {}
+}
+
+
+const BASE = {
+	BADGE: {
 		'border-width': theme.borderWidth.DEFAULT,
 		'font-size': theme.fontSize.xs[0],
 		'font-weight': theme.fontWeight.medium,
@@ -13,7 +18,7 @@ const BADGE_STYLE_BASE = {
 		'user-select': 'none'
 	},
 
-	DOT: {
+	DOT_BADGE: {
 		'color': 'transparent',
 		'font-size': 0,
 		'width': theme.spacing[3],
@@ -26,10 +31,12 @@ const BADGE_STYLE_BASE = {
 	}
 }
 
-const BADGE_UTILITIES = {
-	'.badge': { ...BADGE_STYLE_BASE.DEFAULT },
-	'.dot-badge': { ...BADGE_STYLE_BASE.DOT }
+
+const COMPONENTS = (addComponents, options) => {
+	addComponents({ ['.badge']: { ...BASE.BADGE, ...options['.badge'] } })
+	addComponents({ ['.dot-badge']: { ...BASE.DOT_BADGE, ...options['.dot-badge'] } })
 }
 
 
-module.exports = { BADGE_UTILITIES }
+
+module.exports = { OPTIONS, COMPONENTS }

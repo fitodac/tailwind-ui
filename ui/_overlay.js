@@ -1,7 +1,15 @@
 const theme = require('tailwindcss/defaultTheme')
+const MEDIA = require('./_mediaqueries')
 
-const OVERLAY_STYLE_BASE = {
-	BASIC: {
+const OPTIONS = {
+	'.overlay': {},
+	'input[type=checkbox]:checked + .overlay': {},
+	'input[type=radio]:checked + .overlay': {}
+}
+
+
+const BASE = {
+	OVERLAY: {
 		'padding': theme.spacing[6],
 		'display': 'grid',
 		'place-content': 'center',
@@ -15,28 +23,24 @@ const OVERLAY_STYLE_BASE = {
 		'transition': '.2s ease-in-out',
 		'pointer-events': 'none',
 		'will-change': 'opacity',
-		'z-index': 99
-	},
+		'z-index': 99,
+		...MEDIA.query('xl', {'padding': 0}),
 
-	ACTIVE: {
-		'opacity': 1,
-		'visibility': 'visible',
-		'pointer-events': 'auto'
+		ACTIVE: {
+			'opacity': 1,
+			'visibility': 'visible',
+			'pointer-events': 'auto'
+		}
 	}
 }
 
 
-const OVERLAY_UTILITIES = {
-	'.overlay': { ...OVERLAY_STYLE_BASE.BASIC },
-
-	'input[type=checkbox]:checked + .overlay, input[type=radio]:checked + .overlay': {
-		...OVERLAY_STYLE_BASE.ACTIVE
-	},
-
-	'@media (min-width: 1536px)': {
-		'.overlay': { 'padding': 0 }
-	}
+const COMPONENTS = (addComponents, options) => {
+	addComponents({ ['.overlay']: { ...BASE.OVERLAY, ...options['.overlwy'] } })
+	addComponents({ ['input[type=checkbox]:checked + .overlay']: { ...BASE.OVERLAY.ACTIVE, ...options['input[type=checkbox]:checked + .overlay'] } })
+	addComponents({ ['input[type=radio]:checked + .overlay']: { ...BASE.OVERLAY.ACTIVE, ...options['input[type=radio]:checked + .overlay'] } })
 }
 
 
-module.exports = { OVERLAY_UTILITIES }
+
+module.exports = { OPTIONS, COMPONENTS }

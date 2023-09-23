@@ -1,7 +1,16 @@
 const theme = require('tailwindcss/defaultTheme')
 
-const TOAST_STYLE_BASE = {
-	BASIC: {
+
+const OPTIONS = {
+	'.toast': {},
+	'&:not([class*=top-]):not([class*=left-]):not([class*=right-])': {},
+	'input[type=checkbox]:checked + .toast': {},
+	'input[type=radio]:checked + .toast': {}
+}
+
+
+const BASE = {
+	TOAST: {
 		'border-width': '1px',
 		'font-size': theme.fontSize.sm,
 		'font-weight': theme.fontWeight.normal,
@@ -14,33 +23,48 @@ const TOAST_STYLE_BASE = {
 		'will-change': 'opacity',
 		'transition': '.2s ease-in-out',
 		'pointer-events': 'none',
-		'z-index': 99
+		'z-index': 99,
+
+		POSITION: {
+			'right': theme.spacing[2],
+			'bottom': theme.spacing[2],
+		}
 	},
 
-	POSITION: {
-		'right': theme.spacing[2],
-		'bottom': theme.spacing[2],
-	},
 
-	ACTIVE: {
-		'opacity': 1,
-		'visibility': 'visible',
-		'pointer-events': 'auto'
+	CHECKED: {
+		TOAST:{
+			'opacity': 1,
+			'visibility': 'visible',
+			'pointer-events': 'auto'
+		}
 	}
 }
 
 
-const TOAST_UTILITIES = {
-	'.toast': { 
-		...TOAST_STYLE_BASE.BASIC,
-		
-		'&:not([class*=top-]):not([class*=left-]):not([class*=right-])': { ...TOAST_STYLE_BASE.POSITION }
-	},
+const COMPONENTS = (addComponents, options) => {
+	addComponents({
+		['.toast']: { 
+			...BASE.TOAST,
+			...options['.toast'],
 
-	'input[type=checkbox]:checked + .toast, input[type=radio]:checked + .toast': {
-		...TOAST_STYLE_BASE.ACTIVE
-	}
+			['&:not([class*=top-]):not([class*=left-]):not([class*=right-])']: {
+				...BASE.TOAST.POSITION,
+				...options['&:not([class*=top-]):not([class*=left-]):not([class*=right-])']
+			}
+		}
+	})
+
+	addComponents({
+		['input[type=checkbox]:checked + .toast']: { ...BASE.CHECKED.TOAST, ...options['input[type=checkbox]:checked + .toast'] }
+	})
+
+	addComponents({
+		['input[type=radio]:checked + .toast']: { ...BASE.CHECKED.TOAST, ...options['input[type=radio]:checked + .toast'] }
+	})
 }
 
 
-module.exports = { TOAST_UTILITIES }
+
+
+module.exports = { OPTIONS, COMPONENTS }

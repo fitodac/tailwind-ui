@@ -1,7 +1,15 @@
 const theme = require('tailwindcss/defaultTheme')
 
-const MODAL_STYLE_BASE = {
-	BASIC: {
+
+const OPTIONS = {
+	'.modal': {},
+	'input[type=checkbox]:checked + .overlay > .modal': {},
+	'input[type=radio]:checked + .overlay > .modal': {}
+}
+
+
+const BASE = {
+	MODAL: {
 		'top': theme.spacing[8],
 		'position': 'relative',
 		'opacity': 0,
@@ -9,21 +17,24 @@ const MODAL_STYLE_BASE = {
 		'transition': '.2s ease-in-out'
 	},
 
-	ACTIVE: {
-		'top': 0,
-		'opacity': 1,
-		'transition-delay': theme.transitionDelay[75]
+	INPUT: {
+		OVERLAY: {
+			MODAL: {
+				'top': 0,
+				'opacity': 1,
+				'transition-delay': theme.transitionDelay[75]
+			}
+		}
 	}
 }
 
 
-const MODAL_UTILITIES = {
-	'.modal': { ...MODAL_STYLE_BASE.BASIC },
-
-	'input[type=checkbox]:checked + .overlay > .modal, input[type=radio]:checked + .overlay > .modal': {
-		...MODAL_STYLE_BASE.ACTIVE
-	}
+const COMPONENTS = (addComponents, options) => {
+	addComponents({ ['.modal']: { ...BASE.MODAL, ...options['.modal'] } })
+	addComponents({ ['input[type=checkbox]:checked + .overlay > .modal']: { ...BASE.INPUT.OVERLAY.MODAL, ...options['input[type=checkbox]:checked + .overlay > .modal'] } })
+	addComponents({ ['input[type=radio]:checked + .overlay > .modal']: { ...BASE.INPUT.OVERLAY.MODAL, ...options['input[type=radio]:checked + .overlay > .modal'] } })
 }
 
 
-module.exports = { MODAL_UTILITIES }
+
+module.exports = { OPTIONS, COMPONENTS }

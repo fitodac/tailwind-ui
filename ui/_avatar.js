@@ -1,9 +1,16 @@
 const theme = require('tailwindcss/defaultTheme')
-const GLOBALS = require('./_utils')
 
 
-const AVATAR_STYLE_BASE = {
-	DEFAULT: {
+const OPTIONS = {
+	'.avatar': {},
+	'.avatar > img': {},
+	'.avatar.rounded-full > img': {},
+	'.avatar.avatar-squircle': {}
+}
+
+
+const BASE = {
+	AVATAR: {
 		'font-size': theme.fontSize.xs[0],
 		'line-height': theme.fontSize.xs[1],
 		'display': 'inline-grid',
@@ -13,10 +20,14 @@ const AVATAR_STYLE_BASE = {
 		'user-select': 'none',
 		'transition': theme.transitionProperty.all,
 		'transition-duration': theme.transitionDuration[300],
-		'vertical-align': 'top'
+		'vertical-align': 'top',
+
+		ROUNDED: {
+			IMAGE: { 'border-radius': theme.borderRadius.full }
+		}
 	},
 	
-	IMG: {
+	IMAGE: {
 		'width': '100%',
 		'height': '100%',
 		'object-fit': 'cover',
@@ -37,17 +48,18 @@ const AVATAR_STYLE_BASE = {
 	}
 }
 
-const AVATAR_UTILITIES = {
-	'.avatar': {
-		...AVATAR_STYLE_BASE.DEFAULT,
 
-		'> img': { ...AVATAR_STYLE_BASE.IMG },
+const COMPONENTS = (addComponents, options) => {
+	addComponents({
+		['.avatar']: {
+			...BASE.AVATAR,
+			...options['.avatar'],
 
-		'&.rounded-full > img': { 'border-radius': theme.borderRadius.full },
-
-		'&.avatar-squircle': { ...AVATAR_STYLE_BASE.SQUIRCLE }
-	}
+			['> img']: { ...BASE.IMAGE, ...options['.avatar > img'] },
+			['&.rounded-full > img']: { ...BASE.AVATAR.ROUNDED.IMAGE, ...options['.avatar.rounded-full > img'] },
+			['&.avatar-squircle']: { ...BASE.SQUIRCLE, ...options['.avatar.avatar-squircle'] }
+		}
+	})
 }
 
-
-module.exports = { AVATAR_UTILITIES }
+module.exports = { OPTIONS, COMPONENTS }

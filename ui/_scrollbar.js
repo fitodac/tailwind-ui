@@ -1,17 +1,19 @@
 const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette');
 const toColorValue = require('tailwindcss/lib/util/toColorValue');
-const typedefs = {}
+
 
 const COMPONENTS = ['track', 'thumb', 'corner'];
 
 /**
  * Base resets to make the plugin's utilities work
  */
-const BASE_STYLES = {
-  '*': {
-    // 'scrollbar-color': 'initial',
-    // 'scrollbar-width': 'initial'
-  }
+const STYLES = (addBase) => {
+  addBase({
+		'*': {
+			'scrollbar-color': 'initial',
+			'scrollbar-width': 'initial'
+		}
+	})
 };
 
 /**
@@ -44,45 +46,47 @@ const SCROLLBAR_SIZE_BASE = {
  * Utilities for initializing a custom styled scrollbar, which implicitly set
  * the scrollbar's size
  */
-const SCROLLBAR_SIZE_UTILITIES = {
-  '.scrollbar': {
-    ...SCROLLBAR_SIZE_BASE,
-    'scrollbar-width': 'auto',
+const SCROLLBAR_SIZE_UTILITIES = (addUtilities) => {
+	addUtilities({
+		'.scrollbar': {
+			...SCROLLBAR_SIZE_BASE,
+			'scrollbar-width': 'auto',
 
-    '&::-webkit-scrollbar': {
-      display: 'block',
-      width: 'var(--scrollbar-width, 6px)',
-      height: 'var(--scrollbar-height, 6px)',
-			maxHeight: '100px'
-    }
-  },
+			'&::-webkit-scrollbar': {
+				display: 'block',
+				width: 'var(--scrollbar-width, 6px)',
+				height: 'var(--scrollbar-height, 6px)',
+				maxHeight: '100px'
+			}
+		},
 
-  '.scrollbar-thin': {
-    ...SCROLLBAR_SIZE_BASE,
-    'scrollbar-width': 'thin',
+		'.scrollbar-thin': {
+			...SCROLLBAR_SIZE_BASE,
+			'scrollbar-width': 'thin',
 
-    '&::-webkit-scrollbar': {
-      display: 'block',
-      width: '4px',
-      height: '4px'
-    }
-  },
+			'&::-webkit-scrollbar': {
+				display: 'block',
+				width: '4px',
+				height: '4px'
+			}
+		},
 
-  '.scrollbar-none': {
-    'scrollbar-width': 'none',
+		'.scrollbar-none': {
+			'scrollbar-width': 'none',
 
-    '&::-webkit-scrollbar': {
-      display: 'none'
-    }
-  }
-};
+			'&::-webkit-scrollbar': {
+				display: 'none'
+			}
+		}
+	})
+}
 
 /**
  * Adds scrollbar-COMPONENT-COLOR utilities for every scrollbar component.
  *
  * @param {typedefs.TailwindPlugin} tailwind - Tailwind's plugin object
  */
-const addColorUtilities = ({ matchUtilities, theme }) => {
+const ADD_COLOR_UTILITIES = ({ matchUtilities, theme }) => {
   const themeColors = flattenColorPalette.default(theme('colors'));
   const colors = Object.fromEntries(
     Object.entries(themeColors).map(([k, v]) => [k, toColorValue.default(v)])
@@ -112,7 +116,7 @@ const addColorUtilities = ({ matchUtilities, theme }) => {
  *
  * @param {typedefs.TailwindPlugin} tailwind - Tailwind's plugin object
  */
-const addRoundedUtilities = ({ theme, matchUtilities }) => {
+const ADD_ROUNDED_UTILITIES = ({ theme, matchUtilities }) => {
   COMPONENTS.forEach(component => {
     matchUtilities(
       {
@@ -127,12 +131,8 @@ const addRoundedUtilities = ({ theme, matchUtilities }) => {
   });
 };
 
-/**
- * Adds scrollbar-w-* and scrollbar-h-* utilities
- *
- * @param {typedefs.TailwindPlugin} tailwind - Tailwind's plugin object
- */
-const addSizeUtilities = ({ matchUtilities, theme }) => {
+
+const ADD_SIZE_UTILITIES = ({ matchUtilities, theme }) => {
   ['width', 'height'].forEach(dimension => {
     matchUtilities({
       [`scrollbar-${dimension[0]}`]: value => ({
@@ -145,9 +145,9 @@ const addSizeUtilities = ({ matchUtilities, theme }) => {
 };
 
 module.exports = {
-  BASE_STYLES,
+  STYLES,
   SCROLLBAR_SIZE_UTILITIES,
-  addColorUtilities,
-  addRoundedUtilities,
-  addSizeUtilities
+  ADD_COLOR_UTILITIES,
+  ADD_ROUNDED_UTILITIES,
+  ADD_SIZE_UTILITIES
 };

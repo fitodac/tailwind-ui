@@ -1,4 +1,3 @@
-const plugin = require('tailwindcss/plugin')
 const theme = require('tailwindcss/defaultTheme')
 
 
@@ -44,21 +43,22 @@ const BASE = {
 }
 
 
-module.exports = plugin.withOptions((options = OPTIONS) => {
-	return function ({addComponents}) {
-		addComponents({
-			['.content']: {
-				['h1']: {...BASE.H1, ...options['.code h1']},
-				['h2']: {...BASE.H2, ...options['.code h2']},
-				['h3']: {...BASE.H3, ...options['.code h3']},
-				['h4']: {...BASE.H4, ...options['.code h4']},
-				['h5']: {...BASE.H5, ...options['.code h5']},
-				['p + p']: {...BASE.P_P, ...options['.code p+p']},
-				['ul']: {...BASE.UL, ...options['.code ul']},
-				['ol']: {...BASE.OL, ...options['.code ol']},
-				['code']: {...BASE.CODE, ...options['.code code']},
-				['pre']: {...BASE.PRE, ...options['.code pre']}
-			}
-		})
-	}
-})
+const COMPONENTS = (addComponents, options) => {
+	addComponents({
+		['.content']: {
+			['h1']: {...BASE.H1, ...options['.code h1']},
+			['h2']: {...BASE.H2, ...options['.code h2']},
+			['h3']: {...BASE.H3, ...options['.code h3']},
+			['h4']: {...BASE.H4, ...options['.code h4']},
+			['h5']: {...BASE.H5, ...options['.code h5']},
+			['p + p']: {...BASE.P_P, ...options['.code p+p']},
+			['ul']: {...BASE.UL, ...options['.code ul']},
+			['ol']: {...BASE.OL, ...options['.code ol']},
+			['code']: {...BASE.CODE, ...options['.code code']},
+			['pre']: {...BASE.PRE, ...options['.code pre']}
+		}
+	})
+}
+
+
+module.exports = { OPTIONS, COMPONENTS }
