@@ -22,13 +22,5 @@ module.exports = {
   },
 	plugins: [
 		twUiKit
-		// twUiKit.base,
-		// twUiKit.content,
-		// twUiKit.button({}),
-		// twUiKit.form_input,
-		// twUiKit.form_select,
-		// twUiKit.form_custom_select,
-		// twUiKit.form_checkbox,
-		// twUiKit.form_radiobutton,
 	],
 }
