@@ -22,6 +22,7 @@ const spinner = require('./_spinner')
 const modal = require('./_modal')
 const overlay = require('./_overlay')
 const toast = require('./_toast')
+const collapsible = require('./_collapsible')
 
 
 
@@ -42,6 +43,7 @@ module.exports = plugin.withOptions((options = {
 	...modal.OPTIONS,
 	...overlay.OPTIONS,
 	...toast.OPTIONS,
+	...collapsible.OPTIONS,
 }) => {
 	
 	return function ({addComponents, addBase, addUtilities, matchUtilities, theme}) {
@@ -65,6 +67,7 @@ module.exports = plugin.withOptions((options = {
 		modal.COMPONENTS(addComponents, options)
 		overlay.COMPONENTS(addComponents, options)
 		toast.COMPONENTS(addComponents, options)
+		collapsible.COMPONENTS(addComponents, options)
 
 		if( options.nocompatible ){
 			scrollbar.ADD_ROUNDED_UTILITIES({matchUtilities, theme});
