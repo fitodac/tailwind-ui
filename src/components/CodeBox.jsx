@@ -24,6 +24,12 @@ import Code_Validation from './codes/forms/Validation'
 import Code_InputGroups from './codes/forms/InputGroups'
 import Code_InputAddons from './codes/forms/InputAddons'
 
+import Code_CheckboxSizing from './codes/forms/CheckboxSizing'
+import Code_CheckboxVertical from './codes/forms/CheckboxVertical'
+import Code_CheckboxVerticalMuchText from './codes/forms/CheckboxVerticalMuchText'
+import Code_CheckboxToggler from './codes/forms/CheckboxToggler'
+import Code_CheckboxInputGroup from './codes/forms/CheckboxInputGroup'
+
 import Code_TableBasic from './codes/tables/Basic'
 import Code_TableBordered from './codes/tables/Bordered'
 import Code_TableStriped from './codes/tables/Striped'
@@ -76,44 +82,51 @@ export default function CodeBox(props){
 				<pre className="text-slate-500 text-sm leading-tight p-6 pb-11 dark:text-slate-400" ref={code}>
 
 					{/* Buttons */}
-					{ props.code === 'Code_Buttons' 							? (<Code_Buttons classes={classes} />) 						: null }
-					{ props.code === 'Code_ButtonsSizes' 					? (<Code_ButtonsSizes classes={classes} />) 			: null }
-					{ props.code === 'Code_ButtonsOutline' 				? (<Code_ButtonsOutline classes={classes} />) 		: null }
-					{ props.code === 'Code_ButtonsGhost' 					? (<Code_ButtonsGhost classes={classes} />) 			: null }
-					{ props.code === 'Code_ButtonsRounded' 				? (<Code_ButtonsRounded classes={classes} />) 		: null }
-					{ props.code === 'Code_ButtonsIconized' 			? (<Code_ButtonsIconized classes={classes} />) 		: null }
-					{ props.code === 'Code_ButtonsIconText' 			? (<Code_ButtonsIconText classes={classes} />) 		: null }
-					{ props.code === 'Code_ButtonsToggler' 				? (<Code_ButtonsToggler classes={classes} />) 		: null }
-					{ props.code === 'Code_ButtonsGroup' 					? (<Code_ButtonsGroup classes={classes} />) 			: null }
-					{ props.code === 'Code_ButtonsGroupSize' 			? (<Code_ButtonsGroupSize classes={classes} />) 	: null }
+					{ props.code === 'Code_Buttons' 										? (<Code_Buttons classes={classes} />) 										: null }
+					{ props.code === 'Code_ButtonsSizes' 								? (<Code_ButtonsSizes classes={classes} />) 							: null }
+					{ props.code === 'Code_ButtonsOutline' 							? (<Code_ButtonsOutline classes={classes} />) 						: null }
+					{ props.code === 'Code_ButtonsGhost' 								? (<Code_ButtonsGhost classes={classes} />) 							: null }
+					{ props.code === 'Code_ButtonsRounded' 							? (<Code_ButtonsRounded classes={classes} />) 						: null }
+					{ props.code === 'Code_ButtonsIconized' 						? (<Code_ButtonsIconized classes={classes} />) 						: null }
+					{ props.code === 'Code_ButtonsIconText' 						? (<Code_ButtonsIconText classes={classes} />) 						: null }
+					{ props.code === 'Code_ButtonsToggler' 							? (<Code_ButtonsToggler classes={classes} />) 						: null }
+					{ props.code === 'Code_ButtonsGroup' 								? (<Code_ButtonsGroup classes={classes} />) 							: null }
+					{ props.code === 'Code_ButtonsGroupSize' 						? (<Code_ButtonsGroupSize classes={classes} />) 					: null }
 					
 					
 					{/* Content */}
-					{ props.code === 'Code_Heading' 							? (<Code_Heading classes={classes} />) 							: null }
-					{ props.code === 'Code_Paragraph' 						? (<Code_Paragraph classes={classes} />) 						: null }
-					{ props.code === 'Code_ListOrdered' 					? (<Code_ListOrdered classes={classes} />) 					: null }
-					{ props.code === 'Code_ListUnordered' 				? (<Code_ListUnordered classes={classes} />) 				: null }
-					{ props.code === 'Code_ContentCode' 					? (<Code_ContentCode classes={classes} />) 					: null }
-					{ props.code === 'Code_ContentPre' 						? (<Code_ContentPre classes={classes} />) 					: null }
+					{ props.code === 'Code_Heading' 										? (<Code_Heading classes={classes} />) 										: null }
+					{ props.code === 'Code_Paragraph' 									? (<Code_Paragraph classes={classes} />) 									: null }
+					{ props.code === 'Code_ListOrdered' 								? (<Code_ListOrdered classes={classes} />) 								: null }
+					{ props.code === 'Code_ListUnordered' 							? (<Code_ListUnordered classes={classes} />) 							: null }
+					{ props.code === 'Code_ContentCode' 								? (<Code_ContentCode classes={classes} />) 								: null }
+					{ props.code === 'Code_ContentPre' 									? (<Code_ContentPre classes={classes} />) 								: null }
 					
 					{/* Form */}
-					{ props.code === 'Code_Input' 								? (<Code_Input classes={classes} />) 								: null }
-					{ props.code === 'Code_Helper' 								? (<Code_Helper classes={classes} />) 							: null }
-					{ props.code === 'Code_Validation' 						? (<Code_Validation classes={classes} />) 					: null }
-					{ props.code === 'Code_InputGroups' 					? (<Code_InputGroups classes={classes} />) 					: null }
-					{ props.code === 'Code_InputAddons' 					? (<Code_InputAddons classes={classes} />) 					: null }
+					{ props.code === 'Code_Input' 											? (<Code_Input classes={classes} />) 											: null }
+					{ props.code === 'Code_Helper' 											? (<Code_Helper classes={classes} />) 										: null }
+					{ props.code === 'Code_Validation' 									? (<Code_Validation classes={classes} />) 								: null }
+					{ props.code === 'Code_InputGroups' 								? (<Code_InputGroups classes={classes} />) 								: null }
+					{ props.code === 'Code_InputAddons' 								? (<Code_InputAddons classes={classes} />) 								: null }
+					
+					{ props.code === 'Code_CheckboxSizing' 							? (<Code_CheckboxSizing classes={classes} />) 						: null }
+					{ props.code === 'Code_CheckboxVertical' 						? (<Code_CheckboxVertical classes={classes} />) 					: null }
+					{ props.code === 'Code_CheckboxVerticalMuchText' 		? (<Code_CheckboxVerticalMuchText classes={classes} />) 	: null }
+					{ props.code === 'Code_CheckboxToggler' 						? (<Code_CheckboxToggler classes={classes} />) 						: null }
+					{ props.code === 'Code_CheckboxInputGroup' 					? (<Code_CheckboxInputGroup classes={classes} />) 				: null }
+
 
 					{/* Tables */}
-					{ props.code === 'Code_TableBasic' 						? (<Code_TableBasic classes={classes} />) 					: null }
-					{ props.code === 'Code_TableBordered' 				? (<Code_TableBordered classes={classes} />) 				: null }
-					{ props.code === 'Code_TableStriped' 					? (<Code_TableStriped classes={classes} />) 				: null }
-					{ props.code === 'Code_TableHoverable' 				? (<Code_TableHoverable classes={classes} />) 			: null }
-					{ props.code === 'Code_TableCompact' 					? (<Code_TableCompact classes={classes} />) 				: null }
-					{ props.code === 'Code_TableScrollContent' 		? (<Code_TableScrollContent classes={classes} />) 	: null }
+					{ props.code === 'Code_TableBasic' 									? (<Code_TableBasic classes={classes} />) 								: null }
+					{ props.code === 'Code_TableBordered' 							? (<Code_TableBordered classes={classes} />) 							: null }
+					{ props.code === 'Code_TableStriped' 								? (<Code_TableStriped classes={classes} />) 							: null }
+					{ props.code === 'Code_TableHoverable' 							? (<Code_TableHoverable classes={classes} />) 						: null }
+					{ props.code === 'Code_TableCompact' 								? (<Code_TableCompact classes={classes} />) 							: null }
+					{ props.code === 'Code_TableScrollContent' 					? (<Code_TableScrollContent classes={classes} />) 				: null }
 
 					{/* Modals */}
-					{ props.code === 'Code_Modal' 								? (<Code_Modal classes={classes} />) 								: null }
-					{ props.code === 'Code_ModalCancelButton' 		? (<Code_ModalCancelButton classes={classes} />) 		: null }
+					{ props.code === 'Code_Modal' 											? (<Code_Modal classes={classes} />) 											: null }
+					{ props.code === 'Code_ModalCancelButton' 					? (<Code_ModalCancelButton classes={classes} />) 					: null }
 
 
 				</pre>

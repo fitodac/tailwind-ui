@@ -14,7 +14,7 @@ export default function PageCheckbox(){
 
 
 			<div className="space-y-7">
-				<DemoCard title={'Sizing'}>
+				<DemoCard title={'Sizing'} code="Code_CheckboxSizing">
 					<div className="grid grid-cols-2 gap-10">
 
 						<div className="">
@@ -65,12 +65,46 @@ export default function PageCheckbox(){
 						</div>
 
 					</div>
-
 				</DemoCard>
 
 
-				<DemoCard title={'Vertical'}>
-					<div className="max-w-md grid gap-5">
+
+				<DemoCard title={'Vertical'} code="Code_CheckboxVertical">
+					<div className="space-y-4">
+						<div>
+							<label className="input-checkbox">
+								<input type="checkbox" />
+								<span>Option 1</span>
+							</label>
+						</div>
+
+						<div>
+							<label className="input-checkbox">
+								<input type="checkbox" />
+								<span>Option 2</span>
+							</label>
+						</div>
+						
+						<div>
+							<label className="input-checkbox">
+								<input type="checkbox" defaultChecked />
+								<span>Option 3</span>
+							</label>
+						</div>
+						
+						<div>
+							<label className="input-checkbox">
+								<input type="checkbox" disabled />
+								<span>Disabled</span>
+							</label>
+						</div>
+					</div>
+				</DemoCard>
+
+
+
+				<DemoCard title={'Checkbox with much text'} code="Code_CheckboxVerticalMuchText">
+					<div className="max-w-md space-y-6">
 						<div className="flex gap-6 items-start">
 							<label className="input-checkbox">
 								<input type="checkbox" />
@@ -95,14 +129,14 @@ export default function PageCheckbox(){
 								<span></span>
 							</label>
 
-							<div className="-top-1 relative">In "Star Wars: Rogue One," the droid character, Chopper, from the animated series "Star Wars Rebels," can be spotted in the background during the Battle of Scarif sequence</div>
+							<div className="-top-1 relative">In "Star Wars: Rogue One," the droid character, Chopper, from the animated series "Star Wars Rebels," can be spotted in the background during the Battle of Scarif sequence.</div>
 						</div>
 					</div>
 				</DemoCard>
 
 
 
-				<DemoCard title={'Toggler'}>
+				<DemoCard title={'Toggler'} code="Code_CheckboxToggler">
 					<div className="flex gap-20">
 						<div>
 							<label className="input-checkbox toggler">
@@ -129,59 +163,22 @@ export default function PageCheckbox(){
 				</DemoCard>
 
 
-				<DemoCard title={'Check'}>
-					<div className="max-w-md grid gap-3">
-						<div>
-							<label className="input-checkbox check">
-								<input type="checkbox" />
-								<span>Option 1</span>
-							</label>
-						</div>
-
-						<div>
-							<label className="input-checkbox check">
-								<input type="checkbox" />
-								<span>Option 2</span>
-							</label>
-						</div>
+				<DemoCard title={'Button group'} code="Code_CheckboxInputGroup">
+					<div className="btn-group btn-group-primary">
+						<label>
+							<input type="checkbox" />
+							<span className="btn">One</span>
+						</label>
 						
-						<div>
-							<label className="input-checkbox check">
-								<input type="checkbox" defaultChecked />
-								<span>Option 3</span>
-							</label>
-						</div>
+						<label>
+							<input type="checkbox" />
+							<span className="btn">Two</span>
+						</label>
 						
-						<div>
-							<label className="input-checkbox check">
-								<input type="checkbox" disabled />
-								<span>Disabled</span>
-							</label>
-						</div>
-					</div>
-				</DemoCard>
-
-
-				<DemoCard title={'Button group'}>
-					<div className="grid grid-cols-3 gap-10">
-						<div className="">
-							<div className="btn-group btn-group-primary">
-								<label className="">
-									<input type="checkbox" />
-									<span className="btn">One</span>
-								</label>
-								
-								<label className="">
-									<input type="checkbox" />
-									<span className="btn">Two</span>
-								</label>
-								
-								<label className="">
-									<input type="checkbox" />
-									<span className="btn">Three</span>
-								</label>
-							</div>
-						</div>
+						<label>
+							<input type="checkbox" />
+							<span className="btn">Three</span>
+						</label>
 					</div>
 				</DemoCard>
 
