@@ -1,5 +1,5 @@
-const COLORS = require('./_color')
-const { GLOBALS } = require('./_utils')
+const COLORS = require('../components/color')
+const { GLOBALS } = require('../utilities/utils')
 
 const BASE = (addBase) => {
 	addBase({

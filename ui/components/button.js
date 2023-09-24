@@ -1,6 +1,6 @@
 const theme = require('tailwindcss/defaultTheme')
-const { GLOBALS } = require('./_utils')
-const MEDIA = require('./_mediaqueries')
+const { GLOBALS } = require('../utilities/utils')
+const MEDIA = require('./mediaqueries')
 
 
 const OPTIONS = {

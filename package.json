@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && sass 'ui/css/ui.scss' 'dist/ui/css/ui.css' && copyfiles 'ui/*.js' 'dist'",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prod": "npx tailwindcss build -o output.css"
+    "prod": "sass 'ui/css/ui.scss' 'ui/prod/twUiKit.css' && copyfiles -u 1 'ui/*.js' 'ui/base/*.js' 'ui/components/*.js' 'ui/utilities/*.js' 'dist/twUiKit' && copyfiles -u 2 'ui/prod/*' 'dist/twUiKit/'"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",

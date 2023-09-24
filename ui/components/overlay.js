@@ -1,5 +1,5 @@
 const theme = require('tailwindcss/defaultTheme')
-const MEDIA = require('./_mediaqueries')
+const MEDIA = require('./mediaqueries')
 
 const OPTIONS = {
 	'.overlay': {},

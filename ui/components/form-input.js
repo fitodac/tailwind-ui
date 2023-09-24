@@ -1,5 +1,5 @@
 const theme = require('tailwindcss/defaultTheme')
-const { GLOBALS, FIELD_STYLE_BASE } = require('./_utils')
+const { GLOBALS, FIELD_STYLE_BASE } = require('../utilities/utils')
 
 
 const OPTIONS = {

@@ -4,25 +4,26 @@
  */
 const plugin = require('tailwindcss/plugin')
 
-const base = require('./__base')
-const content = require('./_content')
-const button = require('./_button')
-const form_input = require('./_form-input')
-const form_select = require('./_form-select')
-const form_custom_select = require('./_form-select-custom')
-const form_checkbox = require('./_form-checkbox')
-const form_radiobutton = require('./_form-radiobutton')
-const scrollbar = require('./_scrollbar')
-const avatar = require('./_avatar')
-const table = require('./_table')
-const list_group = require('./_list-group')
-const badge = require('./_badge')
-const tabs = require('./_tabs')
-const spinner = require('./_spinner')
-const modal = require('./_modal')
-const overlay = require('./_overlay')
-const toast = require('./_toast')
-const collapsible = require('./_collapsible')
+const base = require('./base/base')
+const content = require('./components/content')
+const button = require('./components/button')
+const form_input = require('./components/form-input')
+const form_select = require('./components/form-select')
+const form_custom_select = require('./components/form-select-custom')
+const form_checkbox = require('./components/form-checkbox')
+const form_radiobutton = require('./components/form-radiobutton')
+const scroll_bar_base = require('./base/scroll-bar.js')
+const scroll_bar_utilities = require('./utilities/scroll-bar.js')
+const avatar = require('./components/avatar')
+const table = require('./components/table')
+const list_group = require('./components/list-group')
+const badge = require('./components/badge')
+const tabs = require('./components/tabs')
+const spinner = require('./components/spinner')
+const modal = require('./components/modal')
+const overlay = require('./components/overlay')
+const toast = require('./components/toast')
+const collapsible = require('./components/collapsible')
 
 
 
@@ -47,17 +48,17 @@ module.exports = plugin.withOptions((options = {
 }) => {
 	
 	return function ({addComponents, addBase, addUtilities, matchUtilities, theme}) {
-		button.COMPONENTS(addComponents, options)
 		base.BASE(addBase)
+		button.COMPONENTS(addComponents, options)
 		content.COMPONENTS(addComponents, options)
 		form_input.COMPONENTS(addComponents, options)
 		form_select.COMPONENTS(addComponents, options)
 		form_custom_select.COMPONENTS(addComponents, options)
 		form_checkbox.COMPONENTS(addComponents, options)
 		form_radiobutton.COMPONENTS(addComponents, options)
-		scrollbar.STYLES(addBase)
-		scrollbar.SCROLLBAR_SIZE_UTILITIES(addUtilities)
-		scrollbar.ADD_COLOR_UTILITIES({ matchUtilities, theme })
+		scroll_bar_base.STYLES(addBase)
+		scroll_bar_utilities.SCROLLBAR_SIZE_UTILITIES(addUtilities)
+		scroll_bar_utilities.ADD_COLOR_UTILITIES({ matchUtilities, theme })
 		avatar.COMPONENTS(addComponents, options)
 		table.COMPONENTS(addComponents, options)
 		list_group.COMPONENTS(addComponents, options)
@@ -70,8 +71,8 @@ module.exports = plugin.withOptions((options = {
 		collapsible.COMPONENTS(addComponents, options)
 
 		if( options.nocompatible ){
-			scrollbar.ADD_ROUNDED_UTILITIES({matchUtilities, theme});
-			scrollbar.ADD_SIZE_UTILITIES({matchUtilities, theme});
+			scroll_bar_utilities.ADD_ROUNDED_UTILITIES({matchUtilities, theme});
+			scroll_bar_utilities.ADD_SIZE_UTILITIES({matchUtilities, theme});
 		}
 	}
 }, () => {
