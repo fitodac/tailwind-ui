@@ -25,12 +25,18 @@ export default function PageSpinner(){
 
 				<DemoCard title={'Custom colors'}>
 					<div className="flex gap-10 items-end">
-						<span className="spinner border-l-secondary"></span>
-						<span className="spinner border-l-alt"></span>
-						<span className="spinner border-l-teal-400"></span>
-						<span className="spinner border-l-pink-400"></span>
+						<span className="spinner border-l-secondary dark:border-l-secondary"></span>
+						<span className="spinner border-l-alt dark:border-l-alt"></span>
+						<span className="spinner border-l-teal-400 dark:border-l-teal-400"></span>
+						<span className="spinner border-l-pink-400 dark:border-l-pink-400"></span>
 					</div>
 				</DemoCard>
+
+
+				<DemoCard title={'Classic'}>
+					<div className="spinner2 w-14 h-14"></div>
+				</DemoCard>
+
 			</div>
 		</Layout>
 	)
