@@ -76,6 +76,9 @@ export default function Sidebar(){
 									<li className="">
 										<Link href="/forms/radio-buttons" className="px-4 py-2 flex">Radio buttons</Link>
 									</li>
+									<li className="">
+										<Link href="/forms/datepicker" className="px-4 py-2 flex">Datepicker</Link>
+									</li>
 								</ul>
 							</li>
 
