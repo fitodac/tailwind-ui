@@ -53,22 +53,22 @@ export default function Code(props){
 			<code className={tag}>{`span`}</code>
 			<code className={mark}>{` />`}</code>
 			<br/>
+			<code className={mark}>{`    </`}</code>
+			<code className={tag}>{`label`}</code>
+			<code className={mark}>{`>`}</code>
 			<br/>
-			<code className={mark}>{`      <`}</code>
+			<br/>
+			<code className={mark}>{`    <`}</code>
 			<code className={tag}>{`div`}</code>
 			<code className={class_name}> {`class`}</code>
 			<code className={equal}>{`=`}</code>
 			<code className={class_list_secondary}>{`"flex gap-6 items-start"`}</code>
 			<code className={mark}>{`>`}</code>
 			<br/>
-			<code className="text-slate-300 dark:text-slate-500">        {e.text}</code>
-			<br/>
-			<code className={mark}>{`      </`}</code>
-			<code className={tag}>{`div`}</code>
-			<code className={mark}>{`>`}</code>
+			<code className="text-slate-300 dark:text-slate-500">      {e.text}</code>
 			<br/>
 			<code className={mark}>{`    </`}</code>
-			<code className={tag}>{`label`}</code>
+			<code className={tag}>{`div`}</code>
 			<code className={mark}>{`>`}</code>
 			<br/>
 			<code className={mark}>{`  </`}</code>

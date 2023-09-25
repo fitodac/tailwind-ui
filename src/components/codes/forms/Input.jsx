@@ -1,5 +1,5 @@
-export default function Code(props){
-	const {mark, tag, class_name, equal, class_list, class_list_secondary} = props.classes
+export const Code_Input = ({classes}) => {
+	const {mark, tag, class_name, equal, class_list, class_list_secondary} = classes
 
 	return (
 	<>

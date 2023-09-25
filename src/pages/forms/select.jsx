@@ -7,7 +7,7 @@ export default function PageSelect(){
 	return (
 		<Layout>
 			<PageHeader 
-				title="Inputs" 
+				title="Select" 
 				breadcrumbs={[
 					{ text: 'Forms', link: null }
 				]} />

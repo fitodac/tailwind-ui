@@ -43,10 +43,10 @@ export default function PageCustomSelect(){
 				]} />
 
 			<div className="text-slate-400 text-sm font-light mb-10">
-				<p>Custom select components depends of the <a href="https://choices-js.github.io/Choices/" target="_blank" className="text-primary">Choices.js</a> library.</p>
+				<p>Teh custom select component depends of the <a href="https://choices-js.github.io/Choices/" target="_blank" className="text-primary">Choices.js</a> library.</p>
 
 				<div className="content mt-3">
-					<pre className="inline-flex">npm install choices.js</pre>
+					<pre className="inline-flex">npm i --save-dev choices.js</pre>
 				</div>
 			</div>
 
