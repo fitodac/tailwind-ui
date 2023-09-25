@@ -1,14 +1,10 @@
 .btn{
 	@apply 
-	bg-slate-200
-	border-slate-200 
-	text-slate-500 
+	hover:opacity-80;
 
-	hover:opacity-80
-
-	dark:bg-slate-800
-	dark:border-slate-800
-	dark:text-slate-200;
+	&:not([class*=bg-]){ @apply bg-slate-200 dark:bg-slate-800; }
+	&:not([class*=border-]){ @apply border-slate-200 dark:border-slate-800; }
+	&::not([class*=text-]){ @apply text-slate-500 dark:text-slate-200; }
 }
 
 .btn.ghost{ @apply hover:bg-opacity-100; }
