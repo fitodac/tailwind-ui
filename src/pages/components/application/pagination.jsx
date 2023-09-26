@@ -10,13 +10,13 @@ const pagerClassName = {
 		prev: 'relative transition-all group-hover:-ml-2',
 		next: 'relative transition-all group-hover:ml-2',
 	},
-	basic_active: 'bg-slate-100 w-10 h-10 select-none rounded transition-all cursor-default',
+	basic_active: 'bg-slate-100 text-slate-500 font-medium w-10 h-10 select-none rounded transition-all cursor-default dark:bg-slate-600 dark:text-slate-400',
 	rounded: 'w-10 h-10 select-none rounded-full transition-all hover:bg-primary hover:text-white',
-	rounded_active: 'bg-slate-100 w-10 h-10 select-none rounded-full transition-all cursor-default',
+	rounded_active: 'bg-slate-100 text-slate-500 font-medium w-10 h-10 select-none rounded-full transition-all cursor-default dark:bg-slate-600 dark:text-slate-400',
 	boxed: 'border-l border-slate-200 w-10 h-10 select-none transition-all hover:bg-primary hover:text-white hover:border-primary',
-	boxed_active: 'bg-slate-100 border-l border-slate-200 w-10 h-10 select-none transition-all cursor-default',
+	boxed_active: 'bg-slate-100 border-l border-slate-200 text-slate-500 font-medium w-10 h-10 select-none transition-all cursor-default dark:bg-slate-600 dark:text-slate-400',
 	minimal: 'w-10 h-10 select-none transition-all hover:text-primary',
-	minimal_active: 'text-slate-300 w-10 h-10 select-none transition-all cursor-default'
+	minimal_active: 'text-slate-300 font-medium w-10 h-10 select-none transition-all cursor-default dark:text-slate-500'
 }
 
 
@@ -26,7 +26,7 @@ export default function Page(){
 			<PageHeader title="Pagination" />
 
 			<div className="space-y-7">
-				<DemoCard title={'Basic'}>
+				<DemoCard title={'Basic'} code="Code_PaginationBase">
 					<div className="flex gap-x-1 overflow-x-hidden">
 						<button className={pagerClassName.basicArrow.btn}>
 							<i className={`ri-arrow-left-s-line ${pagerClassName.basicArrow.prev}`}></i>
@@ -44,7 +44,7 @@ export default function Page(){
 				</DemoCard>
 
 
-				<DemoCard title={'Rounded'}>
+				<DemoCard title={'Rounded'} code="Code_PaginationRounded">
 					<div className="border border-slate-200 p-1.5 inline-flex rounded-full">
 						<div className="flex gap-x-1 overflow-x-hidden">
 							<button className={pagerClassName.rounded}>
@@ -64,7 +64,7 @@ export default function Page(){
 				</DemoCard>
 
 
-				<DemoCard title={'Boxed'}>
+				<DemoCard title={'Boxed'} code="Code_PaginationBoxed">
 					<div className="border-y border-r border-slate-200 inline-flex rounded">
 						<div className="flex overflow-x-hidden">
 							<button className={pagerClassName.boxed}>
@@ -84,7 +84,7 @@ export default function Page(){
 				</DemoCard>
 
 
-				<DemoCard title={'Minimalist'}>
+				<DemoCard title={'Minimalist'} code="Code_PaginationMinimalist">
 					<div className="flex overflow-x-hidden">
 						<button className={pagerClassName.minimal}>
 							<i className="ri-arrow-left-s-line"></i>

@@ -25,7 +25,7 @@ export default function Sidebar(){
 			className="bg-white border-r border-slte-200 w-60 -left-full top-0 transition-all fixed z-30 
 			lg:left-0
 		dark:bg-slate-800 dark:border-slate-700">
-			<div className="h-screen grid gap-6">
+			<div className="h-screen grid gap-6 grid-rows-6">
 
 				<div className="px-4 pt-5">
 					<h1 className="font-bold select-none">TailwindCSS UI</h1>

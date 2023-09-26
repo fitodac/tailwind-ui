@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prod": "sass 'ui/scss/ui.scss' 'ui/prod/twUiKit.css' && copyfiles -u 1 'ui/*.js' 'ui/base/*.js' 'ui/components/*.js' 'ui/utilities/*.js' 'dist/twUiKit' && copyfiles -u 2 'ui/prod/*' 'dist/twUiKit/'"
+    "dist": "sass 'ui/scss/ui.scss' 'ui/prod/twUiKit.css' && copyfiles -u 1 'ui/*.js' 'ui/base/*.js' 'ui/components/*.js' 'ui/utilities/*.js' 'dist/twUiKit' && copyfiles -u 2 'ui/prod/*' 'dist/twUiKit/'"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",

@@ -47,6 +47,14 @@ import Code_Modal from './codes/modals/Default'
 import Code_ModalCancelButton from './codes/modals/CancelButton'
 
 
+import {
+	Code_PaginationBase,
+	Code_PaginationRounded,
+	Code_PaginationBoxed,
+	Code_PaginationMinimalist
+} from './codes/components/application'
+
+
 const classes = {
 	mark: 'text-white',
 	tag: 'text-red-400',
@@ -141,6 +149,13 @@ export default function CodeBox({code}){
 					{/* Modals */}
 					{ code === 'Code_Modal' 											? (<Code_Modal classes={classes} />) 											: null }
 					{ code === 'Code_ModalCancelButton' 					? (<Code_ModalCancelButton classes={classes} />) 					: null }
+
+					{/* Pagination */}
+					{ code === 'Code_PaginationBase' 							? (<Code_PaginationBase classes={classes} />) 						: null }
+					{ code === 'Code_PaginationRounded' 					? (<Code_PaginationRounded classes={classes} />) 					: null }
+					{ code === 'Code_PaginationBoxed' 						? (<Code_PaginationBoxed classes={classes} />) 						: null }
+					{ code === 'Code_PaginationMinimalist' 				? (<Code_PaginationMinimalist classes={classes} />) 			: null }
+
 
 
 				</pre>
