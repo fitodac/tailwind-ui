@@ -21,7 +21,7 @@ export default function PageModal(){
 				]} />
 
 			<div className="space-y-7">
-				<DemoCard title={'Default'}>
+				<DemoCard title={'Default'} code="Code_ToastDefault">
 					<div className="space-y-2">
 						<label 
 							className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white
@@ -42,7 +42,7 @@ export default function PageModal(){
 				</DemoCard>
 
 
-				<DemoCard title={'Closable'}>
+				<DemoCard title={'Closeable'} code="Code_ToastCloseable">
 					<label 
 						className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white
 											hover:bg-primary-700 hover:border-primary-700 hover:text-white dark:hover:bg-primary-700 dark:hover:border-primary-700 dark:hover:text-white"
@@ -101,7 +101,7 @@ export default function PageModal(){
 
 					<input type="checkbox" id="toast4" className="hidden" onChange={hideAllToasts} />
 
-					<label htmlFor="toast4" className="toast bg-red-300 text-red-700">
+					<label htmlFor="toast4" className="toast bg-red-200 text-red-700">
 						<div className="flex gap-x-3 items-center">
 							<div className="">
 								<i className="ri-error-warning-fill text-red-700 text-4xl"></i>
@@ -153,7 +153,7 @@ export default function PageModal(){
 					<label htmlFor="toast5" className="toast top-2 left-2">
 						<div className="flex gap-x-2 items-center">
 							<div className="">
-								<i class="ri-arrow-left-up-line text-4xl opacity-30"></i>
+								<i className="ri-arrow-left-up-line text-4xl opacity-30"></i>
 							</div>
 							<div className="">
 								<div className="font-semibold">Top left toast</div>
@@ -171,7 +171,7 @@ export default function PageModal(){
 								<div className="text-xs text-slate-300 dark:text-slate-400">Flexible position available</div>
 							</div>
 							<div className="">
-								<i class="ri-arrow-right-up-line text-4xl opacity-30"></i>
+								<i className="ri-arrow-right-up-line text-4xl opacity-30"></i>
 							</div>
 						</div>
 					</label>
@@ -181,7 +181,7 @@ export default function PageModal(){
 					<label htmlFor="toast7" className="toast bottom-2 left-2">
 						<div className="flex gap-x-2 items-center">
 							<div className="">
-								<i class="ri-arrow-left-down-line text-4xl opacity-30"></i>
+								<i className="ri-arrow-left-down-line text-4xl opacity-30"></i>
 							</div>
 							<div className="">
 								<div className="font-semibold">Bottom left toast</div>
@@ -199,7 +199,7 @@ export default function PageModal(){
 								<div className="text-xs text-slate-300 dark:text-slate-400">Flexible position available</div>
 							</div>
 							<div className="">
-								<i class="ri-arrow-right-down-line text-4xl opacity-30"></i>
+								<i className="ri-arrow-right-down-line text-4xl opacity-30"></i>
 							</div>
 						</div>
 					</label>

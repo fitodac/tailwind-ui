@@ -31,7 +31,7 @@ export const Code_DatepickerModal = ({classes}) => {
 		<code className={tag}>{`label`}</code>
 		<code className={class_name}> {`for`}</code>
 		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"modalBox"`}</code>
+		<code className={class_list}>{`"modal_box"`}</code>
 		<code className={class_name}> {`class`}</code>
 		<code className={equal}>{`=`}</code>
 		<code className={class_list}>{`"btn`}</code>
@@ -56,7 +56,7 @@ export const Code_DatepickerModal = ({classes}) => {
 		<code className={class_list_secondary}>{`"checkbox"`}</code>
 		<code className={class_name}> {`id`}</code>
 		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"modalBox"`}</code>
+		<code className={class_list}>{`"modal_box"`}</code>
 		<code className={class_name}> {`class`}</code>
 		<code className={equal}>{`=`}</code>
 		<code className={class_list_secondary}>{`"hidden"`}</code>
@@ -88,7 +88,7 @@ export const Code_DatepickerModal = ({classes}) => {
 		<code className={tag}>{`label`}</code>
 		<code className={class_name}> {`for`}</code>
 		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"modalBox"`}</code>
+		<code className={class_list}>{`"modal_box"`}</code>
 		<code className={class_name}> {`class`}</code>
 		<code className={equal}>{`=`}</code>
 		<code className={class_list}>{`"btn"`}</code>

@@ -128,7 +128,9 @@ export default function PageInput(){
 							<div className="modal">
 								<div id="datepickerModal" />
 								<div className="px-3 pb-3">
-									<label htmlFor="modalBox" className="btn bg-slate-700 border-slate-700 block hover:bg-slate-600 hover:border-slate-600">Cancel</label>
+									<button 
+										className="btn bg-slate-700 border-slate-700 w-full hover:bg-slate-600 hover:border-slate-600"
+										onClick={() => setModalDatepicker(false)}>Cancel</button>
 								</div>
 							</div>
 						</div>

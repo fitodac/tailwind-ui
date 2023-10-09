@@ -54,6 +54,11 @@ import {
 	Code_PaginationMinimalist
 } from './codes/components/application'
 
+import {
+	Code_ToastDefault,
+	Code_ToastCloseable
+} from './codes/toast'
+
 
 const classes = {
 	mark: 'text-white',
@@ -98,7 +103,7 @@ export default function CodeBox({code}){
 		
 		<div className="overflow-hidden">
 			<div className="overflow-x-auto relative top-4 -mt-4">
-				<pre className="text-slate-500 text-sm leading-tight p-6 pb-11 dark:text-slate-400" ref={elPre}>
+				<pre className="text-slate-200 text-sm leading-tight p-6 pb-11 dark:text-slate-400" ref={elPre}>
 
 					{/* Buttons */}
 					{ code === 'Code_Buttons' 										? (<Code_Buttons classes={classes} />) 										: null }
@@ -155,6 +160,10 @@ export default function CodeBox({code}){
 					{ code === 'Code_PaginationRounded' 					? (<Code_PaginationRounded classes={classes} />) 					: null }
 					{ code === 'Code_PaginationBoxed' 						? (<Code_PaginationBoxed classes={classes} />) 						: null }
 					{ code === 'Code_PaginationMinimalist' 				? (<Code_PaginationMinimalist classes={classes} />) 			: null }
+					
+					{/* Toast */}
+					{ code === 'Code_ToastDefault' 								? (<Code_ToastDefault classes={classes} />) 			: null }
+					{ code === 'Code_ToastCloseable' 							? (<Code_ToastCloseable classes={classes} />) 			: null }
 
 
 

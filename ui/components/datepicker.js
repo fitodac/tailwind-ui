@@ -135,7 +135,7 @@ const BASE = {
 
 			GRID: {
 				'display': 'grid',
-				'grid-template-columns': 'repeat(7, minmax(0, 1fr))',
+				'grid-template-columns': 'repeat(4, minmax(0, 1fr))',
 				'flex-wrap': 'wrap',
 				'flex': 'auto',
 
@@ -167,6 +167,7 @@ const BASE = {
 		},
 		DROPDOWN: {
 			'position': 'absolute',
+			'border-radius': '0 0 .8rem .8rem',
 			'z-index': 20,
 
 			ORIENTED_TOP: {
