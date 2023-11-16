@@ -2,21 +2,25 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
+const navItemClassName = {
+	default: 'px-4 py-2 flex hover:text-primary',
+	active: 'text-primary px-4 py-2 flex'
+}
 
 export default function Sidebar(){
-	
-	const router = useRouter()
+
+	const { pathname: path } = useRouter()
 	const [menu, setMenu] = useState('core')
 
-
+	console.log('router', path)
 
 	useEffect(() => {
-		if( router.pathname.indexOf('/application') >= 0 ) setMenu('application')
-		if( router.pathname.indexOf('/dashboard') >= 0 ) setMenu('dashboard')
-		if( router.pathname.indexOf('/ecommerce') >= 0 ) setMenu('ecommerce')
-		if( router.pathname.indexOf('/marketing') >= 0 ) setMenu('marketing')
+		if( path.indexOf('/application') >= 0 ) setMenu('application')
+		if( path.indexOf('/dashboard') >= 0 ) setMenu('dashboard')
+		if( path.indexOf('/ecommerce') >= 0 ) setMenu('ecommerce')
+		if( path.indexOf('/marketing') >= 0 ) setMenu('marketing')
 		
-	}, [router])
+	}, [path])
 
 
 	return(
@@ -43,15 +47,15 @@ export default function Sidebar(){
 								<ul className="pl-2">
 
 									<li className="">
-										<Link href="/buttons" className="px-4 py-2 flex">Buttons</Link>
+										<Link href="/buttons" className={'/buttons' === path ? navItemClassName.active : navItemClassName.default}>Buttons</Link>
 									</li>
 
 									<li className="">
-										<Link href="/colors" className="px-4 py-2 flex">Colors</Link>
+										<Link href="/colors" className={'/colors' === path ? navItemClassName.active : navItemClassName.default}>Colors</Link>
 									</li>
 
 									<li className="">
-										<Link href="/content" className="px-4 py-2 flex">Content</Link>
+										<Link href="/content" className={'/content' === path ? navItemClassName.active : navItemClassName.default}>Content</Link>
 									</li>
 
 								</ul>
@@ -62,22 +66,22 @@ export default function Sidebar(){
 								<div className="text-xs font-semibold px-4 pb-1">FORMS</div>
 								<ul className="pl-2">
 									<li className="">
-										<Link href="/forms/inputs" className="px-4 py-2 flex">Inputs</Link>
+										<Link href="/forms/inputs" className={'/forms/inputs' === path ? navItemClassName.active : navItemClassName.default}>Inputs</Link>
 									</li>
 									<li className="">
-										<Link href="/forms/select" className="px-4 py-2 flex">Select</Link>
+										<Link href="/forms/select" className={'/forms/select' === path ? navItemClassName.active : navItemClassName.default}>Select</Link>
 									</li>
 									<li className="">
-										<Link href="/forms/custom-select" className="px-4 py-2 flex">Custom select</Link>
+										<Link href="/forms/custom-select" className={'/forms/custom-select' === path ? navItemClassName.active : navItemClassName.default}>Custom select</Link>
 									</li>
 									<li className="">
-										<Link href="/forms/checkboxes" className="px-4 py-2 flex">Checkboxes</Link>
+										<Link href="/forms/checkboxes" className={'/forms/checkboxes' === path ? navItemClassName.active : navItemClassName.default}>Checkboxes</Link>
 									</li>
 									<li className="">
-										<Link href="/forms/radio-buttons" className="px-4 py-2 flex">Radio buttons</Link>
+										<Link href="/forms/radio-buttons" className={'/forms/radio-buttons' === path ? navItemClassName.active : navItemClassName.default}>Radio buttons</Link>
 									</li>
 									<li className="">
-										<Link href="/forms/datepicker" className="px-4 py-2 flex">Datepicker</Link>
+										<Link href="/forms/datepicker" className={'/forms/datepicker' === path ? navItemClassName.active : navItemClassName.default}>Datepicker</Link>
 									</li>
 								</ul>
 							</li>
@@ -87,23 +91,23 @@ export default function Sidebar(){
 								<div className="text-xs font-semibold px-4 pb-1">DATA</div>
 								<ul className="pl-2">
 									<li className="">
-										<Link href="/data/avatar" className="px-4 py-2 flex">Avatar</Link>
+										<Link href="/data/avatar" className={'/data/avatar' === path ? navItemClassName.active : navItemClassName.default}>Avatar</Link>
 									</li>
 
 									<li className="">
-										<Link href="/data/tables" className="px-4 py-2 flex">Tables</Link>
+										<Link href="/data/tables" className={'/data/tables' === path ? navItemClassName.active : navItemClassName.default}>Tables</Link>
 									</li>
 
 									<li className="">
-										<Link href="/data/list-group" className="px-4 py-2 flex">List groups</Link>
+										<Link href="/data/list-group" className={'/data/list-group' === path ? navItemClassName.active : navItemClassName.default}>List groups</Link>
 									</li>
 
 									<li className="">
-										<Link href="/data/collapsible" className="px-4 py-2 flex">Collapsible</Link>
+										<Link href="/data/collapsible" className={'/data/collapsible' === path ? navItemClassName.active : navItemClassName.default}>Collapsible</Link>
 									</li>
 
 									<li className="">
-										<Link href="/data/badges" className="px-4 py-2 flex">Badges</Link>
+										<Link href="/data/badges" className={'/data/badges' === path ? navItemClassName.active : navItemClassName.default}>Badges</Link>
 									</li>
 
 								</ul>
@@ -114,11 +118,11 @@ export default function Sidebar(){
 								<div className="text-xs font-semibold px-4 pb-1">NAVIGATION</div>
 								<ul className="pl-2">
 									<li className="">
-										<Link href="/navigation/tabs" className="px-4 py-2 flex">Tabs</Link>
+										<Link href="/navigation/tabs" className={'/navigation/tabs' === path ? navItemClassName.active : navItemClassName.default}>Tabs</Link>
 									</li>
 
 									<li className="">
-										<Link href="/navigation/dropdown" className="px-4 py-2 flex">Dropdown</Link>
+										<Link href="/navigation/dropdown" className={'/navigation/dropdown' === path ? navItemClassName.active : navItemClassName.default}>Dropdown</Link>
 									</li>
 								</ul>
 							</li>
@@ -128,15 +132,15 @@ export default function Sidebar(){
 								<div className="text-xs font-semibold px-4 pb-1">FEEDBACK</div>
 								<ul className="pl-2">
 									<li className="">
-										<Link href="/feedback/spinner" className="px-4 py-2 flex">Spinner</Link>
+										<Link href="/feedback/spinner" className={'/feedback/spinner' === path ? navItemClassName.active : navItemClassName.default}>Spinner</Link>
 									</li>
 
 									<li className="">
-										<Link href="/feedback/modal" className="px-4 py-2 flex">Modal</Link>
+										<Link href="/feedback/modal" className={'/feedback/modal' === path ? navItemClassName.active : navItemClassName.default}>Modal</Link>
 									</li>
 
 									<li className="">
-										<Link href="/feedback/toast" className="px-4 py-2 flex">Toast</Link>
+										<Link href="/feedback/toast" className={'/feedback/toast' === path ? navItemClassName.active : navItemClassName.default}>Toast</Link>
 									</li>
 								</ul>
 							</li>
@@ -147,11 +151,11 @@ export default function Sidebar(){
 								<ul className="pl-2">
 									
 									<li className="">
-										<Link href="/other/scroll-bar" className="px-4 py-2 flex">Scroll bar</Link>
+										<Link href="/other/scroll-bar" className={'/other/scroll-bar' === path ? navItemClassName.active : navItemClassName.default}>Scroll bar</Link>
 									</li>
 
 									<li className="">
-										<Link href="/other/extra" className="px-4 py-2 flex">Extra</Link>
+										<Link href="/other/extra" className={'/other/extra' === path ? navItemClassName.active : navItemClassName.default}>Extra</Link>
 									</li>
 
 								</ul>
@@ -166,11 +170,11 @@ export default function Sidebar(){
 						{ 'application' === menu 
 						? (<ul className="text-slate-600 text-sm leading-tight grid select-none pb-16 dark:text-slate-100">
 							<li className="">
-								<Link href="/components/application" className="font-semibold px-4 py-2 flex">Application components</Link>
+								<Link href="/components/application" className={`font-semibold ${'/components/application' === path ? navItemClassName.active : navItemClassName.default}`}>Application components</Link>
 							</li>
 
 							<li className="">
-								<Link href="/components/application/pagination" className="px-4 py-2 flex">Pagination</Link>
+								<Link href="/components/application/pagination" className={'/components/application/pagination' === path ? navItemClassName.active : navItemClassName.default}>Pagination</Link>
 							</li>
 						</ul>)
 						: null }
@@ -180,7 +184,7 @@ export default function Sidebar(){
 						{ 'dashboard' === menu 
 						? (<ul className="text-slate-600 text-sm leading-tight grid select-none pb-16 dark:text-slate-100">
 							<li className="">
-								<Link href="/components/dashboard" className="font-semibold px-4 py-2 flex">Dashboard components</Link>
+								<Link href="/components/dashboard" className={`font-semibold ${'/components/dashboard' === path ? navItemClassName.active : navItemClassName.default}`}>Dashboard components</Link>
 							</li>
 						</ul>)
 						: null }
@@ -190,7 +194,7 @@ export default function Sidebar(){
 						{ 'ecommerce' === menu 
 						? (<ul className="text-slate-600 text-sm leading-tight grid select-none pb-16 dark:text-slate-100">
 							<li className="">
-								<Link href="/components/ecommerce" className="font-semibold px-4 py-2 flex">E-commerce components</Link>
+								<Link href="/components/ecommerce" className={`font-semibold ${'/components/ecommerce' === path ? navItemClassName.active : navItemClassName.default}`}>E-commerce components</Link>
 							</li>
 						</ul>)
 						: null }
@@ -200,7 +204,7 @@ export default function Sidebar(){
 						{ 'marketing' === menu 
 						? (<ul className="text-slate-600 text-sm leading-tight grid select-none pb-16 dark:text-slate-100">
 							<li className="">
-								<Link href="/components/marketing" className="font-semibold px-4 py-2 flex">Marketing components</Link>
+								<Link href="/components/marketing" className={`font-semibold ${'/components/marketing' === path ? navItemClassName.active : navItemClassName.default}`}>Marketing components</Link>
 							</li>
 						</ul>)
 						: null }
