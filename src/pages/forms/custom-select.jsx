@@ -51,7 +51,7 @@ export default function PageCustomSelect(){
 			</div>
 
 			<div className="space-y-7">
-				<DemoCard title={'Basic'}>
+				<DemoCard title={'Basic'} code="Code_SelectCustomBasic">
 					<div className="grid grid-cols-4 gap-6">
 
 						<div>

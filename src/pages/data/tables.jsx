@@ -13,7 +13,7 @@ const data = {
 				{__html: 'Jan. 13, 2023'},
 				{__html: '<span class="badge bg-green-600 border-green-600">paid</span>'},
 				{__html: `<div class="text-end">
-										<button class="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
+										<button class="btn btn-sm bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
 									</div>`}
 			],
 			[
@@ -23,7 +23,7 @@ const data = {
 				{__html: 'Mar. 4, 2023'},
 				{__html: '<span class="badge bg-green-600 border-green-600">paid</span>'},
 				{__html: `<div class="text-end">
-										<button class="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
+										<button class="btn btn-sm bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
 									</div>`}
 			],
 			[
@@ -33,7 +33,7 @@ const data = {
 				{__html: 'Jun. 22, 2023'},
 				{__html: '<span class="badge bg-red-700 border-red-700">unpaid</span>'},
 				{__html: `<div class="text-end">
-										<button class="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
+										<button class="btn btn-sm bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
 									</div>`}
 			],
 			[
@@ -43,7 +43,7 @@ const data = {
 				{__html: 'Nov. 28, 2023'},
 				{__html: '<span class="badge bg-yellow-600 border-yellow-600">pending</span>'},
 				{__html: `<div class="text-end">
-										<button class="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
+										<button class="btn btn-sm bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Edit</button>
 									</div>`}
 			]
 		]

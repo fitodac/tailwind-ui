@@ -14,7 +14,7 @@ export default function PageRadioButtons(){
 
 			
 			<div className="space-y-7">
-				<DemoCard title={'Sizing'}>
+				<DemoCard title={'Sizing'} code="Code_RadioSizing">
 					<div className="grid grid-cols-2 gap-10">
 
 						<div className="">
@@ -69,11 +69,45 @@ export default function PageRadioButtons(){
 				</DemoCard>
 
 
-				<DemoCard title={'Vertical'}>
+
+				<DemoCard title={'Vertical'} code="Code_RadioVertical">
+					<div className="space-y-4">
+						<div>
+							<label className="input-radio">
+								<input type="radio" name="option-3" />
+								<span>Option 1</span>
+							</label>
+						</div>
+
+						<div>
+							<label className="input-radio">
+								<input type="radio" name="option-3" />
+								<span>Option 2</span>
+							</label>
+						</div>
+						
+						<div>
+							<label className="input-radio">
+								<input type="radio" name="option-3" defaultChecked />
+								<span>Option 3</span>
+							</label>
+						</div>
+						
+						<div>
+							<label className="input-radio">
+								<input type="radio" name="option-3" disabled />
+								<span>Disabled</span>
+							</label>
+						</div>
+					</div>
+				</DemoCard>
+
+
+				<DemoCard title={'Vertical with much text'} code="Code_RadioVerticalMuchText">
 					<div className="max-w-md grid gap-5">
 						<div className="flex gap-6 items-start">
 							<label className="input-radio">
-								<input type="radio" name="option-3" />
+								<input type="radio" name="option-4" />
 								<span></span>
 							</label>
 
@@ -82,7 +116,7 @@ export default function PageRadioButtons(){
 
 						<div className="flex gap-6 items-start">
 							<label className="input-radio">
-								<input type="radio" name="option-3" />
+								<input type="radio" name="option-4" />
 								<span></span>
 							</label>
 
@@ -91,7 +125,7 @@ export default function PageRadioButtons(){
 
 						<div className="flex gap-6 items-start">
 							<label className="input-radio">
-								<input type="radio" name="option-3" defaultChecked />
+								<input type="radio" name="option-4" defaultChecked />
 								<span></span>
 							</label>
 
@@ -101,25 +135,25 @@ export default function PageRadioButtons(){
 				</DemoCard>
 
 
-				<DemoCard title={'Toggler'}>
+				<DemoCard title={'Toggler'} code="Code_RadioToggler">
 					<div className="flex gap-20">
 						<div>
 							<label className="input-radio toggler">
-								<input type="radio" name="option-4" />
+								<input type="radio" name="option-5" />
 								<span>Yes</span>
 							</label>
 						</div>
 
 						<div>
 							<label className="input-radio toggler">
-								<input type="radio" name="option-4" />
+								<input type="radio" name="option-5" />
 								<span>No</span>
 							</label>
 						</div>
 
 						<div>
 							<label className="input-radio toggler">
-								<input type="radio" name="option-4" disabled />
+								<input type="radio" name="option-5" disabled />
 								<span>Disabled</span>
 							</label>
 						</div>
@@ -127,33 +161,26 @@ export default function PageRadioButtons(){
 				</DemoCard>
 
 
-				<DemoCard title={'Check'}>
+				<DemoCard title={'Radio buttons with checkbox style'} code="Code_RadioCheckboxStyle">
 					<div className="max-w-md grid gap-3">
 						<div>
 							<label className="input-radio check">
-								<input type="radio" name="option-5" />
+								<input type="radio" name="option-6" />
 								<span>Option 1</span>
 							</label>
 						</div>
 
 						<div>
 							<label className="input-radio check">
-								<input type="radio" name="option-5" />
+								<input type="radio" name="option-6" />
 								<span>Option 2</span>
 							</label>
 						</div>
 						
 						<div>
 							<label className="input-radio check">
-								<input type="radio" name="option-5" defaultChecked />
+								<input type="radio" name="option-6" disabled/>
 								<span>Option 3</span>
-							</label>
-						</div>
-						
-						<div>
-							<label className="input-radio check">
-								<input type="radio" name="option-5" disabled />
-								<span>Disabled</span>
 							</label>
 						</div>
 					</div>
@@ -165,17 +192,17 @@ export default function PageRadioButtons(){
 						<div className="">
 							<div className="btn-group btn-group-primary">
 								<label className="">
-									<input type="radio" name="option-6" />
+									<input type="radio" name="option-7" />
 									<span className="btn">One</span>
 								</label>
 								
 								<label className="">
-									<input type="radio" name="option-6" />
+									<input type="radio" name="option-7" />
 									<span className="btn">Two</span>
 								</label>
 								
 								<label className="">
-									<input type="radio" name="option-6" />
+									<input type="radio" name="option-7" />
 									<span className="btn">Three</span>
 								</label>
 							</div>

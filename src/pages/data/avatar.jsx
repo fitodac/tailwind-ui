@@ -8,7 +8,7 @@ export default function PageAvatar(){
 			<PageHeader title="Avatar" />
 
 			<div className="space-y-7">
-				<DemoCard title={'Default'}>
+				<DemoCard title={'Default'} code="Code_AvatarDefault">
 					<div className="flex gap-10">
 
 						<div>
@@ -39,7 +39,7 @@ export default function PageAvatar(){
 				</DemoCard>
 
 
-				<DemoCard title={'Squircle'}>
+				<DemoCard title={'Squircle'} code="Code_AvatarSquircle">
 					<div className="flex items-end gap-10">
 
 						<div>
@@ -70,7 +70,7 @@ export default function PageAvatar(){
 				</DemoCard>
 
 
-				<DemoCard title={'Avatar group'}>
+				<DemoCard title={'Avatar group'} code="Code_AvatarGroup">
 					<div className="grid gap-10 grid-cols-3">
 						<div className="-space-x-4">
 							<span className="avatar w-10 rounded-full">
@@ -147,7 +147,7 @@ export default function PageAvatar(){
 				</DemoCard>
 
 
-				<DemoCard title={'Avatar group actions'}>
+				<DemoCard title={'Avatar group & actions'} code="Code_AvatarGroupActions">
 					<div className="grid gap-10 grid-cols-3">
 						<div>
 							<div className="-space-x-4 hover:space-x-1">

@@ -25,7 +25,7 @@ export default function PageInput(){
 			if( page_init ) return
 			const { Datepicker, DateRangePicker } = await loadDatepicker()
 
-			// // Input datepicker
+			// Input datepicker
 			const input_datepicker = document.getElementById('datepicker')
 			new Datepicker(input_datepicker, {})
 
