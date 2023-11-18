@@ -1,24 +1,54 @@
+import { keywords_js } from './keywords'
+import { 
+	varnames,
+	constants
+} from './varnames'
+
 export const codeHighlight = (elmnt, mode) => {
 
   var lang = (mode || 'html');
 
-  var elmntTxt = 'html' === mode ? elmnt.innerHTML.replaceAll('<', '&lt;').replaceAll('>', '&gt;') : elmntObj.innerHTML;
+  var elmntTxt = 'html' === mode ? elmnt.innerHTML.replaceAll('<', '&lt;').replaceAll('>', '&gt;') : elmnt.innerHTML;
 
-  var tagcolor = 'text-white';
-  var tagnamecolor = 'text-red-400';
-  var attributecolor = 'text-orange-400';
-  var attributevaluecolor = 'text-green-500';
-  var commentcolor = 'text-slate-500';
-  var cssselectorcolor = "brown";
-  var csspropertycolor = "red";
-  var csspropertyvaluecolor = "mediumblue";
-  var cssdelimitercolor = "black";
-  var cssimportantcolor = "red";  
-  var jscolor = "black";
-  var jskeywordcolor = "mediumblue";
-  var jsstringcolor = "brown";
-  var jsnumbercolor = "red";
-  var jspropertycolor = "black";
+  const tagcolor = 'text-white';
+  const tagnamecolor = 'text-red-400';
+  const attributecolor = 'text-orange-400';
+  const attributevaluecolor = 'text-green-500';
+  const commentcolor = 'text-slate-500';
+  const cssselectorcolor = "text-red-400";
+  const csspropertycolor = "red";
+  const csspropertyvaluecolor = "mediumblue";
+  const cssdelimitercolor = "black";
+  const cssimportantcolor = "red";  
+  const jscolor = "text-slate-300";
+  const jskeywordcolor = "text-purple-500";
+  const jsstringcolor = "text-green-400";
+  const jsnumbercolor = "red";
+  const jspropertycolor = "text-blue-400";
+	const jsbracketscolor = 'text-orange-400'
+	const jsvarnamecolor = 'text-red-400'
+	const jsconstantcolor = 'text-yellow-400'
+	const specialChars = [
+		'.',
+		'<', 
+		' ', 
+		';', 
+		'(', 
+		'+', 
+		')', 
+		'[', 
+		']', 
+		',', 
+		'&', 
+		':', 
+		'{', 
+		'}', 
+		'/', 
+		'-', 
+		'*', 
+		'|', 
+		'%'
+	]
 
   if (!lang) {lang = "html"; }
   if (lang == "html") {elmntTxt = htmlMode(elmntTxt);}
@@ -26,6 +56,7 @@ export const codeHighlight = (elmnt, mode) => {
   if (lang == "js") {elmntTxt = jsMode(elmntTxt);}
 
   elmnt.innerHTML = elmntTxt;
+
 
   function extract(str, start, end, func, repl) {
     var s, e, d = "", a = [];
@@ -47,7 +78,9 @@ export const codeHighlight = (elmnt, mode) => {
   }
 
   function htmlMode(txt) {
-    var rest = txt, done = "", php, comment, angular, startpos, endpos, note, i;
+    var rest = txt
+		var done = ""
+		var php, comment, angular, startpos, endpos, note, i
     comment = new extract(rest, "&lt;!--", "--&gt;", commentMode, "W3HTMLCOMMENTPOS");
     rest = comment.rest;
     while (rest.indexOf("&lt;") > -1) {
@@ -120,16 +153,16 @@ export const codeHighlight = (elmnt, mode) => {
       done += attributeValueMode(rest.substring(startpos, endpos + 1));
       rest = rest.substr(endpos + 1);
     }
-    return "<code class=" + attributecolor + ">" + done + rest + "</code>";
+		return `<code class="${attributecolor}">${done + rest}</code>`
   }
 
   function attributeValueMode(txt) {
 		if( txt[0] === '=' ) txt = txt.replaceAll('=', `<code class="${tagcolor}">=</code>`)
-    return "<code class=" + attributevaluecolor + ">" + txt + "</code>";
+		return `<code class="${attributevaluecolor}">${txt}</code>`
   }
 
   function commentMode(txt) {
-    return "<code class=" + commentcolor + ">" + txt + "</code>";
+		return `<code class="${commentcolor}">${txt}</code>`
   }
 
   function cssMode(txt) {
@@ -162,7 +195,7 @@ export const codeHighlight = (elmnt, mode) => {
     for (i = 0; i < comment.arr.length; i++) {
         rest = rest.replace("W3CSSCOMMENTPOS", comment.arr[i]);
     }
-    return "<code style=color:" + cssselectorcolor + ">" + rest + "</code>";
+		return `<code class="${cssselectorcolor}">${rest}</code>`
   }
 
   function cssPropertyMode(txt) {
@@ -185,7 +218,7 @@ export const codeHighlight = (elmnt, mode) => {
       done += cssPropertyValueMode(rest.substring(s, e + 1));
       rest = rest.substr(e + 1);
     }
-    return "<code style=color:" + csspropertycolor + ">" + done + rest + "</code>";
+		return `<code class="${csspropertycolor}">${done + rest}</code>`
   }
 
   function cssPropertyValueMode(txt) {
@@ -201,15 +234,24 @@ export const codeHighlight = (elmnt, mode) => {
     if (result.substr(result.length - 1, 1) == ";" && result.substr(result.length - 6, 6) != "&nbsp;" && result.substr(result.length - 4, 4) != "&lt;" && result.substr(result.length - 4, 4) != "&gt;" && result.substr(result.length - 5, 5) != "&amp;") {
       result = result.substring(0, result.length - 1) + "<code style=color:" + cssdelimitercolor + ">;</code>";
     }
-    return "<code style=color:" + csspropertyvaluecolor + ">" + result + "</code>";
+		return `<code class="${csspropertyvaluecolor}">${result}</code>`
   }
 
   function cssImportantMode(txt) {
-    return "<code style=color:" + cssimportantcolor + ";font-weight:bold;>" + txt + "</code>";
+		return `<code class="${cssimportantcolor} font-bold">${txt}</code>`
   }
 
   function jsMode(txt) {
-    var rest = txt, done = "", esc = [], i, cc, tt = "", sfnuttpos, dfnuttpos, compos, comlinepos, keywordpos, numpos, mypos, dotpos, y;
+    var rest = txt
+		let done = ""
+		let esc = []
+		let i
+		let cc = ''
+		let tt = ""
+		let sfnuttpos, dfnuttpos, compos, comlinepos, 
+		keywordpos, numpos, mypos, dotpos, y, bracketpos, 
+		varnamepos, constantpos
+
     for (i = 0; i < rest.length; i++)  {
       cc = rest.substr(i, 1);
       if (cc == "\\") {
@@ -227,10 +269,37 @@ export const codeHighlight = (elmnt, mode) => {
       compos = getPos(rest, /\/\*/, "*/", commentMode);
       comlinepos = getPos(rest, /\/\//, "<br>", commentMode);      
       numpos = getNumPos(rest, jsNumberMode);
-      keywordpos = getKeywordPos("js", rest, jsKeywordMode);
+      keywordpos = getKeywordPos('js', rest, jsKeywordMode, keywords_js)
+      varnamepos = getKeywordPos('js', rest, jsVarNameMode, varnames)
+      constantpos = getKeywordPos('js', rest, jsConstMode, constants)
       dotpos = getDotPos(rest, jsPropertyMode);
-      if (Math.max(numpos[0], sfnuttpos[0], dfnuttpos[0], compos[0], comlinepos[0], keywordpos[0], dotpos[0]) == -1) {break;}
-      mypos = getMinPos(numpos, sfnuttpos, dfnuttpos, compos, comlinepos, keywordpos, dotpos);
+      bracketpos = getBracketPos(rest, jsBracketsMode);
+      if (Math.max(
+				numpos[0], 
+				sfnuttpos[0], 
+				dfnuttpos[0], 
+				compos[0], 
+				comlinepos[0], 
+				keywordpos[0], 
+				varnamepos[0],
+				constantpos[0],
+				dotpos[0], 
+				bracketpos[0],
+			) == -1){
+				break
+			}
+      mypos = getMinPos(
+				numpos, 
+				sfnuttpos, 
+				dfnuttpos, 
+				compos, 
+				comlinepos, 
+				keywordpos, 
+				varnamepos,
+				constantpos,
+				dotpos, 
+				bracketpos
+			);
       if (mypos[0] == -1) {break;}
       if (mypos[0] > -1) {
         done += rest.substring(0, mypos[0]);
@@ -242,28 +311,75 @@ export const codeHighlight = (elmnt, mode) => {
     for (i = 0; i < esc.length; i++) {
       rest = rest.replace("W3JSESCAPE", esc[i]);
     }
-    return "<code style=color:" + jscolor + ">" + rest + "</code>";
+    return `<code class="${jscolor}">${rest}</code>`
   }
 
   function jsStringMode(txt) {
-    return "<code style=color:" + jsstringcolor + ">" + txt + "</code>";
+    return `<code class="${jsstringcolor}">${txt}</code>`
+  }
+  
+	function jsBracketsMode(txt) {
+    return `<code class="${jsbracketscolor}">${txt}</code>`
   }
 
-  function jsKeywordMode(txt) {
-    return "<code style=color:" + jskeywordcolor + ">" + txt + "</code>";
-  }
+	function jsKeywordMode(txt) {
+		return `<code class="${jskeywordcolor}">${txt}</code>`
+	}
+
+	function jsVarNameMode(txt) {
+		return `<code class="${jsvarnamecolor}">${txt}</code>`
+	}
+	
+	function jsConstMode(txt) {
+		return `<code class="${jsconstantcolor}">${txt}</code>`
+	}
 
   function jsNumberMode(txt) {
-    return "<code style=color:" + jsnumbercolor + ">" + txt + "</code>";
+		return `<code class="${jsnumbercolor}">${txt}</code>`
   }
 
   function jsPropertyMode(txt) {
-    return "<code style=color:" + jspropertycolor + ">" + txt + "</code>";
+		return `<code class="${jspropertycolor}">${txt}</code>`
+  }
+
+	function getBracketPos(txt, func) {
+    var x, i, j, s, e, cc
+		let arr = [...specialChars]
+    const start = txt.indexOf('{')
+		if (start > -1) {
+			x = txt.substr(s);
+			for (j = 0; j < x.length; j++) {
+				cc = x[j];
+				for (i = 0; i < arr.length; i++) {
+					if (cc.indexOf(arr[i]) > -1) {
+						e = j;
+						return [start, e + start + 1, func];
+					}
+				}
+			}
+		}
+    
+		let end = txt.indexOf('}')
+
+		if( end > -1 ){
+			x = txt.substr(s);
+			for (j = 0; j < x.length; j++) {
+				cc = x[j];
+				for (i = 0; i < arr.length; i++) {
+					if (cc.indexOf(arr[i]) > -1) {
+						e = j;
+						return [end, e + end + 1, func];
+					}
+				}
+			}
+		}
+    return [-1, -1, func];
   }
 
   function getDotPos(txt, func) {
-    var x, i, j, s, e, arr = [".","<", " ", ";", "(", "+", ")", "[", "]", ",", "&", ":", "{", "}", "/" ,"-", "*", "|", "%"];
-    s = txt.indexOf(".");
+    var x, i, j, s, e, cc
+		let arr = [...specialChars]
+    s = txt.indexOf(".")
     if (s > -1) {
       x = txt.substr(s + 1);
       for (j = 0; j < x.length; j++) {
@@ -289,15 +405,9 @@ export const codeHighlight = (elmnt, mode) => {
     if (arr.length == 0) {arr = arguments[i];}
     return arr;
   }
-
-  function getKeywordPos(typ, txt, func) {
-    var words, i, pos, rpos = -1, rpos2 = -1, patt;
-    if (typ == "js") {
-      words = ["abstract","arguments","boolean","break","byte","case","catch","char","class","const","continue","debugger","default","delete",
-      "do","double","else","enum","eval","export","extends","false","final","finally","float","for","function","goto","if","implements","import",
-      "in","instanceof","int","interface","let","long","NaN","native","new","null","package","private","protected","public","return","short","static",
-      "super","switch","synchronized","this","throw","throws","transient","true","try","typeof","var","void","volatile","while","with","yield"];
-    }
+  
+	function getKeywordPos(typ, txt, func, words) {
+    var i, pos, rpos = -1, rpos2 = -1, patt;
     for (i = 0; i < words.length; i++) {
       pos = txt.indexOf(words[i]);
       if (pos > -1) {
