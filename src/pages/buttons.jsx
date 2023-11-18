@@ -349,7 +349,7 @@ export default function PageButtons(){
 							<button className={`btn ${class_secondary}`}>Three</button>
 						</div>
 
-						<div className="btn-group-sm btn-group-alt">
+						<div className="btn-group-sm">
 							<button className={`btn ${class_alt}`}>One</button>
 							<button className={`btn ${class_alt}`}>Two</button>
 							<button className={`btn ${class_alt}`}>Three</button>

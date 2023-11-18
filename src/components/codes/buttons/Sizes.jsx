@@ -1,132 +1,62 @@
+import { useEffect, useRef } from 'react'
+import { codeHighlight } from '@/components/helpers'
+
 export default function Code(props){
-	const {mark, tag, class_name, equal, class_list, class_list_secondary} = props.classes
+
+	const codeBlock = useRef(null)
+	useEffect(() => codeHighlight(codeBlock.current, 'html'), [])
 
 	return (
-	<>
-		<code>// Small</code>
-		<br/>
-		<code className={mark}>{`<`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={class_name}> {`class`}</code>
-		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"btn btn-sm"`}</code>
-		<code className={mark}>{`>`}</code>
-		<code className={mark}>{`Default`}</code>
-		<code className={mark}>{`</`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`>`}</code>
-		<br/>
-		<br/>
+		<div ref={codeBlock}>
+{`<!-- Small -->
+<button 
+  className="btn btn-sm">
+  Default
+</button>
 
-		<code className={mark}>{`<`}</code>
-		<code className={tag}>{`button`}</code>
-		<br/>
-		<code className={class_name}> {`class`}</code>
-		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"btn btn-sm`}</code>
-		<code className={class_list_secondary}>{` bg-primary border-primary text-white 
-		dark:bg-primary dark:border-primary dark:text-white"`}</code>
-		<code className={mark}>{`>`}</code>
-		<code className={mark}>{`Primary`}</code>
-		<code className={mark}>{`</`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`>`}</code>
-		<br/>
-		<br/>
+<button 
+  className="btn btn-sm bg-primary border-primary text-white 
+             dark:bg-primary dark:border-primary dark:text-white">
+  Primary
+</button>
 
-		<code className={mark}>{`<`}</code>
-		<code className={tag}>{`button`}</code>
-		<br/>
-		<code className={class_name}> {`class`}</code>
-		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"btn btn-sm`}</code>
-		<code className={class_list_secondary}>{` bg-secondary border-secondary text-white 
-		dark:bg-secondary dark:border-secondary dark:text-white"`}</code>
-		<code className={mark}>{`>`}</code>
-		<code className={mark}>{`Secondary`}</code>
-		<code className={mark}>{`</`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`>`}</code>
-		<br/>
-		<br/>
+<button 
+  className="btn btn-sm bg-secondary border-secondary text-white 
+             dark:bg-secondary dark:border-secondary dark:text-white">
+  Secondary
+</button>
 
-		<code className={mark}>{`<`}</code>
-		<code className={tag}>{`button`}</code>
-		<br/>
-		<code className={class_name}> {`class`}</code>
-		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"btn btn-sm`}</code>
-		<code className={class_list_secondary}>{` bg-alt border-alt text-white 
-		dark:bg-alt dark:border-alt dark:text-white"`}</code>
-		<code className={mark}>{`>`}</code>
-		<code className={mark}>{`Alternative`}</code>
-		<code className={mark}>{`</`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`>`}</code>
+<button 
+  className="btn btn-sm bg-alt border-alt text-white 
+             dark:bg-alt dark:border-alt dark:text-white">
+  Alternative
+</button>
 
-		<br/>
-		<br/>
 
-		<code>// Large</code>
-		<br/>
-		<code className={mark}>{`<`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={class_name}> {`class`}</code>
-		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"btn btn-lg"`}</code>
-		<code className={mark}>{`>`}</code>
-		<code className={mark}>{`Default`}</code>
-		<code className={mark}>{`</`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`>`}</code>
-		<br/>
-		<br/>
+<!-- Large -->
+<button 
+  className="btn btn-lg">
+  Default
+</button>
 
-		<code className={mark}>{`<`}</code>
-		<code className={tag}>{`button`}</code>
-		<br/>
-		<code className={class_name}> {`class`}</code>
-		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"btn btn-lg`}</code>
-		<code className={class_list_secondary}>{` bg-primary border-primary text-white 
-		dark:bg-primary dark:border-primary dark:text-white"`}</code>
-		<code className={mark}>{`>`}</code>
-		<code className={mark}>{`Primary`}</code>
-		<code className={mark}>{`</`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`>`}</code>
-		<br/>
-		<br/>
+<button 
+  className="btn btn-lg bg-primary border-primary text-white 
+             dark:bg-primary dark:border-primary dark:text-white">
+  Primary
+</button>
 
-		<code className={mark}>{`<`}</code>
-		<code className={tag}>{`button`}</code>
-		<br/>
-		<code className={class_name}> {`class`}</code>
-		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"btn btn-lg`}</code>
-		<code className={class_list_secondary}>{` bg-secondary border-secondary text-white 
-		dark:bg-secondary dark:border-secondary dark:text-white"`}</code>
-		<code className={mark}>{`>`}</code>
-		<code className={mark}>{`Secondary`}</code>
-		<code className={mark}>{`</`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`>`}</code>
-		<br/>
-		<br/>
+<button 
+  className="btn btn-lg bg-secondary border-secondary text-white 
+             dark:bg-secondary dark:border-secondary dark:text-white">
+  Secondary
+</button>
 
-		<code className={mark}>{`<`}</code>
-		<code className={tag}>{`button`}</code>
-		<br/>
-		<code className={class_name}> {`class`}</code>
-		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"btn btn-lg`}</code>
-		<code className={class_list_secondary}>{` bg-alt border-alt text-white 
-		dark:bg-alt dark:border-alt dark:text-white"`}</code>
-		<code className={mark}>{`>`}</code>
-		<code className={mark}>{`Alternative`}</code>
-		<code className={mark}>{`</`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`>`}</code>
+<button 
+  className="btn btn-lg bg-alt border-alt text-white 
+             dark:bg-alt dark:border-alt dark:text-white">
+  Alternative
+</button>`}
+		</div>
+	)
 
-	</>)
 }

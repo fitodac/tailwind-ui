@@ -1,66 +1,36 @@
+import { useEffect, useRef } from 'react'
+import { codeHighlight } from '@/components/helpers'
+
 export default function Code(props){
-	const {mark, tag, class_name, equal, class_list, class_list_secondary} = props.classes
+
+	const codeBlock = useRef(null)
+	useEffect(() => codeHighlight(codeBlock.current, 'html'), [])
 
 	return (
-	<>
-		<code className={mark}>{`<`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={class_name}> {`class`}</code>
-		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"btn ghost"`}</code>
-		<code className={mark}>{`>`}</code>
-		<code className={mark}>{`Default`}</code>
-		<code className={mark}>{`</`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`>`}</code>
-		<br/>
-		<br/>
+		<div ref={codeBlock}>
+{`<button 
+  className="btn ghost">
+  Default
+</button>
 
-		<code className={mark}>{`<`}</code>
-		<code className={tag}>{`button`}</code>
-		<br/>
-		<code className={class_name}> {`class`}</code>
-		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"btn ghost`}</code>
-		<code className={class_list_secondary}>{` bg-primary text-primary hover:text-white 
-		dark:bg-primary dark:text-primary dark:hover:text-white"`}</code>
-		<code className={mark}>{`>`}</code>
-		<code className={mark}>{`Primary`}</code>
-		<code className={mark}>{`</`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`>`}</code>
-		<br/>
-		<br/>
+<button 
+  className="btn ghost bg-primary text-primary hover:text-white 
+             dark:bg-primary dark:text-primary dark:hover:text-white">
+  Primary
+</button>
 
-		<code className={mark}>{`<`}</code>
-		<code className={tag}>{`button`}</code>
-		<br/>
-		<code className={class_name}> {`class`}</code>
-		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"btn ghost`}</code>
-		<code className={class_list_secondary}>{` bg-secondary text-secondary hover:text-white 
-		dark:bg-secondary dark:text-secondary dark:hover:text-white"`}</code>
-		<code className={mark}>{`>`}</code>
-		<code className={mark}>{`Secondary`}</code>
-		<code className={mark}>{`</`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`>`}</code>
-		<br/>
-		<br/>
+<button 
+  className="btn ghost bg-secondary text-secondary hover:text-white 
+             dark:bg-secondary dark:text-secondary dark:hover:text-white">
+  Secondary
+</button>
 
-		<code className={mark}>{`<`}</code>
-		<code className={tag}>{`button`}</code>
-		<br/>
-		<code className={class_name}> {`class`}</code>
-		<code className={equal}>{`=`}</code>
-		<code className={class_list}>{`"btn ghost`}</code>
-		<code className={class_list_secondary}>{` bg-alt text-alt-600 hover:text-white 
-		dark:bg-alt dark:bg-alt dark:text-alt-600 dark:hover:text-white"`}</code>
-		<code className={mark}>{`>`}</code>
-		<code className={mark}>{`Alternative`}</code>
-		<code className={mark}>{`</`}</code>
-		<code className={tag}>{`button`}</code>
-		<code className={mark}>{`>`}</code>
+<button 
+  className="btn ghost bg-alt text-alt-600 hover:text-white 
+             dark:bg-alt dark:bg-alt dark:text-alt-600 dark:hover:text-white">
+  Alternative
+</button>`}
+		</div>
+	)
 
-	</>)
 }
