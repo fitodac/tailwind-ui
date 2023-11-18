@@ -12,8 +12,6 @@ export default function Sidebar(){
 	const { pathname: path } = useRouter()
 	const [menu, setMenu] = useState('core')
 
-	console.log('router', path)
-
 	useEffect(() => {
 		if( path.indexOf('/application') >= 0 ) setMenu('application')
 		if( path.indexOf('/dashboard') >= 0 ) setMenu('dashboard')

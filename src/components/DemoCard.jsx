@@ -1,6 +1,6 @@
 import  { useState } from 'react'
 
-import CodeBox from './CodeBox'
+import { CodeBox } from './CodeBox'
 
 
 export default function DemoCard(props){
