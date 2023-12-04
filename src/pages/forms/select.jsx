@@ -13,7 +13,7 @@ export default function PageSelect(){
 				]} />
 
 			<div className="space-y-7">
-				<DemoCard title={'Select'}>
+				<DemoCard title={'Select'} code="Code_Select">
 					<div className="grid grid-cols-3 gap-6">
 
 						<div className="space-y-1">
@@ -56,7 +56,7 @@ export default function PageSelect(){
 
 
 
-				<DemoCard title={'Validation states'}>
+				<DemoCard title={'Validation states'} code="Code_SelectValidation">
 					<div className="grid grid-cols-3 gap-6">
 
 						<div className="space-y-1">
@@ -89,7 +89,7 @@ export default function PageSelect(){
 
 
 
-				<DemoCard title={'Input group'}>
+				<DemoCard title={'Input group'} code="Code_SelectInputGroup">
 					<div className="grid grid-cols-3 gap-6">
 
 						<div className="space-y-1">
@@ -105,7 +105,6 @@ export default function PageSelect(){
 								</select>
 								<button className="btn bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white">Submit</button>
 							</div>
-							
 						</div>
 
 
@@ -120,7 +119,7 @@ export default function PageSelect(){
 										<path fill="none" d="M0 0h24v24H0z"/>
 									</svg>
 								</span>
-								<select className="">
+								<select>
 									<option selected>Select one city</option>
 									<option value="new york">New York</option>
 									<option value="london">London</option>

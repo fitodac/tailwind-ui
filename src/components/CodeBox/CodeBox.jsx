@@ -7,6 +7,15 @@ import {
 	Code_AvatarGroupActions,
 	Code_AvatarSquircle,
 
+	// badges
+	Code_BadgesBasic,
+	Code_BadgesRounded,
+	Code_BadgesOutline,
+	Code_BadgesGhost,
+	Code_BadgesCustom,
+	Code_BadgesDot,
+	Code_BadgesNotification,
+
 	// buttons
 	Code_Buttons,
 	Code_ButtonsGhost,
@@ -18,6 +27,10 @@ import {
 	Code_ButtonsRounded,
 	Code_ButtonsSizes,
 	Code_ButtonsToggler,
+
+	// collapsible
+	Code_CollapsibleAccordion,
+	Code_CollapsibleClosable,
 
 	// content
 	Code_ContentCode,
@@ -43,7 +56,10 @@ import {
 	Code_RadioToggler,
 	Code_RadioVertical,
 	Code_RadioVerticalMuchText,
+	Code_Select,
 	Code_SelectCustomBasic,
+	Code_SelectInputGroup,
+	Code_SelectValidation,
 	Code_Validation,
 
 	// list groups
@@ -126,78 +142,95 @@ export const CodeBox = ({code}) => {
 				<pre className="text-slate-200 text-sm leading-tight p-6 pb-11 dark:text-slate-400" ref={elPre}>
 
 					{/* Avatars */}
-					{ code === 'Code_AvatarDefault' 						? <Code_AvatarDefault /> 							: null }
-					{ code === 'Code_AvatarGroup' 							? <Code_AvatarGroup /> 								: null }
-					{ code === 'Code_AvatarGroupActions' 				? <Code_AvatarGroupActions /> 				: null }
-					{ code === 'Code_AvatarSquircle' 						? <Code_AvatarSquircle /> 						: null }
+					{ code === 'Code_AvatarDefault' 						? <Code_AvatarDefault /> : null }
+					{ code === 'Code_AvatarGroup' 							? <Code_AvatarGroup /> : null }
+					{ code === 'Code_AvatarGroupActions' 				? <Code_AvatarGroupActions /> : null }
+					{ code === 'Code_AvatarSquircle' 						? <Code_AvatarSquircle /> : null }
+
+					{/* Badges */}
+					{ code === 'Code_BadgesBasic' 							? <Code_BadgesBasic /> : null }
+					{ code === 'Code_BadgesRounded' 						? <Code_BadgesRounded /> : null }
+					{ code === 'Code_BadgesOutline' 						? <Code_BadgesOutline /> : null }
+					{ code === 'Code_BadgesGhost' 							? <Code_BadgesGhost /> : null }
+					{ code === 'Code_BadgesCustom' 							? <Code_BadgesCustom /> : null }
+					{ code === 'Code_BadgesDot' 								? <Code_BadgesDot /> : null }
+					{ code === 'Code_BadgesNotification' 				? <Code_BadgesNotification /> : null }
 
 					{/* Buttons */}
-					{ code === 'Code_Buttons' 									? <Code_Buttons /> 										: null }
-					{ code === 'Code_ButtonsSizes' 							? <Code_ButtonsSizes /> 							: null }
-					{ code === 'Code_ButtonsOutline' 						? <Code_ButtonsOutline /> 						: null }
-					{ code === 'Code_ButtonsGhost' 							? <Code_ButtonsGhost /> 							: null }
-					{ code === 'Code_ButtonsRounded' 						? <Code_ButtonsRounded /> 						: null }
-					{ code === 'Code_ButtonsIconized' 					? <Code_ButtonsIconized /> 						: null }
-					{ code === 'Code_ButtonsIconText' 					? <Code_ButtonsIconText /> 						: null }
-					{ code === 'Code_ButtonsToggler' 						? <Code_ButtonsToggler /> 						: null }
-					{ code === 'Code_ButtonsGroup' 							? <Code_ButtonsGroup /> 							: null }
-					{ code === 'Code_ButtonsGroupSize' 					? <Code_ButtonsGroupSize /> 					: null }
+					{ code === 'Code_Buttons' 									? <Code_Buttons /> : null }
+					{ code === 'Code_ButtonsSizes' 							? <Code_ButtonsSizes /> : null }
+					{ code === 'Code_ButtonsOutline' 						? <Code_ButtonsOutline /> : null }
+					{ code === 'Code_ButtonsGhost' 							? <Code_ButtonsGhost /> : null }
+					{ code === 'Code_ButtonsRounded' 						? <Code_ButtonsRounded /> : null }
+					{ code === 'Code_ButtonsIconized' 					? <Code_ButtonsIconized /> : null }
+					{ code === 'Code_ButtonsIconText' 					? <Code_ButtonsIconText /> : null }
+					{ code === 'Code_ButtonsToggler' 						? <Code_ButtonsToggler /> : null }
+					{ code === 'Code_ButtonsGroup' 							? <Code_ButtonsGroup /> : null }
+					{ code === 'Code_ButtonsGroupSize' 					? <Code_ButtonsGroupSize /> : null }
+
+					{/* Collapsible */}
+					{ code === 'Code_CollapsibleAccordion' 			? <Code_CollapsibleAccordion /> : null }
+					{ code === 'Code_CollapsibleClosable' 			? <Code_CollapsibleClosable /> : null }
+
 					
 					{/* Content */}
-					{ code === 'Code_Heading' 									? <Code_Heading /> 										: null }
-					{ code === 'Code_Paragraph' 								? <Code_Paragraph /> 									: null }
-					{ code === 'Code_ListOrdered' 							? <Code_ListOrdered /> 								: null }
-					{ code === 'Code_ListUnordered' 						? <Code_ListUnordered /> 							: null }
-					{ code === 'Code_ContentCode' 							? <Code_ContentCode /> 								: null }
-					{ code === 'Code_ContentPre' 								? <Code_ContentPre /> 								: null }
+					{ code === 'Code_Heading' 									? <Code_Heading /> : null }
+					{ code === 'Code_Paragraph' 								? <Code_Paragraph /> : null }
+					{ code === 'Code_ListOrdered' 							? <Code_ListOrdered /> : null }
+					{ code === 'Code_ListUnordered' 						? <Code_ListUnordered /> : null }
+					{ code === 'Code_ContentCode' 							? <Code_ContentCode /> : null }
+					{ code === 'Code_ContentPre' 								? <Code_ContentPre /> : null }
 					
 					{/* Form */}
-					{ code === 'Code_CheckboxSizing' 						? <Code_CheckboxSizing /> 						: null }
-					{ code === 'Code_CheckboxToggler' 					? <Code_CheckboxToggler /> 						: null }
-					{ code === 'Code_CheckboxVertical' 					? <Code_CheckboxVertical /> 					: null }
-					{ code === 'Code_CheckboxVerticalMuchText' 	? <Code_CheckboxVerticalMuchText /> 	: null }
-					{ code === 'Code_DatepickerInline' 					? <Code_DatepickerInline /> 					: null }
-					{ code === 'Code_DatepickerModal' 					? <Code_DatepickerModal /> 						: null }
-					{ code === 'Code_Helper' 										? <Code_Helper /> 										: null }
-					{ code === 'Code_Input' 										? <Code_Input /> 											: null }
-					{ code === 'Code_InputAddons' 							? <Code_InputAddons /> 								: null }
-					{ code === 'Code_InputGroups' 							? <Code_InputGroups /> 								: null }
-					{ code === 'Code_RadioCheckboxStyle' 				? <Code_RadioCheckboxStyle /> 				: null }
-					{ code === 'Code_RadioSizing' 							? <Code_RadioSizing /> 								: null }
-					{ code === 'Code_RadioToggler' 							? <Code_RadioToggler /> 							: null }
-					{ code === 'Code_RadioVertical' 						? <Code_RadioVertical /> 							: null }
-					{ code === 'Code_RadioVerticalMuchText' 		? <Code_RadioVerticalMuchText /> 			: null }
-					{ code === 'Code_SelectCustomBasic' 				? <Code_SelectCustomBasic /> 					: null }
-					{ code === 'Code_Validation' 								? <Code_Validation /> 								: null }
+					{ code === 'Code_CheckboxSizing' 						? <Code_CheckboxSizing /> : null }
+					{ code === 'Code_CheckboxToggler' 					? <Code_CheckboxToggler /> : null }
+					{ code === 'Code_CheckboxVertical' 					? <Code_CheckboxVertical /> : null }
+					{ code === 'Code_CheckboxVerticalMuchText' 	? <Code_CheckboxVerticalMuchText /> : null }
+					{ code === 'Code_DatepickerInline' 					? <Code_DatepickerInline /> : null }
+					{ code === 'Code_DatepickerModal' 					? <Code_DatepickerModal /> : null }
+					{ code === 'Code_Helper' 										? <Code_Helper /> : null }
+					{ code === 'Code_Input' 										? <Code_Input /> : null }
+					{ code === 'Code_InputAddons' 							? <Code_InputAddons /> : null }
+					{ code === 'Code_InputGroups' 							? <Code_InputGroups /> : null }
+					{ code === 'Code_RadioCheckboxStyle' 				? <Code_RadioCheckboxStyle /> : null }
+					{ code === 'Code_RadioSizing' 							? <Code_RadioSizing /> : null }
+					{ code === 'Code_RadioToggler' 							? <Code_RadioToggler /> : null }
+					{ code === 'Code_RadioVertical' 						? <Code_RadioVertical /> : null }
+					{ code === 'Code_RadioVerticalMuchText' 		? <Code_RadioVerticalMuchText /> : null }
+					{ code === 'Code_Select' 										? <Code_Select /> : null }
+					{ code === 'Code_SelectCustomBasic' 				? <Code_SelectCustomBasic /> : null }
+					{ code === 'Code_SelectInputGroup' 					? <Code_SelectInputGroup /> : null }
+					{ code === 'Code_SelectValidation' 					? <Code_SelectValidation /> : null }
+					{ code === 'Code_Validation' 								? <Code_Validation /> : null }
 					
 					{/* List groups */}
-					{ code === 'Code_ListGroupBasic' 						? <Code_ListGroupBasic /> 						: null }
-					{ code === 'Code_ListGroupStriped' 					? <Code_ListGroupStriped /> 					: null }
-					{ code === 'Code_ListGroupHoverable' 				? <Code_ListGroupHoverable /> 				: null }
-					{ code === 'Code_ListGroupHead' 						? <Code_ListGroupHead /> 							: null }
-					{ code === 'Code_ListGroupLink' 						? <Code_ListGroupLink /> 							: null }
+					{ code === 'Code_ListGroupBasic' 						? <Code_ListGroupBasic /> : null }
+					{ code === 'Code_ListGroupStriped' 					? <Code_ListGroupStriped /> : null }
+					{ code === 'Code_ListGroupHoverable' 				? <Code_ListGroupHoverable /> : null }
+					{ code === 'Code_ListGroupHead' 						? <Code_ListGroupHead /> : null }
+					{ code === 'Code_ListGroupLink' 						? <Code_ListGroupLink /> : null }
 
 					{/* Tables */}
-					{ code === 'Code_TableBasic' 								? <Code_TableBasic /> 								: null }
-					{ code === 'Code_TableBordered' 						? <Code_TableBordered /> 							: null }
-					{ code === 'Code_TableStriped' 							? <Code_TableStriped /> 							: null }
-					{ code === 'Code_TableHoverable' 						? <Code_TableHoverable /> 						: null }
-					{ code === 'Code_TableCompact' 							? <Code_TableCompact /> 							: null }
-					{ code === 'Code_TableScrollContent' 				? <Code_TableScrollContent /> 				: null }
+					{ code === 'Code_TableBasic' 								? <Code_TableBasic /> : null }
+					{ code === 'Code_TableBordered' 						? <Code_TableBordered /> : null }
+					{ code === 'Code_TableStriped' 							? <Code_TableStriped /> : null }
+					{ code === 'Code_TableHoverable' 						? <Code_TableHoverable /> : null }
+					{ code === 'Code_TableCompact' 							? <Code_TableCompact /> : null }
+					{ code === 'Code_TableScrollContent' 				? <Code_TableScrollContent /> : null }
 
 					{/* Modals */}
-					{ code === 'Code_Modal' 										? <Code_Modal classes={classes} /> 											: null }
-					{ code === 'Code_ModalCancelButton' 				? <Code_ModalCancelButton classes={classes} /> 					: null }
+					{ code === 'Code_Modal' 										? <Code_Modal classes={classes} /> : null }
+					{ code === 'Code_ModalCancelButton' 				? <Code_ModalCancelButton classes={classes} /> : null }
 
 					{/* Pagination */}
-					{ code === 'Code_PaginationBase' 						? <Code_PaginationBase classes={classes} /> 						: null }
-					{ code === 'Code_PaginationRounded' 				? <Code_PaginationRounded classes={classes} /> 					: null }
-					{ code === 'Code_PaginationBoxed' 					? <Code_PaginationBoxed classes={classes} /> 						: null }
-					{ code === 'Code_PaginationMinimalist' 			? <Code_PaginationMinimalist classes={classes} /> 			: null }
+					{ code === 'Code_PaginationBase' 						? <Code_PaginationBase classes={classes} /> : null }
+					{ code === 'Code_PaginationRounded' 				? <Code_PaginationRounded classes={classes} /> : null }
+					{ code === 'Code_PaginationBoxed' 					? <Code_PaginationBoxed classes={classes} /> : null }
+					{ code === 'Code_PaginationMinimalist' 			? <Code_PaginationMinimalist classes={classes} /> : null }
 					
 					{/* Toast */}
-					{ code === 'Code_ToastDefault' 							? <Code_ToastDefault classes={classes} /> 							: null }
-					{ code === 'Code_ToastCloseable' 						? <Code_ToastCloseable classes={classes} /> 						: null }
+					{ code === 'Code_ToastDefault' 							? <Code_ToastDefault classes={classes} /> : null }
+					{ code === 'Code_ToastCloseable' 						? <Code_ToastCloseable classes={classes} /> : null }
 
 
 

@@ -9,7 +9,7 @@ export default function PageTags(){
 			<PageHeader title="Badges" />
 
 			<div className="space-y-7">
-				<DemoCard title={'Basic badge'}>
+				<DemoCard title={'Basic badge'} code="Code_BadgesBasic">
 					<div className="space-x-4">
 						<span className="badge">Badge</span>
 						<span className="badge bg-primary border-primary">Primary</span>
@@ -19,7 +19,7 @@ export default function PageTags(){
 				</DemoCard>
 
 
-				<DemoCard title={'Rounded badge'}>
+				<DemoCard title={'Rounded badge'} code="Code_BadgesRounded">
 					<div className="space-x-4">
 						<span className="badge rounded-full">Badge</span>
 						<span className="badge bg-primary border-primary rounded-full">Primary</span>
@@ -29,7 +29,7 @@ export default function PageTags(){
 				</DemoCard>
 
 
-				<DemoCard title={'Outline badge'}>
+				<DemoCard title={'Outline badge'} code="Code_BadgesOutline">
 					<div className="space-x-4">
 						<span className="badge bg-transparent bg-opacity-60 text-slate-400">Badge</span>
 						<span className="badge bg-transparent border-primary text-primary">Primary</span>
@@ -39,7 +39,7 @@ export default function PageTags(){
 				</DemoCard>
 
 
-				<DemoCard title={'Ghost badge'}>
+				<DemoCard title={'Ghost badge'} code="Code_BadgesGhost">
 					<div className="space-x-4">
 						<span className="badge ghost text-slate-500">Badge</span>
 						<span className="badge ghost bg-primary border-primary text-primary">Primary</span>
@@ -49,7 +49,7 @@ export default function PageTags(){
 				</DemoCard>
 
 
-				<DemoCard title={'Custom badge'}>
+				<DemoCard title={'Custom badge'} code="Code_BadgesCustom">
 					<div className="space-x-4">
 						<span className="badge bg-green-600 border-green-600">Success</span>
 						<span className="badge bg-yellow-600 border-yellow-600">Warning</span>
@@ -86,7 +86,7 @@ export default function PageTags(){
 				</DemoCard>
 
 
-				<DemoCard title={'Dot badges'}>
+				<DemoCard title={'Dot badges'} code="Code_BadgesDot">
 					<div className="flex gap-16">
 						<div className="bg-slate-100 border border-slate-300 w-14 h-14 rounded-md relative dark:bg-slate-800 dark:border-slate-900">
 							<div className="dot-badge -left-0.5"></div>
@@ -99,7 +99,7 @@ export default function PageTags(){
 				</DemoCard>
 
 
-				<DemoCard title={'Notification'}>
+				<DemoCard title={'Notification'} code="Code_BadgesNotification">
 					<div className="grid grid-cols-3">
 						
 						<div className="">

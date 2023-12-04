@@ -58,7 +58,7 @@ export default function PageAccordion(){
 		<PageHeader title="Collapsible" />
 
 		<div className="space-y-7">
-			<DemoCard title={'Accordion'}>
+			<DemoCard title={'Accordion'} code="Code_CollapsibleAccordion">
 				<div className="grid gap-6 mt-6 md:grid-cols-2">
 
 					<div className="grid content-start gap-4">
@@ -107,7 +107,7 @@ export default function PageAccordion(){
 
 
 
-			<DemoCard title={'Closable'}>
+			<DemoCard title={'Closable'} code="Code_CollapsibleClosable">
 				<div className="grid gap-6 mt-6 md:grid-cols-2">
 
 					<div className="grid content-start gap-4">
